@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./template.css">
+    <style>
+        .page1_toFooterSpace {
+            margin-bottom: 193px;
+        }
+
+        .about-space {
+            margin-bottom: 123.035px;
+        }
+
+
+        .swiper-container {
+            width: 100%;
+            height: 760px;
+
+            margin-bottom: 40px;
+        }
+
+
+
+        .page_1_slide1 {
+            background-position: 50% 60%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .page_1_slide2 {
+            background-position: left;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .page_1_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/01-首頁/main_banner_01.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            display: none;
+        }
+
+
+
+        .about_titleBox {
+            margin: auto;
+            /* width: 444.5px; */
+            border-bottom: 1px #DAB059 solid;
+        }
+
+        .about_title {
+
+            margin: auto;
+            /* width: 240px; */
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            /* letter-spacing: -1px; */
+            color: #DAB059;
+
+            letter-spacing: 1.5px;
+
+
+        }
+
+        .about_content {
+            margin-top: 93px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .about_text {
+            margin-left: 95px;
+            /* display: flex;
+           flex-flow: column;
+           align-items: unset; */
+        }
+
+        .about_text_topSpace {
+            margin-top: 13.5px;
+        }
+
+        .about_text p {
+            font-size: 22px;
+            /* letter-spacing: -1px; */
+            line-height: 32px;
+
+        }
+
+        .about_textSpace {
+            margin-bottom: 40px;
+        }
+
+        .about_imgBox {
+            display: flex;
+
+            flex-flow: column;
+            height: 615px;
+            position: relative;
+
+        }
+
+        .about_img1 {
+            width: 429px;
+            height: 429px;
+            position: absolute;
+            right: 102px;
+            /* transform: translateX(-142px); */
+            z-index: 5;
+
+        }
+
+        .about_img2 {
+            width: 403.15px;
+            height: 322.41px;
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            /* transform: translate(3px, -137px); */
+
+            /* margin-right: 10px;
+            margin-top: 293px; */
+        }
+
+        @media (max-width:850px) {
+
+            .swiper-container {
+                display: none;
+            }
+
+            .about_titleBox {
+                width: 240px;
+                margin: 50px auto 50px;
+            }
+
+            .about_title {
+                font-size: 23px;
+                width: 240px
+            }
+
+            .about_text_topSpace {
+                margin-top: 0px;
+            }
+
+            .page_1_banner {
+                display: block;
+                height: 250px;
+                background-position: bottom;
+            }
+
+            .about_content {
+                justify-content: center;
+                margin-top: 0px;
+            }
+
+            .about_text {
+                text-align: center;
+                /* z-index   : 99999; */
+                margin: auto;
+                /* font-size: 12px; */
+            }
+
+            .about_imgBox {
+                opacity: 0.2;
+
+            }
+
+            .about_img1 {
+                right: 50px;
+            }
+
+            .about_img2 {
+                right: 20px;
+                /* bottom: 20px;   */
+            }
+
+            .page1_toFooterSpace {
+                margin-bottom: 50px;
+            }
+
+        }
+
+        @media (max-width:550px) {
+            .about_titleBox {
+                margin: 30px auto 0px;
+            }
+
+            .about_title {
+                font-size: 23px;
+            }
+
+            .about_content {
+                margin-top: 0px;
+            }
+
+            .about_text p {
+                font-size: 14px;
+            }
+
+            .about_textSpace {
+                margin-bottom: 20px;
+            }
+
+            .about_img1 {
+                width: 300px;
+                height: 300px;
+                top: 97px;
+            }
+
+            .about_img2 {
+                width: 253px;
+                height: 202px;
+                top: 307px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="page_1 page ">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page_1_slide1" style="background-image:url(./素材/01-首頁/main_banner_01.jpg)">
+                </div>
+                <div class="swiper-slide page_1_slide2" style="background-image:url(./素材/01-首頁/main_banner_03.jpg)">
+                </div>
+
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <div class="page_1_banner"></div>
+        <div class="box_container page1_toFooterSpace">
+            <div class="about_titleBox">
+                <div class="about_title">ABOUT ANNIE</div>
+            </div>
+            <div class="about_content ">
+
+                <div class="about_text">
+                    <p class="about_text_topSpace">公主與王子從此過著幸福快樂的日子，</p>
+                    <p>童話故事永遠是這樣結束，</p>
+                    <p>然而我們的故事，卻是從這裡開始…. </p>
+                    <p class="about_textSpace">安妮公主每一天，小巧而確切的幸福，</p>
+                    <p>都在花園微縮的小宇宙實現，</p>
+                    <p>公主的生活、公主的心思、公主的夢，</p>
+                    <p>也都藏著每個角落秘密裡， </p>
+                    <p>種植藷香藥草，烹飪料理，</p>
+                    <p class="about_textSpace">透過味蕾直到心理，</p>
+                    <p>安靜下來，蜂在低語、樹在搖曳、 </p>
+                    <p>鳥在呢喃、幸福快樂剛要開始</p>
+                    <p>安妮編織自己的幸福，料理精彩美味魔法，</p>
+                    <p>走近一步，公主以幫你將幸福準備齊全，</p>
+                    <p>穿越、等待、期許、滿載、甜蜜、收藏總總的幸福，</p>
+                    <p>歡迎您與安妮預謀一場幸福魔法派對，將夢想成真!</p>
+                </div>
+                <div class="about_imgBox">
+                    <img src="./素材/01-首頁/main_annie-new.png" alt="" class="about_img1 testUse">
+                    <img src="./素材/01-首頁/main_flower.png" alt="" class="about_img2">
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_box">
+
+                <div class="footer_text">
+                    <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                    <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                    <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                    <p>電話 : 04-25931567-8（預約專線）</p>
+                    <p>地址 : 台中市新社區中和里中興街223號</p>
+                </div>
+                <div class=" footer_iconGroupBox">
+                    <div class="footer_iconGroup">
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon"></a>
+                        <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png" alt=""
+                                class="footer_lineIcon"></a>
+                        <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+    </div>
+
+
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script>
+        var triggerPoint = document.querySelectorAll(".triggerPoint")
+       
+        
+
+        for (i = 0; i < triggerPoint.length; i++) {
+            const TriggerPoint = triggerPoint[i]
+           
+          
+
+            TriggerPoint.onclick = function () {
+                clearAllactive()
+                $('html,body').animate({ scrollTop: 0 }, "fast");
+                TriggerPoint.classList.add("active");
+              
+            }
+        }
+
+        function clearAllactive() {
+            for (var a = 0; a < triggerPoint.length; a++) {
+                triggerPoint[a].classList.remove("active");
+               
+            }
+
+        }
+    </script> -->
+    <script>
+    //    $(".nav_btnGroup a").on("click",function (){
+    //        $(this).css({
+    //            "backgroundColor":"#E05D97"
+    //        })
+
+    //    })
+
+
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            effect: 'fade',
+            speed: 3500,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+
+
+
+    </script>
+
+    <script>
+
+        // $(".returnBut").on("click", function () {
+
+
+
+        //     $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+        //     return false;
+        // })
+
+    </script>
+
+    <script>
+        var image = document.querySelector('.about_img1');
+        var image2 = document.querySelector('.about_img2');
+
+
+        new simpleParallax(image, {
+            orientation: 'left',
+            overflow: true,
+            // scale: 1.2,
+            delay: 5
+
+        });
+
+        new simpleParallax(image2, {
+
+            overflow: true,
+            // scale: 2,
+            delay: 5
+        });
+
+
+
+    </script>
+    <script>
+        // $(function () {
+        //     if ($(window).width() < 850)
+        //         $(".nav_btnGroup").on("click", function () {
+        //             $(".nav_btn").toggle()
+        //             var burger_decoration1 = $(".burger_decoration1")
+        //             console.log(burger_decoration1);
+
+        //             if (burger_decoration1.hasClass("acive")) {
+        //                 $(".burger_decoration1").removeClass("acive")
+        //                 $(".burger_decoration2").removeClass("acive")
+        //                 $(".burger_decoration3").removeClass("acive")
+        //             }
+        //             else {
+        //                 $(".burger_decoration1").addClass("acive")
+        //                 $(".burger_decoration2").addClass("acive")
+        //                 $(".burger_decoration3").addClass("acive")
+        //             }
+
+        //         })
+        // })
+
+
+                // $(".nav_btnGroup_mobile ").on("click", function () {
+                //     // $(".nav_btn").toggle()
+                // $(".mobile_nav_btns").toggle()
+                // // $(".mobile_nav_btns")
+                //     var burger_decoration1 = $(".burger_decoration1")
+
+                //     if($(".mobile_nav_btns").hasClass("active")){
+                //         $(".mobile_nav_btns").removeClass("active")
+                //     }
+                //     else{
+                //         $(".mobile_nav_btns").addClass("active")
+                //     }
+
+                //     if (burger_decoration1.hasClass("active")) {
+                //         $(".burger_decoration1").removeClass("active")
+                //         $(".burger_decoration2").removeClass("active")
+                //         $(".burger_decoration3").removeClass("active")
+                //     }
+                //     else {
+                //         $(".burger_decoration1").addClass("active")
+                //         $(".burger_decoration2").addClass("active")
+                //         $(".burger_decoration3").addClass("active")
+                //     }
+
+                // })
+
+    </script>
+    <script>
+        // $(".nav_btn_guide i").on("click",function () {
+
+        // })
+    </script>
+
+</body>
+
+</html>

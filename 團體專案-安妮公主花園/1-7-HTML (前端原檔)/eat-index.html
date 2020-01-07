@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./template.css">
+    <title>Document</title>
+
+    <style>
+        .page_4_decoration1 {
+            width: 100%;
+            height: 234px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 2021.5px;
+            z-index: -999;
+        }
+
+        .page_4_decoration2 {
+            width: 100%;
+            height: 234px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 3918.5px;
+            z-index: -999;
+        }
+
+        .page4_chiefImg {
+            width: 223px;
+            height: 447px;
+            background-image: url("./素材/04-主廚上菜/restaurant_chef.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: none;
+            position: absolute;
+            top: 100px;
+            right: 10px;
+            z-index: 9999;
+            opacity: 0;
+        }
+
+        .page4_chiefImg.active {
+            animation: chiefShake;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        @keyframes chiefShake {
+            0% {
+                transform: rotate(0deg);
+
+            }
+
+            25% {
+                transform: rotate(15deg);
+
+            }
+
+            50% {
+                transform: rotate(0deg);
+
+            }
+
+            75% {
+                transform: rotate(-15deg);
+
+            }
+
+            100% {
+                transform: rotate(0deg);
+
+            }
+        }
+
+        .page_4_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/04-主廚上菜/restaurant_banner.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            position: relative;
+
+        }
+
+        .page_4_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+            /* transform: translate(988px,319px); */
+            /* margin-left: 988px; */
+            /* margin-left: 51.4%; */
+            position: absolute;
+            top: 319px;
+            text-align: center;
+        }
+
+        .page_4_banner .banner_decorationBox2 {
+            width: 280px;
+            height: 80px;
+            /* background-color: #E05D7F; */
+            background-color: rgba(224, 93, 127, 0.75);
+            position: absolute;
+            top: 491px;
+            left: 638px;
+            ;
+            border-radius: 10px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+
+        .page_4_banner .banner_text {
+            /* text-align: center; */
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+
+        }
+
+        .page_4_banner .banner_text2 {
+            text-align: center;
+            font-size: 30px;
+            /* letter-spacing: 2px; */
+            color: white;
+            text-decoration: underline;
+            text-decoration-style: 1px solid;
+            cursor: pointer;
+
+        }
+
+        .eat_titleBox {
+            width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            ;
+            margin: 46px auto;
+        }
+
+        .eat_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+        }
+
+        .eat_titleContent {
+            text-align: center;
+
+            white-space: nowrap;
+            line-height: 43px;
+            font-size: 28px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            color: #97908D;
+        }
+
+        .eat_suggest {
+            width: 250.5px;
+            height: 178.452px;
+            margin-top: 85px;
+            position: relative;
+        }
+
+        .eat_suggest_imgBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .eat_suggest_imgBox img {
+
+            width: 165px;
+            height: 165px;
+
+        }
+
+        .eat_suggest_text {
+
+            position: absolute;
+            right: 7px;
+            bottom: -4px;
+            font-size: 35px;
+            letter-spacing: 1px;
+
+        }
+
+        .eat_suggest_decoration {
+            width: 238px;
+            height: 17px;
+            background-color: #DDB259;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .page4_toFooterSpace {
+            margin-bottom: 344.052px;
+        }
+
+        .page4_specialContainerGroup {
+
+            margin-top: 20.5px;
+            margin-bottom: 344.052px;
+        }
+
+        .page4_specialContainer {
+            max-width: 1504px;
+
+            margin: auto;
+            position: relative;
+        }
+
+
+        .eat_show1 {
+            height: 534.653px;
+
+
+            padding-top: 176px;
+        }
+
+        .eat_show1 .titleBox {
+            font-size: 35px;
+            letter-spacing: 1px;
+            display: flex;
+
+            margin-left: 46px;
+        }
+
+        .eat_show1 .titleBox .decoration {
+            height: 19.776px;
+            width: 19.776px;
+            transform: rotate(45deg);
+            background-color: #DDB259;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+
+        .eat_show1 .imgBox {
+            position: absolute;
+            top: 0;
+            right: 38.111px;
+            z-index: 3;
+            width: 537px;
+            /* height: 302px; */
+        }
+
+        .eat_show1 .imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .eat_show1 .decorationBox {
+            width: 406.5px;
+            height: 315px;
+            position: absolute;
+            background-color: #F0ABC9;
+            top: 25px;
+            right: 0;
+            z-index: -3;
+        }
+
+        .eat_show1 .textBox {
+            padding: 17px 181px 17px 63px;
+            font-size: 27px;
+            line-height: 43px;
+            letter-spacing: 3px;
+            border: 2px solid #DDB259;
+            box-shadow: 10px 10px 3px 0px #131212b9;
+            position: absolute;
+            /* top: 244.653px; */
+            bottom: 0;
+            left: 0;
+            border-radius: 60px;
+            text-align: center;
+            color: #513508;
+            background-color: white;
+
+        }
+
+        .eat_show2 {
+            margin-top: 271.347px;
+            padding-top: 309.275px;
+            height: 599.275px;
+        }
+
+        .eat_show2 .titleBox {
+            font-size: 35px;
+            letter-spacing: 1px;
+            display: flex;
+            text-align: end;
+            position: absolute;
+            top: 228px;
+            right: 63.5px;
+        }
+
+        .eat_show2 .titleBox .decoration {
+            height: 19.776px;
+            width: 19.776px;
+            transform: rotate(45deg);
+            background-color: #DDB259;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+
+        .eat_show2 .imgBox {
+            position: absolute;
+            top: 0;
+            left: 51px;
+            z-index: 3;
+            width: 532px;
+            height: 335.5px;
+
+        }
+
+        .eat_show2 .imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        .eat_show2 .textBox {
+            padding: 40px 90px 40px 97px;
+            font-size: 27px;
+            line-height: 43px;
+            letter-spacing: 1.5px;
+            border: 2px solid #DDB259;
+            box-shadow: 10px 10px 3px 0px #131212b9;
+            position: absolute;
+            /* top: 244.653px; */
+            bottom: 0;
+            right: 0;
+            border-radius: 60px;
+            text-align: center;
+            color: #513508;
+            background-color: white;
+
+        }
+
+        .eat_show3 {
+            margin-top: 226.5px;
+            padding-top: 176px;
+            height: 534.653px;
+        }
+
+        .eat_show3 .titleBox {
+            font-size: 35px;
+            letter-spacing: 1px;
+            display: flex;
+
+            margin-left: 46px;
+        }
+
+        .eat_show3 .titleBox .decoration {
+            height: 19.776px;
+            width: 19.776px;
+            transform: rotate(45deg);
+            background-color: #DDB259;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+
+        .eat_show3 .imgBox {
+            position: absolute;
+            top: 0;
+            right: 38.111px;
+            z-index: 3;
+            width: 537px;
+            height: 302px;
+        }
+
+        .eat_show3 .imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .eat_show3 .decorationBox {
+            width: 406.5px;
+            height: 315px;
+            position: absolute;
+            background-color: #F0ABC9;
+            top: 25px;
+            right: 0;
+            z-index: -3;
+        }
+
+        .eat_show3 .textBox {
+            padding: 17px 181px 17px 63px;
+            font-size: 27px;
+            line-height: 43px;
+            letter-spacing: 3px;
+            border: 2px solid #DDB259;
+            box-shadow: 10px 10px 3px 0px #131212b9;
+            position: absolute;
+            /* top: 244.653px; */
+            bottom: 0;
+            left: 0;
+            border-radius: 60px;
+            text-align: center;
+            color: #513508;
+            background-color: white;
+
+        }
+
+        .eat_show4 {
+            margin-top: 271.347px;
+            padding-top: 309.275px;
+            height: 599.275px;
+        }
+
+        .eat_show4 .titleBox {
+            font-size: 35px;
+            letter-spacing: 1px;
+            display: flex;
+            text-align: end;
+            position: absolute;
+            top: 228px;
+            right: 63.5px;
+        }
+
+        .eat_show4 .titleBox .decoration {
+            height: 19.776px;
+            width: 19.776px;
+            transform: rotate(45deg);
+            background-color: #DDB259;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+
+        .eat_show4 .imgBox {
+            position: absolute;
+            top: 0;
+            left: 51px;
+            z-index: 3;
+            width: 532px;
+            height: 335.5px;
+        }
+
+        .eat_show4 .imgBox img {
+
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        .eat_show4 .textBox {
+            padding: 40px 90px 40px 97px;
+            font-size: 27px;
+            line-height: 43px;
+            letter-spacing: 1.5px;
+            border: 2px solid #DDB259;
+            box-shadow: 10px 10px 3px 0px #131212b9;
+            position: absolute;
+            /* top: 244.653px; */
+            bottom: 0;
+            right: 0;
+            border-radius: 60px;
+            text-align: center;
+            color: #513508;
+            background-color: white;
+
+        }
+
+        .eat_show5 {
+            margin-top: 246.924px;
+            padding-top: 176px;
+            height: 534.653px;
+        }
+
+        .eat_show5 .titleBox {
+            font-size: 35px;
+            letter-spacing: 1px;
+            display: flex;
+
+            margin-left: 46px;
+        }
+
+        .eat_show5 .titleBox .decoration {
+            height: 19.776px;
+            width: 19.776px;
+            transform: rotate(45deg);
+            background-color: #DDB259;
+            margin-right: 16px;
+            margin-top: 16px;
+        }
+
+        .eat_show5 .imgBox {
+            position: absolute;
+            top: 0;
+            right: 38.111px;
+            z-index: 3;
+            width: 537px;
+            height: 302px;
+        }
+
+        .eat_show5 .imgBox img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .eat_show5 .decorationBox {
+            width: 406.5px;
+            height: 315px;
+            position: absolute;
+            background-color: #F0ABC9;
+            top: 25px;
+            right: 0;
+            z-index: -3;
+        }
+
+        .eat_show5 .textBox {
+            padding: 17px 181px 17px 63px;
+            font-size: 27px;
+            line-height: 43px;
+            letter-spacing: 3px;
+            border: 2px solid #DDB259;
+            box-shadow: 10px 10px 3px 0px #131212b9;
+            position: absolute;
+            /* top: 244.653px; */
+            bottom: 0;
+            left: 0;
+            border-radius: 60px;
+            text-align: center;
+            color: #513508;
+            background-color: white;
+
+        }
+
+        @media (max-width: 1024px) {
+
+            .page_4_decoration1 {
+                display: none
+            }
+
+            .page_4_decoration2 {
+                display: none;
+            }
+
+            .page_4_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+
+            .page_4_banner .banner_decorationBox2 {
+
+                left: 176px;
+                top: 438px;
+                width: 240px;
+            }
+
+
+            .eat_titleBox {
+                margin: 25px auto;
+            }
+
+            .eat_titleContent {
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: unset;
+            }
+
+            .eat_suggest {
+                margin: auto;
+                width: 165px;
+                height: 165px;
+                position: relative;
+            }
+
+            .eat_suggest::after {
+                content: "";
+                border-bottom: #F6D3E2 3px solid;
+                width: 513px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -11px;
+            }
+
+            .eat_suggest_imgBox {
+                margin: auto;
+                width: 400px;
+                position: unset;
+            }
+
+            .eat_suggest_decoration {
+                width: 150px;
+                height: 13px;
+            }
+
+            .page4_specialContainerGroup {
+                margin-bottom: 144px;
+            }
+
+            .eat_show2 .titleBox {
+                position: unset;
+            }
+
+            .eat_show4 .titleBox {
+                position: unset;
+
+            }
+
+            .page4_specialContainer .titleBox {
+                font-size: 29px;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .page4_specialContainer .titleBox p {
+                text-align: center;
+            }
+
+
+            .page4_specialContainer .titleBox .decoration {
+
+                height: 15.776px;
+                width: 15.776px;
+                transform: rotate(45deg);
+                background-color: #DDB259;
+
+            }
+
+            .eat_show1 {
+                padding-top: unset;
+            }
+
+            .eat_show2 {
+                padding-top: unset;
+                margin-top: 100px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                background-color: #F6D3E2;
+                height: unset;
+            }
+
+            .eat_show3 {
+                padding-top: unset;
+                margin-top: 100px;
+            }
+
+            .eat_show4 {
+                padding-top: unset;
+                margin-top: 100px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                background-color: #F6D3E2;
+                height: unset;
+            }
+
+            .eat_show5 {
+                padding-top: unset;
+                margin-top: 100px;
+            }
+
+
+
+            .page4_specialContainer .textBox {
+                padding: unset;
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 0px;
+                border: unset;
+                box-shadow: unset;
+                position: unset;
+                background-color: unset;
+            }
+
+            .eat_suggest_text {
+
+                font-size: 26px;
+
+            }
+
+
+
+            .page4_specialContainer .decorationBox {
+                display: none;
+            }
+
+            .page4_specialContainer .imgBox {
+                position: unset;
+                margin: auto;
+                width: 400px;
+                height: unset;
+            }
+
+
+
+
+        }
+
+        @media (max-width: 650px) {
+            .page_4_banner {
+                height: 248px;
+            }
+
+            .page_4_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .page_4_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .page_4_banner .banner_decorationBox2 {
+                width: 95px;
+                height: 25px;
+                background-color: white;
+                border: 2px solid #E05D7F;
+                padding-top: 4px;
+                left: 0px;
+                top: 258px
+            }
+
+            .page_4_banner .banner_text2 {
+                font-size: 12px;
+                font-weight: lighter;
+                color: black;
+                left: -20px;
+                text-decoration: none;
+
+            }
+
+            .page_4_banner .banner_text2 a {
+
+                color: black;
+
+            }
+
+            .eat_titleBox {
+                width: 211px;
+                margin: 50px auto;
+            }
+
+            .eat_title {
+                font-size: 23px;
+                letter-spacing: 3px;
+            }
+
+            .eat_titleContent {
+                display: none;
+            }
+
+            .eat_suggest {
+                height: 1px;
+            }
+
+            .eat_suggest::after {
+                width: 359px;
+                bottom: -49px;
+            }
+
+            .eat_suggest_text {
+                right: 15px;
+            }
+
+            .eat_suggest_decoration {
+              right: 9px;
+            }
+
+            .eat_suggest_imgBox {
+                display: none;
+            }
+
+            .page4_specialContainerGroup {
+                margin-top: 42px;
+            }
+
+            .page4_specialContainer .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .page4_specialContainer .textBox {
+                font-size: 14px;
+                font-family: 'Noto Serif SC', serif !important;
+                line-height: 30px;
+            }
+
+            .page4_specialContainer .imgBox {
+                width: 300px;
+            }
+
+            .eat_show1 {
+                height: unset;
+                margin-top: 100px;
+            }
+
+            .eat_show2 {
+                height: unset;
+                margin-top: 100px;
+            }
+
+            .eat_show3 {
+                height: unset;
+                margin-top: 100px;
+            }
+
+            .eat_show4 {
+                height: unset;
+                margin-top: 100px;
+            }
+
+            .eat_show5 {
+                height: unset;
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="page_4 page ">
+        <div class="page4_chiefImg"></div>
+        <div class="page_4_decoration1"></div>
+        <div class="page_4_decoration2"></div>
+        <div class="page_4_banner">
+            <!-- <div class="banner_text">主廚上菜</div> -->
+            <div class="banner_decorationBox">
+                <div class="banner_text">主廚上菜</div>
+
+            </div>
+            <div class="banner_decorationBox2">
+                <div class="banner_text2 "><a href="./princess-index.html"> >> MENU下載</a></div>
+            </div>
+        </div>
+        <div class="box_container ">
+            <div class="eat_titleBox">
+                <div class="eat_title">RESTAURANT</div>
+            </div>
+            <div class="eat_titleContent m-auto">
+                <p>安妮公主招喚想要幸福的你，來這裡品嘗幸福的料理，</p>
+                <p>呼吸清新的空氣，悠哉度過午後時光；與安妮預謀一場幸福的魔術</p>
+                <p>讓您最親愛的愛人、家人、好朋友、在幸福王國中，擁有最難忘的記憶！</p>
+            </div>
+            <div class="eat_suggest">
+                <div class="eat_suggest_imgBox">
+                    <img src="./素材/04-主廚上菜/restaurant_hat.png" alt="">
+                </div>
+                <div class="eat_suggest_text">私房菜推薦
+                    <!-- <p>私房菜推465薦</p> -->
+                </div>
+                <div class="eat_suggest_decoration"></div>
+            </div>
+        </div>
+        <div class="page4_specialContainerGroup">
+            <div class="page4_specialContainer eat_show1">
+
+                <div class="imgBox ">
+                    <img src="./素材/04-主廚上菜/restaurant_pork.jpg" alt="" class="">
+                </div>
+                <div class="decorationBox"></div>
+                <div class="titleBox">
+                    <div class="decoration"></div>
+                    <p>德國豬腳</p>
+                </div>
+                <div class="textBox">
+                    <p>公主一手抓著月桂葉，一手抓著家傳秘訣食譜，</p>
+                    <p>仔細地將月桂葉、百里香、丁香這些香料跟脂肪較厚的豬後小腿，</p>
+                    <p>用力的搓揉，將一隻隻的後小腿封存醃製!</p>
+                    <p>看看醃製的後小腿的入味，送進烤箱，將肉汁鎖在裡面，</p>
+                    <p>最後放進油鍋炸出金黃亮度的表皮</p>
+                    <p>連皮帶肉搭配酸白菜、黃芥末的一口! 真期待!</p>
+                </div>
+            </div>
+            <div class="page4_specialContainer eat_show2">
+
+                <div class="imgBox">
+                    <img src="./素材/04-主廚上菜/restaurant_chicken.JPG" alt="">
+                </div>
+                <div class="decorationBox"></div>
+                <div class="titleBox">
+                    <div class="decoration"></div>
+                    <p>烤春雞</p>
+                </div>
+                <div class="textBox">
+                    <p>安妮特別訂了出生才一個月左右小鮮肉的雞，肉質細嫩鮮美，</p>
+                    <p>比一般放山雞體型比較小很多、骨架也比較軟，</p>
+                    <p>摘了些百里香、迷迭香、茴香、鼠尾草，帶著這些香草，洗滌了幾次，</p>
+                    <p>也把小鮮肉雞整理了一番，將剛剛這些香草都塞進小鮮肉的肚</p>
+                    <p>子裡面，封存醃製的時間兩小時，比起豬小腿料理時間跟過程簡單許多!</p>
+                </div>
+            </div>
+            <div class="page4_specialContainer eat_show3">
+
+                <div class="imgBox">
+                    <img src="./素材/04-主廚上菜/restaurant_steak.jpg" alt="">
+                </div>
+                <div class="decorationBox"></div>
+                <div class="titleBox">
+                    <div class="decoration"></div>
+                    <p>紅磚牛排</p>
+                </div>
+                <div class="textBox">
+                    <p>公主一手抓著月桂葉，一手抓著家傳秘訣食譜，</p>
+                    <p>仔細地將月桂葉、百里香、丁香這些香料跟脂肪較厚的豬後小腿，</p>
+                    <p>用力的搓揉，將一隻隻的後小腿封存醃製!</p>
+                    <p>看看醃製的後小腿的入味，送進烤箱，將肉汁鎖在裡面，</p>
+                    <p>最後放進油鍋炸出金黃亮度的表皮</p>
+                    <p>連皮帶肉搭配酸白菜、黃芥末的一口! 真期待!</p>
+                </div>
+            </div>
+            <div class="page4_specialContainer eat_show4 ">
+
+                <div class="imgBox">
+                    <img src="./素材/04-主廚上菜/restaurant_casserole.jpg" alt="">
+                </div>
+                <div class="decorationBox"></div>
+                <div class="titleBox">
+                    <div class="decoration"></div>
+                    <p>野菇焗烤飯</p>
+                </div>
+                <div class="textBox">
+                    <p>安妮特別訂了出生才一個月左右小鮮肉的雞，肉質細嫩鮮美，</p>
+                    <p>比一般放山雞體型比較小很多、骨架也比較軟，</p>
+                    <p>摘了些百里香、迷迭香、茴香、鼠尾草，帶著這些香草，洗滌了幾次，</p>
+                    <p>也把小鮮肉雞整理了一番，將剛剛這些香草都塞進小鮮肉的肚</p>
+                    <p>子裡面，封存醃製的時間兩小時，比起豬小腿料理時間跟過程簡單許多!</p>
+                </div>
+            </div>
+            <div class="page4_specialContainer  eat_show5 ">
+
+                <div class="imgBox">
+                    <img src="./素材/04-主廚上菜/restaurant_pasta.jpg" alt="">
+                </div>
+                <div class="decorationBox"></div>
+                <div class="titleBox">
+                    <div class="decoration"></div>
+                    <p>番茄海鮮義大利麵</p>
+                </div>
+                <div class="textBox">
+                    <p>公主一手抓著月桂葉，一手抓著家傳秘訣食譜，</p>
+                    <p>仔細地將月桂葉、百里香、丁香這些香料跟脂肪較厚的豬後小腿，</p>
+                    <p>用力的搓揉，將一隻隻的後小腿封存醃製!</p>
+                    <p>看看醃製的後小腿的入味，送進烤箱，將肉汁鎖在裡面，</p>
+                    <p>最後放進油鍋炸出金黃亮度的表皮</p>
+                    <p>連皮帶肉搭配酸白菜、黃芥末的一口! 真期待!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_box">
+
+                <div class="footer_text">
+                    <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                    <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                    <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                    <p>電話 : 04-25931567-8（預約專線）</p>
+                    <p>地址 : 台中市新社區中和里中興街223號</p>
+                </div>
+                <div class=" footer_iconGroupBox">
+                    <div class="footer_iconGroup">
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon"></a>
+                        <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png" alt=""
+                                class="footer_lineIcon"></a>
+                        <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script>
+
+
+        $(window).on("scroll", function () {
+            var windowScrollTop = $(window).scrollTop()
+            if (windowScrollTop > 100) {
+                $(".returnBut").fadeIn()
+            }
+            else {
+                $(".returnBut").fadeOut()
+            }
+        })
+
+        $(".returnBut").on("click", function () {
+
+
+
+            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+            return false;
+        })
+    </script> -->
+    <script>
+        // var page4_decoration_1=$(".page_4_decoration1").scrollTop()
+        // var page4_decoration_2=$(".page_4_decoration2").scrollTop()
+        // console.log(page4_decoration_1);
+        // console.log(page4_decoration_2);
+
+        var page4_decoration_1_height = $(".page_4_decoration1").height()
+        var page4_decoration_2_height = $(".page_4_decoration1").height()
+
+
+
+
+        $(window).on("scroll", function () {
+            // console.log(page4_decoration_2_height);
+
+
+            var eat_show2_offsetTop = $(".eat_show2").offset().top
+            var eat_show4_offsetTop = $(".eat_show4").offset().top
+            var windowHeight = $(window).height()
+            var windowScrollTop = $(window).scrollTop()
+            var eat_show2_touchPoint = eat_show2_offsetTop - windowHeight
+            var eat_show4_touchPoint = eat_show4_offsetTop - windowHeight
+            var chiefVanishPoint = $(".eat_title").offset().top
+
+            var wdth = $(window).width();
+            // console.log(eat_show2_offsetTop);
+            // console.log(eat_show4_offsetTop); 
+            // console.log(windowScrollTop);
+
+            // console.log(eat_show2_touchPoint + 0.5 * page4_decoration_1_height);
+
+            // console.log(eat_show4_touchPoint - 0.5 * page4_decoration_2_height);
+
+
+            if (wdth > 850) {
+                if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
+                    $(".page4_chiefImg").show()
+                    $(".page4_chiefImg").css({
+                        "top": "1634.5px"
+                    })
+                    $(".page4_chiefImg").animate({
+                        opacity: 1,
+                    }, 1000)
+
+                    $(".page4_chiefImg").addClass("active")
+
+
+                }
+
+                else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
+                    $(".page4_chiefImg").fadeIn()
+                    $(".page4_chiefImg").css({
+                        "top": "3531.5px"
+                    })
+                    $(".page4_chiefImg").addClass("active")
+                    $(".page4_chiefImg").animate({
+                        opacity: 1,
+                    }, 1000)
+
+                }
+                else {
+                    $(".page4_chiefImg").hide()
+                    $(".page4_chiefImg").removeClass("active")
+                    $(".page4_chiefImg").css({
+                        "top": "100px"
+                    })
+                    $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
+                }
+            }
+            else {
+                $(".page4_chiefImg").hide()
+            }
+            // if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
+            //     $(".page4_chiefImg").show()
+            //     $(".page4_chiefImg").css({
+            //         "top": "1634.5px"
+            //     })
+            //     $(".page4_chiefImg").animate({
+            //         opacity: 1,
+            //     }, 1000)
+
+            //     $(".page4_chiefImg").addClass("active")
+
+
+            // }
+
+            // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
+            //     $(".page4_chiefImg").fadeIn()
+            //     $(".page4_chiefImg").css({
+            //         "top": "3531.5px"
+            //     })
+            //     $(".page4_chiefImg").addClass("active")
+            //     $(".page4_chiefImg").animate({
+            //         opacity: 1,
+            //     }, 1000)
+
+            // }
+            // else {
+            //     $(".page4_chiefImg").hide()
+            //     $(".page4_chiefImg").removeClass("active")
+            //     $(".page4_chiefImg").css({
+            //         "top": "100px"
+            //     })
+            //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
+            // }
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

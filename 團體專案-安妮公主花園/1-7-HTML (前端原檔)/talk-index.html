@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./template.css">
+    <title>Document</title>
+    <style>
+        .page_6_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/06-安妮悄悄話/contact_us_banner-new.jpg");
+            background-position: 50% 10%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            position: relative;
+
+        }
+
+        .page_6_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+            /* transform: translate(988px,319px); */
+            /* margin-left: 988px; */
+            /* margin-left: 51.4%; */
+            position: absolute;
+            left: 0;
+            top: 319px;
+
+        }
+
+        .page_6_banner .banner_text {
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+
+        }
+
+        .talk_titleBox {
+            width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            ;
+            margin: 46px auto;
+        }
+
+        .talk_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+        }
+
+        .talk_titleContent {
+            text-align: center;
+            white-space: nowrap;
+            line-height: 43px;
+            font-size: 32px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            color: #97908D
+        }
+
+        .page_6_specialContainer {
+            max-width: 1340px;
+            margin: 64px auto 173px;
+            padding: 83.5px 100px;
+            display: flex;
+            background-color: #F6D3E2;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        .gooleMapbox {
+            border-radius: 50px;
+        }
+
+        iframe {
+            border-radius: 50px;
+        }
+
+        .page_6_specialContainer .textBox {
+            width: 540px;
+            display: flex;
+            flex-flow: column;
+            margin-left: 88px;
+        }
+
+        .name {
+            margin-bottom: 47px;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px #9F416B solid;
+        }
+
+        .telephone {
+            margin-bottom: 47px;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px #9F416B solid;
+        }
+
+        .e_mail {
+            margin-bottom: 65px;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px #9F416B solid;
+        }
+
+        .text {
+            margin-bottom: 50px;
+            width: 100%;
+            max-height: 265px;
+            min-height: 265px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px #9F416B solid;
+
+            vertical-align: top;
+            padding: 0;
+        }
+
+        .textBox .button {
+            width: 213px;
+            height: 70px;
+            /* padding: 23.2px 26.71px; */
+            background-color: #F0ABC9;
+            border-radius: 20px;
+            border: 0px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: white;
+            /* line-height: 23.6px;
+            text-align: center; */
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .decoration_img1 {
+            position: absolute;
+            left: 82px;
+            top: -125px;
+        }
+
+        .decoration_img1 img {
+            width: 185px;
+            height: 185px;
+        }
+
+        .decoration_img2 {
+            position: absolute;
+            bottom: -199px;
+            right: -93px;
+            z-index: 99;
+        }
+
+        .decoration_img2 img {
+            width: 398px;
+            height: 398px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="page_6 page">
+        <div class="page_6_banner">
+            <div class="banner_decorationBox">
+                <div class="banner_text">安妮悄悄話</div>
+            </div>
+        </div>
+        <div class="box_container">
+            <div class="talk_titleBox">
+                <div class="talk_title">CONTACT US</div>
+            </div>
+            <div class="talk_titleContent m-auto">
+                <p>有悄悄話也歡迎跟安妮公主說喔</p>
+            </div>
+        </div>
+        <div class="page_6_specialContainer">
+            <div class="gooleMapbox">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.102454383904!2d120.8291555153677!3d24.168139378605385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691f26b34344dd%3A0x94a0bfa04637f70e!2z5a6J5aau5YWs5Li76Iqx5ZyS6aSQ5buz!5e0!3m2!1szh-TW!2stw!4v1577615315730!5m2!1szh-TW!2stw"
+                    width="512" height="710" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+            </div>
+            <div class="textBox">
+                <input type="text" name="" id="name" placeholder="   姓名" class="name">
+                <input type="text" name="" id="telephone" placeholder="   連絡電話" class="telephone">
+                <input type="text" name="" id="e_mail" placeholder="   E-mail" class="e_mail">
+                <textarea name="" id="text" placeholder="   給安妮的悄悄話" class="text"></textarea>
+                <!-- <input type="text" name="" id="text" placeholder="   給安妮的悄悄話" class="text"> -->
+                <!-- <div class="name"></div>
+                <div class="telephone"></div>
+                <div class="e_mail"></div>
+                <div class="text"></div> -->
+                <input type="submit" class="button" value="送    出">
+                <!-- <button >送出</button> -->
+            </div>
+            <div class="decoration_img1">
+                <img src="./素材/06-安妮悄悄話/contact_us_bird.png" alt="">
+            </div>
+            <div class="decoration_img2">
+                <img src="./素材/06-安妮悄悄話/contact_us_annie.png" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_box">
+                <div class="footer_text">
+                    <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                    <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                    <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                    <p>電話 : 04-25931567-8（預約專線）</p>
+                    <p>地址 : 台中市新社區中和里中興街223號</p>
+                </div>
+                <div class=" footer_iconGroupBox">
+                    <div class="footer_iconGroup">
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon"></a>
+                        <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png" alt=""
+                                class="footer_lineIcon"></a>
+                        <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="returnBut">
+            <div class="returnBut_text">Top</div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="./template.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
+        <!-- <script>
+
+
+        $(window).on("scroll", function () {
+            var windowScrollTop = $(window).scrollTop()
+            if (windowScrollTop > 100) {
+                $(".returnBut").fadeIn()
+            }
+            else {
+                $(".returnBut").fadeOut()
+            }
+        })
+
+        $(".returnBut").on("click", function () {
+
+
+
+            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+            return false;
+        })
+    </script> -->
+</body>
+
+</html>

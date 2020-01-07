@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./template.css">
+    <title>Document</title>
+
+    <style>
+        .extraPage_diy_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/09-手作DIY/diy_banner.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
+
+        .extraPage_diy_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+
+            position: absolute;
+            right: 0;
+            top: 319px;
+
+        }
+
+        .extraPage_diy_banner .banner_text {
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+
+        }
+
+        .extraPage_diy_titleBox {
+            width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            ;
+            margin: 46px auto;
+        }
+
+        .extraPage_diy_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+        }
+
+        .extraPage_diy_titleContent {
+            text-align: center;
+
+            white-space: nowrap;
+            line-height: 43px;
+            font-size: 32px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+
+        }
+
+        .extraPage_diy_themeGroup {
+            max-width: 1440px;
+            margin: 119px auto 118px;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .extraPage_diy_theme {
+            width: 450px;
+            height: 567.375px;
+        }
+
+        .extraPage_diy_theme_titleBox {
+            width: 238px;
+            height: 47.016px;
+            font-size: 35px;
+            letter-spacing: 1.5px;
+            position: relative;
+            margin: 0px auto 72.5px;
+            text-align: center;
+        }
+
+        .extraPage_diy_theme_titleBox_decorationBox {
+            width: 100%;
+            height: 17px;
+            position: absolute;
+            bottom: 0;
+            z-index: -2;
+            background-color: #F0ABC9;
+            box-shadow: 3px 3px 5px black;
+        }
+
+        .extraPage_diy_theme_m .extraPage_diy_theme_titleBox_decorationBox {
+            background-color: #FAEC21;
+        }
+
+        .extraPage_diy_theme_imgBox {
+            width: 450px;
+            height: 450px;
+            position: relative;
+        }
+
+
+        .extraPage_diy_theme_imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .extraPage_diy_mask {
+            height: 76.4%;
+            width: 76.4%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            z-index: 55;
+            top: calc(50% - 172px);
+            left: calc(50% - 172px);
+            text-align: center;
+            display: none;
+
+
+        }
+
+        .extraPage_diy_mask.active {
+            display: block;
+        }
+
+        .extraPage_diy_lastContent {
+            margin-bottom: 206.253px;
+            text-align: center;
+            font-size: 23px;
+            line-height: 38px;
+            letter-spacing: 3px;
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="extraPage_diy page">
+        <div class="extraPage_diy_banner">
+            <div class="banner_decorationBox">
+                <div class="banner_text">手做DIY</div>
+            </div>
+        </div>
+        <div class="extraPage_diy_container">
+            <div class="extraPage_diy_titleBox">
+                <div class="extraPage_diy_title">HANDMADE</div>
+            </div>
+            <div class="extraPage_diy_titleContent m-auto">
+                <p>各種有關香草手作DIY等你來體驗哦！</p>
+            </div>
+        </div>
+        <div class="extraPage_diy_themeGroup">
+            <div class="extraPage_diy_theme_l extraPage_diy_theme">
+                <div class="extraPage_diy_theme_titleBox">
+                    <div class="extraPage_diy_theme_titleText">手繪明信片</div>
+                    <div class="extraPage_diy_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="extraPage_diy_theme_imgBox">
+                    <div class="extraPage_diy_mask">
+                        <p class="mask_text-t">Behind the Scene</p>
+                        <p class="mask_text-m">手繪明信片</p>
+                        <p class="mask_text-b cursor">MORE</p>
+                    </div>
+                    <img src="./素材/09-手作DIY/diy_hand_draw.png" alt="" class="extraPage_diy_img">
+                </div>
+            </div>
+            <div class="extraPage_diy_theme_m extraPage_diy_theme">
+                <div class="extraPage_diy_theme_titleBox">
+                    <div class="extraPage_diy_theme_titleText">葉拓染布</div>
+
+                    <div class="extraPage_diy_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="extraPage_diy_theme_imgBox">
+                    <div class="extraPage_diy_mask">
+                        <p class="mask_text-t">Proposal</p>
+                        <p class="mask_text-m">葉拓染布</p>
+                        <p class="mask_text-b cursor">MORE</p>
+                    </div>
+                    <img src="./素材/09-手作DIY/diy_hand_draw.png" alt="" class="extraPage_diy_img">
+                </div>
+            </div>
+            <div class="extraPage_diy_theme_r extraPage_diy_theme">
+                <div class="extraPage_diy_theme_titleBox">
+                    <div class="extraPage_diy_theme_titleText">香草精油提煉</div>
+
+                    <div class="extraPage_diy_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="extraPage_diy_theme_imgBox">
+                    <div class="extraPage_diy_mask">
+                        <p class="mask_text-t">Photography</p>
+                        <p class="mask_text-m">香草精油提煉</p>
+                        <p class="mask_text-b cursor">MORE</p>
+                    </div>
+                    <img src="./素材/09-手作DIY/diy_essential_oil.png" alt="" class="extraPage_diy_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="extraPage_diy_lastContent">
+            <p>除了上述體驗活動之外，安妮也會不定期推出新的體驗活動，歡迎來電洽詢 04-25931567(8) 林小姐!</p>
+
+        </div>
+        <div class="footer">
+            <div class="footer_box">
+
+                <div class="footer_text">
+                    <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                    <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                    <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                    <p>電話 : 04-25931567-8（預約專線）</p>
+                    <p>地址 : 台中市新社區中和里中興街223號</p>
+                </div>
+                <div class=" footer_iconGroupBox">
+                    <div class="footer_iconGroup">
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon"></a>
+                        <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png" alt=""
+                                class="footer_lineIcon"></a>
+                        <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                    </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script> -->
+        <script src="./template.js"></script>
+    <script>
+        AOS.init();
+    </script>
+      <!-- <script>
+
+
+        $(window).on("scroll", function () {
+            var windowScrollTop = $(window).scrollTop()
+            if (windowScrollTop > 100) {
+                $(".returnBut").fadeIn()
+            }
+            else {
+                $(".returnBut").fadeOut()
+            }
+        })
+
+        $(".returnBut").on("click", function () {
+
+
+
+            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+            return false;
+        })
+    </script> -->
+    <script>
+       
+        var diy_img = document.querySelectorAll(".extraPage_diy_img")
+        var diy_mask = document.querySelectorAll(".extraPage_diy_mask")
+        console.log(wedding_img);
+        console.log(wedding_mask);
+        for (let i = 0; i < diy_img.length; i++) {
+            const Diy_img = diy_img[i];
+            const Diy_mask = diy_mask[i]
+
+          
+
+            $(Diy_img).on("mouseover", function () {
+          
+                $(Diy_mask).fadeIn()
+            })
+            $(".extraPage_diy_theme_imgBox").on("mouseleave", function () {
+                $(Diy_mask).fadeOut()
+            })
+
+        }
+        
+    </script>
+    <script>
+    
+    </script>
+
+</body>
+</html>

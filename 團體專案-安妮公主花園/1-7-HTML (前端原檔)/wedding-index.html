@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./template.css">
+    <title>Document</title>
+    <style>
+        .page_5_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/05-見證幸福/wedding_banner.jpg");
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            position: relative;
+
+        }
+
+        .page_5_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+            /* transform: translate(988px,319px); */
+            /* margin-left: 988px; */
+            /* margin-left: 51.4%; */
+            position: absolute;
+            left: 0;
+            top: 319px;
+
+        }
+
+        .page_5_banner .banner_text {
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+        }
+
+        .wedding_titleBox {
+            width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            margin: 46px auto;
+            letter-spacing: 3px;
+        }
+
+        .wedding_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+        }
+
+        .wedding_titleContent {
+            text-align: center;
+            white-space: nowrap;
+            line-height: 43px;
+            font-size: 26px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            color: #97908D;
+        }
+
+        .page5_toFooterSpace {
+            margin-bottom: 206.253px;
+            text-align: center;
+            font-size: 23px;
+            line-height: 38px;
+            letter-spacing: 3px;
+        }
+
+        .wedding_themeGroup {
+            max-width: 1440px;
+            margin: 130.065px auto 118px;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .wedding_theme {
+            width: 450px;
+            height: 567.375px;
+        }
+
+        .wedding_theme_titleBox {
+            width: 238px;
+            height: 47.016px;
+            font-size: 35px;
+            letter-spacing: 1.5px;
+            position: relative;
+            margin: 0px auto 72.5px;
+            text-align: center;
+        }
+
+        .wedding_theme_titleBox_decorationBox {
+            width: 100%;
+            height: 17px;
+            position: absolute;
+            bottom: 0;
+            z-index: -2;
+            background-color: #F0ABC9;
+            box-shadow: 3px 3px 5px black;
+        }
+
+
+
+        .wedding_theme_imgBox {
+            width: 450px;
+            height: 450px;
+            position: relative;
+        }
+
+        .wedding_theme_imgBox:hover .wedding_mask {
+            animation-name: imgshow;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes imgshow {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .wedding_theme_imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .wedding_mask {
+            height: 76.4%;
+            width: 76.4%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            z-index: 55;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* top: calc(50% - 172px);
+            left: calc(50% - 172px); */
+            text-align: center;
+            opacity: 0;
+
+
+        }
+
+        .wedding_mask.active {
+            display: block;
+        }
+
+        .mask_text-t {
+            margin-top: 22%;
+            font-family: "Times New Roman";
+            font-size: 35px;
+            letter-spacing: 3px;
+            color: #DDB259;
+        }
+
+        .mask_text-m {
+            margin-top: 2%;
+            font-size: 35px;
+            letter-spacing: 1.5px;
+
+        }
+
+        .mask_text-b {
+            margin-top: 6%;
+            font-family: "Times New Roman";
+            font-size: 23px;
+            letter-spacing: 3px;
+            color: #DDB259;
+        }
+
+
+        .fulscreen_mask {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999999999999999;
+            display: none;
+        }
+
+        .canclePoint {
+            position: absolute;
+            top: -23px;
+            right: -23px;
+            z-index: 2;
+        }
+
+        .back {
+            position: absolute;
+            top: -21px;
+            right: -21px;
+            z-index: 2;
+            background-color: black;
+            border-radius: 50%;
+            width: 42px;
+            height: 43px;
+        }
+
+        .imgShow {
+            height: 90%;
+            width: 70%;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .imgShow.active {
+            display: block;
+        }
+
+        /* 
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .specialSwipper {
+            background-position: 90% 30%;
+
+        }
+
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+        } */
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        @media (max-width:1250px) {
+
+
+            .wedding_theme_imgBox {
+                width: 350px;
+                height: 350px;
+            }
+
+        }
+
+        @media (max-width:1000px) {
+
+            .page_5_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+
+            .wedding_themeGroup {
+
+                flex-flow: column;
+                align-items: center;
+            }
+
+            .wedding_theme {
+                width: unset;
+
+
+            }
+
+            .page5_toFooterSpace {
+
+                font-size: 20px;
+
+
+            }
+        }
+
+
+        @media (max-width:540px) {
+
+            .page_5_banner {
+                height: 248px;
+            }
+
+            .page_5_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .page_5_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .wedding_titleBox {
+                width: unset;
+                margin: 40px auto 0px;
+            }
+
+            .wedding_theme {
+                height: unset;
+            }
+
+            .wedding_theme_titleBox_decorationBox {
+                bottom: 8px;
+            }
+
+            .wedding_themeGroup {
+                margin: 40px auto 0px;
+            }
+
+            .wedding_theme_titleBox {
+                font-size: 24px;
+                margin: 80px auto 20px;
+            }
+
+            .page5_toFooterSpace {
+                margin: 112px auto 112px;
+                font-size: 14px;
+                line-height: 20px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="page_5 page">
+        <div class="page_5_banner">
+            <div class="banner_decorationBox">
+                <div class="banner_text">見證幸福</div>
+            </div>
+        </div>
+        <div class="box_container">
+            <div class="wedding_titleBox">
+                <div class="wedding_title">WEDDING</div>
+            </div>
+            <div class="wedding_titleContent m-auto">
+                <p>安妮邀您一起見證幸福</p>
+            </div>
+        </div>
+        <div class="wedding_themeGroup">
+            <div class="wedding_theme_l wedding_theme">
+                <div class="wedding_theme_titleBox">
+                    <div class="wedding_theme_titleText">婚禮花絮</div>
+                    <div class="wedding_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="wedding_theme_imgBox">
+                    <div class="wedding_mask">
+                        <p class="mask_text-t">Behind the Scene</p>
+                        <p class="mask_text-m">婚禮花絮</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
+                    </div>
+                    <img src="./素材/05-見證幸福/wedding_BTS.jpg" alt="" class="wedding_img">
+                </div>
+            </div>
+            <div class="wedding_theme_m wedding_theme">
+                <div class="wedding_theme_titleBox">
+                    <div class="wedding_theme_titleText">求婚告白</div>
+                    <div class="wedding_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="wedding_theme_imgBox">
+                    <div class="wedding_mask">
+                        <p class="mask_text-t">Proposal</p>
+                        <p class="mask_text-m">求婚告白</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
+                    </div>
+                    <img src="./素材/05-見證幸福/wedding_photo.jpg" alt="" class="wedding_img">
+                </div>
+            </div>
+            <div class="wedding_theme_r wedding_theme">
+                <div class="wedding_theme_titleBox">
+                    <div class="wedding_theme_titleText">婚紗拍攝</div>
+
+                    <div class="wedding_theme_titleBox_decorationBox"></div>
+                </div>
+                <div class="wedding_theme_imgBox">
+                    <div class="wedding_mask">
+                        <p class="mask_text-t">Photography</p>
+                        <p class="mask_text-m">婚禮拍攝</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
+                    </div>
+                    <img src="./素材/05-見證幸福/wedding_proposal.jpg" alt="" class="wedding_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="box_container page5_toFooterSpace">
+            <p>告白、求婚、生日、結婚紀念日、彌月、訂婚、 各種讓人歡喜幸福的特殊日子，</p>
+            <p>讓安妮與您一起安排完全客製化的Party，歡迎來電洽詢 04-25931567(8) 林小姐!</p>
+        </div>
+        <div class="footer">
+            <div class="footer_box">
+                <div class="footer_text">
+                    <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                    <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                    <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                    <p>電話 : 04-25931567-8（預約專線）</p>
+                    <p>地址 : 台中市新社區中和里中興街223號</p>
+                </div>
+                <div class=" footer_iconGroupBox">
+                    <div class="footer_iconGroup">
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon"></a>
+                        <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png" alt=""
+                                class="footer_lineIcon"></a>
+                        <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fulscreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+
+                    <i class="fas fa-times-circle fa-3x " style="color:white ; "></i>
+                </div>
+                <div class="swiper-container gallery-top swiper-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_01.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_02.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_03.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_04.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_05.jpg)">
+                        </div>
+                        <div class="swiper-slide specialSwipper"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_07.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_08.jpg)">
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs swiper-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_01.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_02.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_03.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_04.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_05.jpg)">
+                        </div>
+                        <div class="swiper-slide specialSwipper"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_07.jpg)">
+                        </div>
+                        <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_08.jpg)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x " style="color:white ;"></i>
+                </div>
+                <div class="swiper-container gallery-top swiper-top2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_01.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_02.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_03.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_04.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_05.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_06.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_07.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_08.jpg)">
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs swiper-thumbs2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_01.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_02.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_03.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_04.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_05.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_06.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_07.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_08.jpg)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+
+                    <i class="fas fa-times-circle fa-3x " style="color:white ;"></i>
+                </div>
+                <div class="swiper-container gallery-top swiper-top3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_01.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_02.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_03.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_04.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_05.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_06.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_07.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_08.jpg)">
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs swiper-thumbs3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_01.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_02.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_03.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_04.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_05.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_06.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_07.jpg)">
+                        </div>
+                        <div class="swiper-slide"
+                            style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_08.jpg)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="returnBut">
+            <div class="returnBut_text">Top</div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="./template.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            var galleryThumbs = new Swiper('.swiper-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.swiper-top', {
+                spaceBetween: 10,
+                loop: true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs,
+                },
+            });
+
+            var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop2 = new Swiper('.swiper-top2', {
+                spaceBetween: 10,
+                loop: true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs2,
+                },
+            });
+
+            var galleryThumbs3 = new Swiper('.swiper-thumbs3', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop3 = new Swiper('.swiper-top3', {
+                spaceBetween: 10,
+                loop: true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs3,
+                },
+            });
+        </script>
+        <!-- <script>
+        var galleryThumbs = new Swiper('.swiper-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.swiper-top1', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+
+        var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop2 = new Swiper('.swiper-top2', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs2,
+            },
+        });
+    </script> -->
+        <!-- <script>
+        var galleryThumbs1 = new Swiper('.swiper-thumbs1', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop1 = new Swiper('.swiper-top1', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs1,
+            },
+        });
+
+        var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop2 = new Swiper('.swiper-top2', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs2,
+            },
+        });
+       
+        var galleryThumbs3 = new Swiper('.swiper-thumbs3', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop3 = new Swiper('.swiper-top3', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs3,
+            },
+        });
+
+
+
+    </script> -->
+        <script>
+            var triggers = document.querySelectorAll(".trigger")
+            var imgShows = document.querySelectorAll(".imgShow")
+            console.log(triggers);
+            console.log(imgShows);
+
+            // $(".trigger").on("click", function () {
+            //     $(".fulscreen_mask").toggle()
+            // })
+            $(".canclePoint").on("click", function () {
+                $(".fulscreen_mask").toggle()
+            })
+
+            for (let i = 0; i < triggers.length; i++) {
+                const Triggers = triggers[i]
+                const ImgShows = imgShows[i]
+                console.log(imgShows[i]);
+
+
+                Triggers.onclick = function () {
+                    $(".fulscreen_mask").toggle()
+                    clearAllactive3();
+
+                    ImgShows.classList.add("active")
+                }
+            }
+            function clearAllactive3() {
+                for (var a = 0; a < triggers.length; a++) {
+                    imgShows[a].classList.remove("active");
+
+                }
+            }
+
+        </script>
+
+
+
+        <!-- <script>
+
+
+        $(window).on("scroll", function () {
+            var windowScrollTop = $(window).scrollTop()
+            if (windowScrollTop > 100) {
+                $(".returnBut").fadeIn()
+            }
+            else {
+                $(".returnBut").fadeOut()
+            }
+        })
+
+        $(".returnBut").on("click", function () {
+
+
+
+            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+            return false;
+        })
+    </script> -->
+        <!-- <script>
+        var wedding_img = document.querySelectorAll(".wedding_img")
+        var wedding_mask = document.querySelectorAll(".wedding_mask")
+        console.log(wedding_img);
+        console.log(wedding_mask);
+        for (let i = 0; i < wedding_img.length; i++) {
+            const Wedding_img = wedding_img[i];
+            const Wedding_mask = wedding_mask[i];
+
+            // $(Wedding_img).on("mouseover", function () {
+            //     // clearAllactive2()
+            //     // Wedding_mask.classList.add("active")
+            //     $(Wedding_mask).fadeIn()
+            // })
+            // $(".wedding_theme_imgBox").on("mouseleave", function () {
+            //     $(Wedding_mask).fadeOut()
+            // })
+
+
+
+        }
+
+    </script> -->
+</body>
+
+</html>

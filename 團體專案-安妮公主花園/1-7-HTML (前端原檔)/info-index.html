@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./template.css">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page_2_decoration1 {
+            width: 100%;
+            height: 500px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 1983px;
+            z-index: -999;
+        }
+
+        .page_2_decoration2 {
+            width: 100%;
+            height: 500px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 4028px;
+            z-index: -999;
+        }
+
+        .page_2_decoration3 {
+            width: 100%;
+            height: 500px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 1983px;
+            z-index: -999;
+            display: none;
+        }
+
+        .page_2_decoration4 {
+            width: 100%;
+            height: 500px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 4028px;
+            z-index: -999;
+            display: none;
+        }
+
+        .page_2_decoration5 {
+            width: 100%;
+            height: 500px;
+            background-color: #E05D97;
+            position: absolute;
+            top: 5028px;
+            z-index: -999;
+            display: none;
+
+        }
+
+
+
+        .page_2_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/02-園區資訊/info_banner.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            position: relative;
+
+        }
+
+        .page_2_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+            /* transform: translate(988px,319px); */
+            /* margin-left: 988px; */
+            /* margin-left: 51.4%; */
+            position: absolute;
+
+            top: 319px;
+
+        }
+
+        .page_2_banner .banner_text {
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+
+        }
+
+        .information_titleBox {
+            max-width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            ;
+            margin: 100px auto;
+        }
+
+        .information_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+
+        }
+
+        .information_titleContent {
+            text-align: center;
+            /* white-space: nowrap; */
+            line-height: 43px;
+            font-size: 32px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            display: flex;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            color: #989597;
+            justify-content: center;
+        }
+
+        .information_titleContent .interSpace {
+            margin-right: 30px;
+        }
+
+        /* .page2_specialContainer {
+            width: 1404px;
+            height: 600px;
+            background-color: cornsilk;
+            position: relative;
+
+        } */
+
+        /* 
+        .page_2_section1 {
+            width: 100%;
+           
+        } */
+        section {
+            max-width: 100%;
+            margin: auto;
+        }
+
+
+        .page2_textBox .titleBox {
+            font-size: 42px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .page2_textBox span {
+            margin-left: 25px;
+        }
+
+        .titleBox_decorationBox {
+            width: 292px;
+            height: 20px;
+            position: absolute;
+            bottom: 5px;
+            background-color: #FFBDD5;
+            z-index: -1;
+        }
+
+
+        .page2_textBox p {
+            font-size: 28px;
+
+        }
+
+        .page_2_section1 {
+            background-attachment: fixed;
+        }
+
+        .page_2_section4 {
+            background-attachment: fixed;
+        }
+
+        .Container1 {
+            margin: 150px auto 150px;
+            max-width: 1140px;
+            height: 550px;
+            position: relative;
+
+            /* display: flex;
+            justify-content: space-between;
+            z-index: -999; */
+
+
+        }
+
+        .Container1_textBox {
+
+            position: absolute;
+            right: -40px;
+            top: 200px
+        }
+
+        .Container1_img1 {
+            width: 727px;
+            height: 550px;
+            position: absolute;
+            left: -200px;
+            top: 0
+        }
+
+        .Container1_img3 {
+            display: none;
+        }
+
+
+        .page_2_section2 {
+            /* background-color: #E05D7F; */
+        }
+
+
+        .Container2 {
+            max-width: 1140px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+            padding-top: 150px;
+        }
+
+        .Container2 span {
+            color: white;
+        }
+
+        .Container2 .titleBox_decorationBox {
+            background-color: #9F416B;
+        }
+
+        .Container2_textBox {
+            color: white;
+        }
+
+        .Container2_img1 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            right: -162px;
+            bottom: -155px;
+        }
+
+        .Container2_img1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container2_img2 {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            right: -192px;
+            top: -11px;
+        }
+
+        .Container2_img2 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container2_img3 {
+            display: none;
+        }
+
+        .Container3 {
+            margin: 150px auto;
+            padding-top: 160px;
+            position: relative;
+            max-width: 1140px;
+            height: 571px;
+        }
+
+        .Container3_textBox {
+            position: absolute;
+            right: -156px;
+        }
+
+        .mobile_use {
+            display: none;
+        }
+
+        /* .Container3_textBox .title {
+            margin-bottom: 21px;
+        } */
+
+        .Container3_img1 {
+            width: 501px;
+            height: 501px;
+            position: absolute;
+            top: -10px;
+            left: -176px;
+        }
+
+        .Container3_img1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container3_img2 {
+            width: 561px;
+            height: 339px;
+            position: absolute;
+            top: 247px;
+            left: -200px;
+        }
+
+        .Container3_img2 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container3_img3 {
+            display: none;
+        }
+
+        .Container4 {
+            margin: auto;
+            padding-top: 200px;
+            position: relative;
+            max-width: 1140px;
+            height: 549px;
+
+        }
+
+
+        .Container4_textBox {
+            position: absolute;
+            left: 15px;
+
+        }
+
+        /* .Container4_textBox .title {
+            margin-bottom: 37px;
+        } */
+
+        .Container4_img1 {
+            width: 791px;
+            height: 564px;
+            position: absolute;
+            right: -357px;
+            top: 0;
+        }
+
+        .Container4_img2 {
+            display: none;
+        }
+
+        .page_2_section5 {
+            /* background-color: #E05D7F; */
+
+        }
+
+        .Container5 {
+            margin: 150px auto 150px;
+            padding-top: 114px;
+            position: relative;
+            max-width: 1140px;
+            height: 500px;
+        }
+
+        .Container5 span {
+            color: white;
+        }
+
+        .Container5 .titleBox_decorationBox {
+
+            background-color: #9F416B;
+        }
+
+        .Container5_textBox {
+            position: absolute;
+            right: -176px;
+            color: white;
+        }
+
+        /* .Container5_textBox .title {
+            margin-bottom: 23px;
+        } */
+
+        .Container5_img1 {
+            width: 500px;
+            height: 579px;
+            position: absolute;
+            left: -181px;
+            top: -18px;
+        }
+
+        .Container5_img1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container6 {
+            margin: auto;
+            padding-top: 114px;
+            position: relative;
+            max-width: 1140px;
+            height: 454px;
+        }
+
+        .Container6_textBox {
+            position: absolute;
+            left: 15px;
+        }
+
+        /* .Container6_textBox .title {
+            margin-bottom: 23px;
+        } */
+
+        .Container6_img1 {
+            width: 518px;
+            height: 454px;
+            position: absolute;
+            right: -200px;
+            top: 0;
+        }
+
+        .Container6_img1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Container7 {
+            margin: 150px auto 150px;
+            padding-top: 47px;
+            position: relative;
+            max-width: 1140px;
+            height: 613px;
+        }
+
+        .Container7_textBox {
+            position: absolute;
+            right: -105px;
+        }
+
+        .Container7_img1 {
+            width: 758px;
+            height: 616px;
+            position: absolute;
+            left: -290px;
+            top: 0;
+        }
+
+        .Container7_img2 {
+            display: none;
+        }
+
+        .Container7_img2 img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .Container8 {
+            margin: 0px auto 259px;
+            padding-top: 26px;
+            position: relative;
+            max-width: 1140px;
+            height: 388px;
+
+        }
+
+
+        .Container8_textBox {
+            position: absolute;
+            left: 15px;
+            bottom: 0;
+
+        }
+
+
+
+        .Container8_img {
+            width: 476px;
+            height: 392px;
+            position: absolute;
+            right: 0px;
+            top: 0;
+
+        }
+
+        .Container8_img img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        @media (max-width:1500px) {
+            .Container4_img1 {
+
+                right: -185px;
+
+            }
+        }
+
+        @media (max-width:1100px) {
+            .page_2_decoration1 {
+                display: none;
+            }
+
+            .page_2_decoration2 {
+                display: none;
+            }
+
+            .Container2 .titleBox_decorationBox {
+                background-color: #FFBDD5;
+            }
+
+            .Container5 .titleBox_decorationBox {
+                background-color: #FFBDD5;
+            }
+
+
+            .page_2_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+
+            .page2_textBox .titleBox {
+                font-size: 38px;
+                font-weight: bold;
+                color: black;
+                margin-bottom: 15px;
+                position: relative;
+            }
+
+            .page2_textBox p {
+                font-size: 24px;
+            }
+
+            .Container7 {
+                height: 313px;
+            }
+
+
+
+            .Container1_textBox {
+                right: 0px;
+
+            }
+
+            .Container2_textBox {
+                color: black;
+            }
+
+            .Container3_textBox {
+                right: 0px;
+            }
+
+            .Container5_textBox {
+                right: 0px;
+                color: black;
+            }
+
+            .Container7_textBox {
+                right: 0px;
+            }
+
+            .Container1_img1 {
+                width: 486px;
+                height: 368px;
+                opacity: 0.3;
+                left: 0px;
+            }
+
+            .Container2_img1 {
+                top: 170px;
+                right: 0;
+                opacity: 0.3;
+                width: 309px;
+                height: 309px;
+            }
+
+            .Container2_img2 {
+                top: 56px;
+                right: 0px;
+                opacity: 0.3;
+                width: 263px;
+                height: 263px;
+            }
+
+            .Container3_img1 {
+
+                left: 0px;
+                opacity: 0.3;
+            }
+
+            .Container3_img2 {
+
+                left: -37px;
+                opacity: 0.3;
+            }
+
+            .Container4_img1 {
+                width: 489px;
+                height: 349px;
+                right: 0px;
+                opacity: 0.3;
+            }
+
+            .Container5_img1 {
+                left: 0px;
+                opacity: 0.3;
+            }
+
+            .Container6_img1 {
+                right: 0px;
+                opacity: 0.3;
+            }
+
+            .Container7_img1 {
+                width: 495px;
+                height: 402px;
+                left: 0px;
+                opacity: 0.3;
+
+            }
+
+            .Container8_img {
+                width: 342px;
+                height: 282px;
+                right: 0px;
+                top: 108px;
+                opacity: 0.3;
+
+            }
+
+            .Container2 span {
+                color: black;
+            }
+
+            .Container5 span {
+                color: black;
+            }
+
+
+        }
+
+        @media (max-width: 650px) {
+
+            .page_2_decoration3 {
+                height: 100px;
+                top: 637px;
+                display: block;
+            }
+
+            .page_2_decoration4 {
+
+                height: 100px;
+                top: 1634px;
+                display: block;
+            }
+
+            .page_2_decoration5 {
+                height: 100px;
+                top: 2392px;
+                display: block;
+            }
+
+            .information_titleBox {
+                width: 224px;
+                margin: 37px auto 27px;
+            }
+
+            .information_title {
+                font-size: 23px;
+                letter-spacing: 1px;
+            }
+
+            .information_titleContent {
+                display: none;
+            }
+
+
+            .page_2_banner {
+                height: 248px;
+            }
+
+            .page_2_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .page_2_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .page2_textBox p {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .page2_textBox span {
+                margin-left: unset;
+            }
+
+            .page2_textBox .titleBox {
+                font-size: 16px;
+                font-weight: bold;
+                color: black;
+                margin-bottom: 15px;
+                position: relative;
+            }
+
+            .titleBox_decorationBox {
+                width: 113px;
+                height: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .Container1 {
+                margin: auto;
+                height: unset;
+
+            }
+
+            .Container2 {
+                padding-top: 74px;
+                height: unset;
+            }
+
+            .Container3 {
+                height: unset;
+                margin: auto;
+                padding-top: 74px;
+            }
+
+            .Container4 {
+                padding-top: 74px;
+                height: unset;
+            }
+
+            .Container5 {
+                padding-top: 74px;
+                margin: auto;
+                height: unset;
+            }
+
+            .Container6 {
+                padding-top: 74px;
+                margin: auto;
+                height: unset;
+            }
+
+            .Container7 {
+                padding-top: 74px;
+                margin: auto;
+                height: unset;
+            }
+
+            .Container8 {
+                padding-top: 74px;
+                margin: 0px auto 25px;
+            }
+
+            .Container1_img1 {
+                display: none;
+            }
+
+            .Container1_img3 {
+                display: block;
+                width: 103px;
+                height: 101px;
+                margin: auto;
+            }
+
+            .Container2_img1 {
+
+                display: none;
+            }
+
+            .Container2_img2 {
+
+                display: none;
+            }
+
+            .Container2_img3 {
+                display: block;
+                position: relative;
+                width: 117px;
+                height: 117px;
+                margin: auto;
+            }
+
+            .Container2_img4 {
+                display: block;
+                position: absolute;
+                width: 87px;
+                height: 87px;
+                top: -15px;
+                right: -35px;
+                transform: rotate(11deg);
+            }
+
+            .Container3_img1 {
+                display: none;
+            }
+
+            .Container3_img2 {
+                display: none;
+            }
+
+            .Container3_img3 {
+                display: block;
+                width: 117px;
+                height: 117px;
+                margin: auto;
+                position: relative;
+            }
+
+            .Container3_img4 {
+                display: block;
+                width: 108px;
+                height: 108px;
+                position: absolute;
+                top: 39px;
+                left: 4px;
+            }
+
+            .Container4_img1 {
+                width: 489px;
+                height: 349px;
+                right: 0px;
+                opacity: 0.3;
+                display: none;
+            }
+
+            .Container4_img2 {
+                display: block;
+                width: 125px;
+                height: 132px;
+                margin: auto;
+            }
+
+            .Container5_img1 {
+                left: 0px;
+                opacity: 0.3;
+                width: 117px;
+                height: 136px;
+                position: unset;
+                margin: auto;
+                opacity: unset;
+            }
+
+            .Container6_img1 {
+                right: 0px;
+                opacity: 0.3;
+                width: 117px;
+                height: 116px;
+                position: unset;
+                margin: auto;
+                opacity: unset;
+            }
+
+            .Container7_img1 {
+                width: 495px;
+                height: 402px;
+                left: 0px;
+                opacity: 0.3;
+                display: none;
+
+            }
+
+            .Container7_img2 {
+                display: block;
+                width: 121px;
+                height: 122px;
+                margin: auto;
+                opacity: unset;
+            }
+
+            .Container8_img {
+                width: 150px;
+                height: 134px;
+                position: unset;
+                margin: auto;
+                opacity: unset;
+
+            }
+
+            .Container1_textBox {
+                position: unset;
+                width: 226px;
+                margin: auto;
+                text-align: center;
+                line-height: 29px;
+            }
+
+            .Container2_textBox {
+                width: 272px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .Container3_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .Container4_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .Container5_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .Container6_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .Container7_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .Container8_textBox {
+                width: 374px;
+                margin: auto;
+                text-align: center;
+                position: unset;
+            }
+
+            .pc_use {
+                display: none;
+            }
+
+            .mobile_use {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav_logo">
+
+        </div>
+        <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
+            <div class="nav_btn_about nav_btn_space nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space nav_btn ">
+                <a href="./guide-index.html">園區導覽</a>
+            </div>
+            <div class="nav_btn_eat nav_btn_space nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space nav_btn ">
+                <a href="./talk-index.html" class="nav_btn">安妮悄悄話</a>
+            </div>
+            <div>
+                <a class="nav_btn_homestay nav_btn " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+        <div class="nav_btnGroup_mobile burger">
+            <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div>
+        </div>
+        <div class="mobile_nav_btns">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+                <a href="./index.html">關於安妮公主</a>
+            </div>
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+                <a href="./info-index.html">園區資訊</a>
+            </div>
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+                <a href="./guide-index.html" class="special_a">園區導覽</a>
+                <i class="fas fa-angle-down fa-lg"></i>
+            </div>
+            <div class="guide_extraPages">
+                <div class="pancakePage">
+                    <a href="#">鬆餅小屋</a>
+                </div>
+                <div class="diyPage">
+                    <a href="./diy-index.html">手作Diy</a>
+                </div>
+                <div class="princessPage">
+                    <a href="./princess-index.html">公主故事屋</a>
+                </div>
+            </div>
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+                <a href="./eat-index.html">主廚上菜</a>
+            </div>
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+                <a href="./wedding-index.html">見證幸福</a>
+            </div>
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+                <a href="./talk-index.html" class="">安妮悄悄話</a>
+            </div>
+            <div class="mobile_nav_btn">
+                <a class="nav_btn_homestay  " href="https://forestprince.mmweb.tw/">友站連結:森王子民宿</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mobile_mask"></div>
+    <div class="page_2 page">
+        <div class="page_2_decoration1"></div>
+        <div class="page_2_decoration2"></div>
+        <div class="page_2_decoration3"></div>
+        <div class="page_2_decoration4"></div>
+        <div class="page_2_decoration5"></div>
+
+        <div class="page_2_banner">
+            <div class="banner_decorationBox">
+                <div class="banner_text">園區資訊</div>
+            </div>
+        </div>
+        <div class="box_container">
+            <div class="information_titleBox">
+                <div class="information_title">INFORMATION</div>
+            </div>
+            <div class="information_titleContent m-auto ">
+                <div class="div interSpace">入園方式</div>
+                <div class="div interSpace">預約用餐</div>
+                <div class="div interSpace">家裡毛小孩</div>
+                <div class="div ">園區導覽</div>
+            </div>
+
+            <div class="information_titleContent m-auto ">
+                <div class="div interSpace">婚紗拍攝</div>
+                <div class="div interSpace">客製化聚餐</div>
+                <div class="div interSpace">親子DIY</div>
+                <div class="div">有愛無礙</div>
+            </div>
+
+        </div>
+        <section class="page_2_section1">
+            <div class=" Container1 ">
+                <div class="Container1_img1 page_2_img">
+                    <img src="./素材/02-園區資訊/info_circle_ticket.png" alt="" class="">
+                </div>
+                <div class="Container1_img3">
+                    <img src="./素材/02-園區資訊/info_ticket.png" alt="">
+                </div>
+                <div class="Container1_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>入園方式</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>安妮公主採入園低銷方式，</p>
+                    <p>每人將收取一張的100元入園卷</p>
+                    <p>可以全額折抵消費 !</p>
+                </div>
+            </div>
+        </section>
+        <section class="page_2_section2">
+            <div class="Container2 ">
+                <div class="Container2_img1">
+                    <img src="./素材/02-園區資訊/info_plate.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container2_img2">
+                    <img src="./素材/02-園區資訊/info_tableware.png" alt="" class="page_2_img">
+                </div>
+
+                <div class="Container2_img3">
+                    <img src="./素材/02-園區資訊/info_plate.png" alt="" class="page_2_img">
+                    <div class="Container2_img4">
+                        <img src="./素材/02-園區資訊/info_tableware.png" alt="" class="page_2_img">
+                    </div>
+                </div>
+
+                <div class="Container2_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>預約用餐</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>6人以上接受預約</p>
+                    <p>最晚請於11點30分前到達園區，</p>
+                    <p>若預約失敗，歡迎至現場點單及劃位！</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Container3">
+                <div class="Container3_img1">
+                    <img src="./素材/02-園區資訊/info_cat.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container3_img2">
+                    <img src="./素材/02-園區資訊/info_flower.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container3_img3">
+                    <img src="./素材/02-園區資訊/info_cat.png" alt="" class="page_2_img">
+                    <div class="Container3_img4">
+                        <img src="./素材/02-園區資訊/info_flower.png" alt="" class="page_2_img">
+                    </div>
+                </div>
+
+                <div class="Container3_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>家裡毛小孩</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>歡迎帶狗狗貓貓入園散步，</p>
+                    <p>要請您幫忙協助寶貝狗狗綁好安全帶，</p>
+                    <p class="pc_use">若有黃金要留意一下，也避免踩壞花草以及影響其他朋友。</p>
+                    <p class="mobile_use">若有黃金要留意一下，也避免踩壞花草以及</p>
+                    <p class="mobile_use">影響其他朋友。謝謝您的幫忙唷～</p>
+                    <p class="pc_use">謝謝您的幫忙唷～</p>
+                    <p>木屋二樓的空間，還是尚未開放給大型寵物!</p>
+                    <p>其他用餐區大小寵物是可以一起用餐一起奔跑的唷!</p>
+                </div>
+            </div>
+        </section>
+        <section class="page_2_section4">
+            <div class=" Container4 ">
+                <div class="Container4_img1">
+                    <img src="./素材/02-園區資訊/info_circle_loud_speaker.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container4_img2">
+                    <img src="./素材/02-園區資訊/info_loud_speaker.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container4_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>園區導覽</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>20人以上接受預約，</p>
+                    <p>提供免費白冷圳與香草導覽解說(30分鐘)</p>
+                    <p>若是沒有事先預約、或是平日時段，</p>
+                    <p>只要工作人員有空，也都歡迎提出導覽要求喔！</p>
+                </div>
+            </div>
+        </section>
+        <section class="page_2_section5">
+            <div class=" Container5">
+                <div class="Container5_img1">
+                    <img src="./素材/02-園區資訊/info_marrage.png" alt="">
+                </div>
+                <div class="Container5_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>婚紗拍攝</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>園區採預約拍攝，建議您平日到訪，</p>
+                    <p class="pc_use">平日將供應4小時更換衣服及化妝小屋使用，費用為2000元。</p>
+                    <p class="mobile_use">平日將供應4小時更換衣服及化妝小屋使用，</p>
+                    <p class="mobile_use">費用為2000元。</p>
+                    <p>若為假日人潮比較多，較容易影響您的拍攝流程，</p>
+                    <p>如有婚宴、求婚等需求，歡迎來電與我們聯繫，</p>
+                    <p>團隊將有專人為您諮詢服務!</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Container6">
+                <div class="Container6_img1">
+                    <img src="./素材/02-園區資訊/info_cake.png" alt="" class="page_2_img">
+                </div>
+
+                <div class="Container6_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>客製化聚餐</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p class="pc_use">安妮公主花園可承接婚宴、團體聚會、車聚、求婚等活動，</p>
+                    <p class="pc_use">園區可供座位約600多個，</p>
+                    <p class="mobile_use">安妮公主花園可承接婚宴、團體聚會、車聚、</p>
+                    <p class="mobile_use">求婚等活動，園區可供座位約600多個，</p>
+                    <p>可同時容納5台大型遊覽車及100台汽車，</p>
+                    <p>亦有室內、半室內及戶外區，</p>
+                    <p>歡迎公司團體、學校、尾牙舉辦。</p>
+                    <p class="pc_use">若需上述服務，歡迎與我們聯繫，團隊將有專人為您服務!</p>
+                    <p class="mobile_use">若需上述服務，歡迎與我們聯繫，</p>
+                    <p class="mobile_use">團隊將有專人為您服務!</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Container7">
+                <div class="Container7_img1">
+                    <img src="./素材/02-園區資訊/info_circle_flower_cart.png" alt="" class="page_2_img">
+                </div>
+                <div class="Container7_img2">
+                    <img src="./素材/02-園區資訊/info_flower_cart.png" alt="" class="page_2_img">
+                </div>
+
+                <div class="Container7_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>親子DIY</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p>DIY活動分為團體預約與假日非預約。</p>
+                    <p>團體預約包含白冷圳、香草導覽 約為30分鐘，</p>
+                    <p class="pc_use">搭配香草體驗摘取活動包含香草拓染、香草化石、</p>
+                    <p class="pc_use">香草種植等課程，時間約為70分鐘。</p>
+                    <p class="mobile_use">搭配香草體驗摘取活動包含香草拓染、</p>
+                    <p class="mobile_use">香草化石、香草種植等課程，</p>
+                    <p class="mobile_use">時間約為70分鐘。</p>
+                    <p class="mobile_use">假日採非預約制，</p>
+                    <p class="mobile_use">可以現場選擇彩繪商品或是香草版畫。</p>
+                    <p class="pc_use">假日採非預約制，可以現場選擇彩繪商品或是香草版畫。</p>
+                    <p>或搜尋「安妮公主花園臉書粉絲團」</p>
+                    <p>即時接收最新的DIY活動消息!</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Container8">
+                <div class="Container8_img ">
+                    <img src="./素材/02-園區資訊/info_baby_cart-new.png" alt="" class="page_2_img">
+                </div>
+
+                <div class="Container8_textBox page2_textBox">
+                    <div class="titleBox">
+                        <span>有愛無礙</span>
+                        <div class="titleBox_decorationBox"></div>
+                    </div>
+                    <p class="pc_use">安妮是一個三代同堂的幸福家庭，很歡迎小小朋友坐著推車，</p>
+                    <p class="mobile_use">安妮是一個三代同堂的幸福家庭，</p>
+                    <p class="mobile_use">很歡迎小小朋友坐著推車，</p>
+                    <p>或是大大朋友乘坐輪椅，一起共享天倫之樂。</p>
+                    <p>若有需要無障礙服務，歡迎提前來電洽詢，</p>
+                    <p>團隊將有專人為您安排!</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="footer">
+                <div class="footer_box">
+                    <div class="footer_text">
+                        <p class="pc_use">營業時間 : 09：00 - 20：00（最晚用餐點單 19：00）</p>
+                        <p class="mobile_use">營業時間 : 09：00 - 20：00</p>
+                        <p class="mobile_use">（最晚用餐點單 19：00）</p>
+                        <p>電話 : 04-25931567-8（預約專線）</p>
+                        <p>地址 : 台中市新社區中和里中興街223號</p>
+                    </div>
+                    <div class=" footer_iconGroupBox">
+                        <div class="footer_iconGroup">
+                            <a href="https://zh-tw.facebook.com/annies0425931567"><img
+                                    src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon"></a>
+                            <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon-new.png"
+                                    alt="" class="footer_lineIcon"></a>
+                            <img src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon">
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon">
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script>
+
+
+        $(window).on("scroll", function () {
+            var windowScrollTop = $(window).scrollTop()
+            if (windowScrollTop > 100) {
+                $(".returnBut").fadeIn()
+            }
+            else {
+                $(".returnBut").fadeOut()
+            }
+        })
+
+        $(".returnBut").on("click", function () {
+
+
+
+            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+
+            return false;
+        })
+    </script> -->
+</body>
+
+</html>

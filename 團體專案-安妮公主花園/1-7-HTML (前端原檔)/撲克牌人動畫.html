@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 500vh;
+            width: 100%;
+        }
+
+        .box_all {
+            width: 50%;
+            display: flex;
+            border: 1px blue solid;
+            transform: translateY(500px);
+
+        }
+
+        .box1 {
+            width: 300px;
+            height: 500px;
+            border: 1px red solid;
+            /* transform-style: preserve-3d;
+            transform: translateZ(-100px); */
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* transform-style: preserve-3d;
+            
+            transform: translateZ(200px); */
+            transform: translateX(-50px);
+            z-index: -99;
+
+        }
+
+        .box_all img {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .pokerMan_1 {
+            position: absolute;
+            top: -150px;
+            left: 50px;
+            animation-name: pokerAct1;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            /* animation-direction: alternate-reverse; */
+
+        }
+
+        @keyframes pokerAct1 {
+            0% {
+                left: 50px;
+                transform: rotate(15deg);
+
+            }
+
+            10% {
+                left: 250px;
+                transform: rotate(-15deg);
+            }
+
+            20% {
+                left: 450px;
+                transform: rotate(15deg);
+            }
+
+            30% {
+                left: 650px;
+                transform: rotate(-15deg);
+            }
+
+            40% {
+                left: 850px;
+                transform: rotate(15deg);
+            }
+
+            50% {
+                left: 1230px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            /* 55%{
+                left:1230px;
+                transform:rotate(15deg) rotateY(-180deg)
+            } */
+
+            60% {
+                left: 1030px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            70% {
+                left: 830px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            80% {
+                left: 630px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            90% {
+                left: 430px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            100% {
+                left: 50px;
+                transform: rotate(15deg);
+            }
+        }
+
+        /* @keyframes pokerAct1 {
+            0%{ 
+                left:50px;
+                transform: rotate(15deg) rotateY(-180deg);
+                
+                }
+            10%{
+                transform: rotate(-15deg)  rotateY(-180deg);
+            }
+            20%{
+                left:250px;
+                transform: rotate(15deg)  rotateY(-180deg);
+            }
+            30%{
+                transform: rotate(-15deg)  rotateY(-180deg);
+            }
+            40%{
+                left:450px;
+                transform:  rotate(15deg)  rotateY(-180deg);
+            }
+            50%{ 
+                
+                transform:rotate(-15deg)  rotateY(-180deg);}
+            60%{ 
+                left:650px;
+                transform:rotate(15deg)  rotateY(-180deg);}
+            70%{ transform:rotate(-15deg)  rotateY(-180deg);}
+            80%{ 
+                left:850px;
+                transform:rotate(15deg) rotateY(-180deg);}
+            90%{ transform:rotate(-15deg)  rotateY(-180deg);}
+          
+            100%{ 
+                left:1050px;
+                transform: rotate(15deg) rotateY(-180deg);}
+        } */
+
+        .pokerMan_2 {
+            position: absolute;
+            top: -150px;
+            left: 200px;
+            animation-name: pokerAct2;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            /* animation-direction: alternate-reverse; */
+
+        }
+
+        @keyframes pokerAct2 {
+            0% {
+                left: 230px;
+                transform: rotate(-15deg);
+            }
+
+            10% {
+                left: 430px;
+                transform: rotate(15deg);
+            }
+
+            20% {
+                left: 630px;
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                left: 830px;
+                transform: rotate(15deg);
+            }
+
+            40% {
+                left: 1030px;
+                transform: rotate(-15deg);
+            }
+
+            50% {
+                left: 1050px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            /* 55%{
+                left:1050px;
+                transform:rotate(-15deg) rotateY(180deg);
+            } */
+            60% {
+                left: 850px;
+                transform: rotate(-15deg)rotateY(180deg);
+            }
+
+            70% {
+                left: 650px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            80% {
+                left: 450px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            90% {
+                left: 250px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            100% {
+                left: 230px;
+                transform: rotate(15deg);
+            }
+        }
+
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            top: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_all">
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius at maxime ullam repudiandae! Possimus
+            veritatis ad quaerat repudiandae exercitationem eius voluptates et quasi amet eos? Error non aperiam nisi
+            aspernatur.
+        </div>
+        <div class="box2"></div>
+        <img src="./素材/插畫/紅撲克牌人-已加陰影-01.png" alt="" class="pokerMan_1">
+        <img src="./素材/插畫/黑撲克牌人-換面-01.png" alt="" class="pokerMan_2">
+    </div>
+
+    <div class="test"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(window).on("scroll", function () {
+            windowScrolltop = $(window).scrollTop()
+            console.log(windowScrolltop);
+
+            test = document.querySelector(".test")
+
+            if (windowScrolltop > 100) {
+               
+        }})
+    </script>
+</body>
+
+</html>
