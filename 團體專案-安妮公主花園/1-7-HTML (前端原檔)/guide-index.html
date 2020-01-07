@@ -20,6 +20,40 @@
             height: 100%;
         }
 
+        .swiper-container {
+            max-width: 550px;
+            height: 300px;
+
+            margin: 0px auto 50px;
+
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            left: -8%;
+            right: auto;
+        }
+
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            right: -8%;
+            left: auto;
+        }
+
+        .page_3_slide {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
         .page_3_banner {
             width: 100%;
             height: 760px;
@@ -109,8 +143,8 @@
             position: absolute;
             width: 355px;
             height: 355px;
-            top: -39px;
-            left: 462px;
+            top: -42px;
+            left: 454px;
 
         }
 
@@ -338,6 +372,179 @@
                 width: 762px;
                 height: 488px;
             }
+
+            .trigger_imgBox1 {
+                top: -36px;
+                left: 301px;
+                width: 242px;
+            }
+
+            .trigger_imgBox2 {
+                top: 243px;
+                left: 98px;
+                width: 109px;
+            }
+
+            .trigger_imgBox3 {
+                top: 300px;
+                left: 28px;
+                width: 113px;
+            }
+
+            .trigger_imgBox4 {
+                top: 317px;
+                left: 137px;
+                width: 134px;
+            }
+
+            .page_3_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width:750px) {
+            .page_3_banner {
+                height: 248px;
+            }
+
+            .page_3_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .page_3_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .imgBox_Map {
+                width: 359px;
+                height: 230px;
+            }
+
+            .triggerBoxs {
+                display: none;
+            }
+
+            .swiperBox {
+                height: 221px;
+                max-width: 620px;
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: -9%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -9%;
+                left: auto;
+            }
+        }
+
+        @media (max-width:550px) {
+            .guide_title {
+                font-size: 23px;
+            }
+
+            .guide_titleBox {
+                width: unset;
+                border: unset;
+                position: relative;
+            }
+
+            .guide_titleBox::after {
+                content: "";
+                position: absolute;
+                background-color: #F6D3E2;
+                width: 250px;
+                height: 2px;
+                left: 50%;
+                bottom: 0px;
+                transform: translateX(-50%);
+            }
+
+            .map_titleBox {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .page_3_mapBox {
+
+                margin: 0px auto 86px;
+            }
+
+            .ecology_titleBox {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 65px
+            }
+
+            .map_titleBox .decoration {
+                height: 17.776px;
+                width: 17.776px;
+                margin-right: 9px;
+                margin-top: 2px;
+            }
+
+            .ecology_titleBox .decoration {
+                height: 17.776px;
+                width: 17.776px;
+
+                margin-right: 9px;
+                margin-top: 2px;
+            }
+
+            .swiper-container {
+                max-width: 300px;
+                height: 150px;
+
+                margin: 0px auto 65px;
+
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: -12%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -12%;
+                left: auto;
+            }
+        }
+
+        @media (max-width:360px) {
+            .imgBox_Map {
+                width: 255px;
+                height: 164px;
+            }
+
+            .swiper-container {
+                max-width: 250px;
+                height: 125px;
+                margin: 0px auto 65px;
+
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: -12.5%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -12.5%;
+                left: auto;
+            }
         }
     </style>
 </head>
@@ -421,7 +628,7 @@
     <div class="page_3 page">
         <div class="page_3_banner">
             <div class="banner_decorationBox">
-                <div class="banner_text "><a href="./diy-index.html">園區導覽GUIDANCE</a></div>
+                <div class="banner_text "><a href="./diy-index.html">園區導覽</a></div>
             </div>
         </div>
         <div class="guide_titleBox">
@@ -435,23 +642,23 @@
             <div class="imgBox_Map">
                 <img src="./素材/03-園區導覽/guide_map.jpg" alt="" class="map">
 
-                <div class="trigger_imgBox1">
+                <div class="trigger_imgBox1 triggerBoxs">
                     <a href="./eat-index.html">
                         <img src="./素材/03-園區導覽/map_icon_restaurant.png" alt="" title="我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
 
-                <div class="trigger_imgBox2">
+                <div class="trigger_imgBox2 triggerBoxs ">
                     <a href="./diy-index.html">
                         <img src="./素材/03-園區導覽/map_icon_diy-new.png" alt="" title="diy我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
-                <div class="trigger_imgBox3">
+                <div class="trigger_imgBox3 triggerBoxs">
                     <a href="./wedding-index.html">
                         <img src="./素材/03-園區導覽/map_icon_pancake-new.png" alt="" title="鬆餅 我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
-                <div class="trigger_imgBox4">
+                <div class="trigger_imgBox4 triggerBoxs">
                     <a href="./princess-index.html">
                         <img src="./素材/03-園區導覽/map_icon_princess-new.png" alt="" title=" 公主 我來測試看看拉哈哈哈哈">
                     </a>
@@ -463,9 +670,74 @@
         <div class="box_container ">
             <div class="ecology_titleBox">
                 <div class="decoration"></div>
-                <p>園區生態</p>
+                <p>園區景觀</p>
             </div>
-            <div class="page_3_imgBoxGroup page3_toFooterSpace ">
+        </div>
+
+
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco01.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco02.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco03.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco04.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco05.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco06.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco07.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco08.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco09.jpg)"></div>
+            </div>
+
+            <!-- Add Pagination -->
+
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+        <!-- <div class="swiperBox"> -->
+        <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page_3_slide " style="background-image:url('./素材/03-園區導覽/guide_eco01.jpg')">
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco02.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco03.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco04.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco05.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco06.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco07.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco08.jpg')">
+
+                </div>
+                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco09.jpg')">
+
+                </div>
+
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div> -->
+
+
+        <!-- <div class="page_3_imgBoxGroup page3_toFooterSpace ">
                 <div class="imgBox_t">
                     <div class="imgBox_t_l page_3_imgBox " data-aos="flip-left" data-aos-duration="1000">
                         <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="" class="page_3_image">
@@ -499,8 +771,10 @@
                         <img src="./素材/03-園區導覽/guide_eco09.jpg" alt="" class="page_3_image">
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+
+
+        <!-- </div> -->
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
@@ -522,116 +796,117 @@
                 </div>
             </div>
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="">
         </div>
+    </div>
 
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco02.jpg" alt="">
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco02.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco03.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco03.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco04.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco04.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco05.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco05.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco06.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco06.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco07.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco07.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco08.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco08.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco09.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco09.jpg" alt="">
         </div>
-        <div class="fullScreen_mask">
-            <div class="imgShow">
-                <div class="back"></div>
-                <div class="canclePoint">
-                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
-                </div>
-                <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="">
+    </div>
+    <div class="fullScreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclePoint">
+                <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
             </div>
+            <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="">
         </div>
-        <div class="returnBut">
-            <div class="returnBut_text">Top</div>
-        </div>
+    </div>
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="./template.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
 
-        <script>
-            AOS.init();
-        </script>
-        <!-- <script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script>
 
 
         $(window).on("scroll", function () {
@@ -653,37 +928,54 @@
             return false;
         })
     </script> -->
-        <script>
-            var page_3_imgBox = document.querySelectorAll(".page_3_imgBox")
-            var fullScreen_mask = document.querySelectorAll(".fullScreen_mask")
-            console.log(page_3_imgBox);
-            for (let i = 0; i < page_3_imgBox.length; i++) {
-                const Page_3_imgBox = page_3_imgBox[i];
-                const FullScreen_mask = fullScreen_mask[i]
+    <script>
+        var page_3_imgBox = document.querySelectorAll(".page_3_imgBox")
+        var fullScreen_mask = document.querySelectorAll(".fullScreen_mask")
+        console.log(page_3_imgBox);
+        for (let i = 0; i < page_3_imgBox.length; i++) {
+            const Page_3_imgBox = page_3_imgBox[i];
+            const FullScreen_mask = fullScreen_mask[i]
 
-                $(Page_3_imgBox).on("click", function () {
-                    clearAllactive4()
-                    $(FullScreen_mask).addClass("active")
+            $(Page_3_imgBox).on("click", function () {
+                clearAllactive4()
+                $(FullScreen_mask).addClass("active")
 
-                })
+            })
 
-                $(".canclePoint").on("click", function () {
-                    clearAllactive4()
-                })
+            $(".canclePoint").on("click", function () {
+                clearAllactive4()
+            })
+        }
+
+
+        function clearAllactive4() {
+            for (var a = 0; a < page_3_imgBox.length; a++) {
+                fullScreen_mask[a].classList.remove("active");
+
             }
-
-
-            function clearAllactive4() {
-                for (var a = 0; a < page_3_imgBox.length; a++) {
-                    fullScreen_mask[a].classList.remove("active");
-
-                }
-            }
+        }
         // $(".canclePoint").on("click", function () {
         //     $(".fullScreen_mask").remove("active")
         // })
-        </script>
-        <!-- <script>
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'flip',
+            grabCursor: true,
+
+            speed: 3500,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <!-- <script>
         var triggers = document.querySelectorAll(".trigger")
         var imgShows = document.querySelectorAll(".imgShow")
         console.log(triggers);
