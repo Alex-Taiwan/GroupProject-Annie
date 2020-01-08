@@ -153,7 +153,7 @@ $(".mobile_mask").on("click",function(){
     
 })
 
-var window_width=$(window).width()
+// var window_width=$(window).width()
 
 // if(window_width<850){
 //     var css=document.querySelector("#css");
