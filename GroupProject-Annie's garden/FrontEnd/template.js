@@ -152,3 +152,34 @@ $(".mobile_mask").on("click",function(){
     $(".burger_decoration3").removeClass("active")
     
 })
+
+var window_width=$(window).width()
+
+// if(window_width<850){
+//     var css=document.querySelector("#css");
+//     console.log(css);
+//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
+//     var c=css.sheet;
+//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:block;}", 0)
+// }
+// $(".gmail_iconBox").on("click",function(){
+//     var window_Nowwidth=$(window).width()
+//     if(window_Nowwidth<850){
+//         var css=document.querySelector("#css");
+//     console.log(css);
+//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
+//     var c=css.sheet;
+//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:block;}", 0)
+//     }
+// })
+
+// $(window).on("dblclick",function(){
+//     var window_Nowwidth=$(window).width()
+//     if(window_Nowwidth<850){
+//         var css=document.querySelector("#css");
+//     console.log(123);
+//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
+//     var c=css.sheet;
+//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:none;}", 0)
+//     }
+// })

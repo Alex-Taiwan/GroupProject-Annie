@@ -20,6 +20,11 @@
             height: 100%;
         }
 
+
+        .mobile_swiper {
+            display: none;
+        }
+
         .swiper-container {
             max-width: 550px;
             height: 300px;
@@ -145,6 +150,7 @@
             height: 355px;
             top: -42px;
             left: 454px;
+            z-index: 2;
 
         }
 
@@ -185,6 +191,45 @@
             left: 453px;
 
         } */
+        .trigger_imgBox6 {
+            position: absolute;
+            width: 120px;
+            /* height: 255px; */
+            top: 18px;
+            left: 496px;
+            z-index: 1;
+            display: none;
+        }
+        .trigger_imgBox7 {
+            position: absolute;
+            width: 147px;
+            height: 122px;
+            top: 367px;
+            left: 151px;
+            z-index: 2;
+            display: none;
+        }
+          .trigger_imgBox8 {
+            position: absolute;
+            width: 159px;
+            height: 125px;
+            top: 463px;
+            left: 51px;
+            z-index: 3;
+            display: none;
+        }
+        .trigger_imgBox9 {
+            position: absolute;
+            width: 192px;
+            height: 192px;
+            top: 481px;
+            left: 200px;
+            z-index: 4;
+            display: none;
+        }
+       
+       
+
 
         .trigger_imgBox1:hover {
 
@@ -194,6 +239,35 @@
 
         }
 
+        .trigger_imgBox1:hover~.trigger_imgBox6 {
+            display: block;
+            animation-name: billboardAct;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .trigger_imgBox2:hover~.trigger_imgBox7 {
+            display: block;
+            animation-name: billboardAct;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .trigger_imgBox3:hover~.trigger_imgBox8 {
+            display: block;
+            animation-name: billboardAct;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .trigger_imgBox4:hover~.trigger_imgBox9 {
+            display: block;
+            animation-name: billboardAct;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+       
         .trigger_imgBox2:hover {
 
             animation-name: act;
@@ -217,6 +291,16 @@
             animation-iteration-count: infinite;
 
         }
+
+
+        /* .trigger_imgBox6:hover {
+
+            animation-name: billboardact;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+        } */
+
 
 
 
@@ -248,11 +332,22 @@
             }
         }
 
+        @keyframes billboardAct {
+            0% {
+                transform: translateY(0px);
+            }
+
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
         .ecology_titleBox {
             font-size: 35px;
             letter-spacing: 1px;
             display: flex;
-            margin-bottom: 187px;
+            /* margin-bottom: 187px; */
         }
 
         .ecology_titleBox .decoration {
@@ -318,9 +413,8 @@
 
         .page3_toFooterSpace {
             margin-bottom: 210px;
-            /* font-size: 23px;
-            line-height: 38px;
-            letter-spacing: 3px; */
+            margin-top: 173px;
+
         }
 
         .fullScreen_mask {
@@ -404,8 +498,16 @@
         }
 
         @media (max-width:750px) {
+            .pc_box {
+                display: none;
+            }
+
+            .mobile_swiper {
+                display: block;
+            }
+
             .page_3_banner {
-                height: 248px;
+                height: 250px;
             }
 
             .page_3_banner .banner_decorationBox {
@@ -434,6 +536,10 @@
                 max-width: 620px;
             }
 
+            .swiper-container {
+                margin: 50px auto 65px;
+            }
+
             .swiper-button-prev,
             .swiper-container-rtl .swiper-button-next {
                 left: -9%;
@@ -448,6 +554,7 @@
         }
 
         @media (max-width:550px) {
+
             .guide_title {
                 font-size: 23px;
             }
@@ -465,7 +572,7 @@
                 width: 250px;
                 height: 2px;
                 left: 50%;
-                bottom: 0px;
+                bottom: -6px;
                 transform: translateX(-50%);
             }
 
@@ -482,7 +589,7 @@
             .ecology_titleBox {
                 font-size: 14px;
                 font-weight: bold;
-                margin-bottom: 65px
+                margin-bottom: unset;
             }
 
             .map_titleBox .decoration {
@@ -503,9 +610,6 @@
             .swiper-container {
                 max-width: 300px;
                 height: 150px;
-
-                margin: 0px auto 65px;
-
             }
 
             .swiper-button-prev,
@@ -550,7 +654,6 @@
 </head>
 
 <body>
-
     <nav class="nav" id="nav">
         <div class="nav_logo">
 
@@ -646,6 +749,12 @@
                     <a href="./eat-index.html">
                         <img src="./素材/03-園區導覽/map_icon_restaurant.png" alt="" title="我來測試看看拉哈哈哈哈">
                     </a>
+                    <!-- <div class="trigger_imgBox6 triggerBox Billboard">
+                        <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    </div> -->
+                </div>
+                <div class="trigger_imgBox6 triggerBox Billboard">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
                 <div class="trigger_imgBox2 triggerBoxs ">
@@ -653,30 +762,81 @@
                         <img src="./素材/03-園區導覽/map_icon_diy-new.png" alt="" title="diy我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
+                
+                <div class="trigger_imgBox7 triggerBox Billboard">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                </div>
+
                 <div class="trigger_imgBox3 triggerBoxs">
                     <a href="./wedding-index.html">
                         <img src="./素材/03-園區導覽/map_icon_pancake-new.png" alt="" title="鬆餅 我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
+
+                <div class="trigger_imgBox8 triggerBox Billboard">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                </div>
+
                 <div class="trigger_imgBox4 triggerBoxs">
                     <a href="./princess-index.html">
                         <img src="./素材/03-園區導覽/map_icon_princess-new.png" alt="" title=" 公主 我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
+
+                <div class="trigger_imgBox9 triggerBox Billboard">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                </div>
                 <div class="trigger_imgBox5"></div>
 
             </div>
         </div>
-        <div class="box_container ">
+        <div class="box_container  ">
             <div class="ecology_titleBox">
                 <div class="decoration"></div>
                 <p>園區景觀</p>
             </div>
+            <div class="page_3_imgBoxGroup page3_toFooterSpace pc_box">
+                <div class="imgBox_t">
+                    <div class="imgBox_t_l page_3_imgBox " data-aos="flip-left" data-aos-duration="1000">
+                        <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_t_m page_3_imgBox" data-aos="flip-left" data-aos-duration="1200">
+                        <img src="./素材/03-園區導覽/guide_eco02.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_t_r page_3_imgBox" data-aos="flip-left" data-aos-duration="1400">
+                        <img src="./素材/03-園區導覽/guide_eco03.jpg" alt="" class="page_3_image">
+                    </div>
+                </div>
+                <div class="imgBox_m">
+                    <div class="imgBox_m_l page_3_imgBox" data-aos="flip-left" data-aos-duration="1600">
+                        <img src="./素材/03-園區導覽/guide_eco04.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_m_m page_3_imgBox" data-aos="flip-left" data-aos-duration="1800">
+                        <img src="./素材/03-園區導覽/guide_eco05.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_m_r page_3_imgBox" data-aos="flip-left" data-aos-duration="2000">
+                        <img src="./素材/03-園區導覽/guide_eco06.jpg" alt="" class="page_3_image">
+                    </div>
+                </div>
+                <div class="imgBox_b">
+                    <div class="imgBox_b_l page_3_imgBox" data-aos="flip-left" data-aos-duration="2200">
+                        <img src="./素材/03-園區導覽/guide_eco07.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_b_m page_3_imgBox" data-aos="flip-left" data-aos-duration="2400">
+                        <img src="./素材/03-園區導覽/guide_eco08.jpg" alt="" class="page_3_image">
+                    </div>
+                    <div class="imgBox_b_r page_3_imgBox" data-aos="flip-left" data-aos-duration="2600">
+                        <img src="./素材/03-園區導覽/guide_eco09.jpg" alt="" class="page_3_image">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
 
 
-        <div class="swiper-container">
+        <div class="swiper-container mobile_swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco01.jpg)"></div>
                 <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco02.jpg)"></div>
@@ -689,10 +849,6 @@
                 <div class="swiper-slide" style="background-image:url(./素材/03-園區導覽/guide_eco09.jpg)"></div>
             </div>
 
-            <!-- Add Pagination -->
-
-
-            <!-- Add Arrows -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -737,41 +893,7 @@
         </div> -->
 
 
-        <!-- <div class="page_3_imgBoxGroup page3_toFooterSpace ">
-                <div class="imgBox_t">
-                    <div class="imgBox_t_l page_3_imgBox " data-aos="flip-left" data-aos-duration="1000">
-                        <img src="./素材/03-園區導覽/guide_eco01.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_t_m page_3_imgBox" data-aos="flip-left" data-aos-duration="1200">
-                        <img src="./素材/03-園區導覽/guide_eco02.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_t_r page_3_imgBox" data-aos="flip-left" data-aos-duration="1400">
-                        <img src="./素材/03-園區導覽/guide_eco03.jpg" alt="" class="page_3_image">
-                    </div>
-                </div>
-                <div class="imgBox_m">
-                    <div class="imgBox_m_l page_3_imgBox" data-aos="flip-left" data-aos-duration="1600">
-                        <img src="./素材/03-園區導覽/guide_eco04.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_m_m page_3_imgBox" data-aos="flip-left" data-aos-duration="1800">
-                        <img src="./素材/03-園區導覽/guide_eco05.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_m_r page_3_imgBox" data-aos="flip-left" data-aos-duration="2000">
-                        <img src="./素材/03-園區導覽/guide_eco06.jpg" alt="" class="page_3_image">
-                    </div>
-                </div>
-                <div class="imgBox_b">
-                    <div class="imgBox_b_l page_3_imgBox" data-aos="flip-left" data-aos-duration="2200">
-                        <img src="./素材/03-園區導覽/guide_eco07.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_b_m page_3_imgBox" data-aos="flip-left" data-aos-duration="2400">
-                        <img src="./素材/03-園區導覽/guide_eco08.jpg" alt="" class="page_3_image">
-                    </div>
-                    <div class="imgBox_b_r page_3_imgBox" data-aos="flip-left" data-aos-duration="2600">
-                        <img src="./素材/03-園區導覽/guide_eco09.jpg" alt="" class="page_3_image">
-                    </div>
-                </div>
-            </div> -->
+
 
 
         <!-- </div> -->
@@ -962,9 +1084,8 @@
         var swiper = new Swiper('.swiper-container', {
             effect: 'flip',
             grabCursor: true,
-
+            updateOnWindowResize: true,
             speed: 3500,
-
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -974,6 +1095,16 @@
                 disableOnInteraction: false,
             },
         });
+    </script>
+    <script>
+        var windowWidth = $(window).width()
+        if (windowWidth < 1500) {
+            setTimeout(() => {
+                swiper.update(), swiper2.update(), swiper3.update()
+
+            }, 500)
+        }
+
     </script>
     <!-- <script>
         var triggers = document.querySelectorAll(".trigger")

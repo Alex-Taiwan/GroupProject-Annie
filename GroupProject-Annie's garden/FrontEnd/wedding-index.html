@@ -15,6 +15,27 @@
     <link rel="stylesheet" href="./template.css">
     <title>Document</title>
     <style>
+        .mobile_swiper{
+            display: none;
+        }
+        .swiper-container1{
+            width: 80%;
+            height: 500px;
+            margin:30px auto ;
+        }
+
+        .swiper-container2{
+            width: 80%;
+            height: 500px;
+            margin:30px auto ;
+        }
+
+        .swiper-container3{
+            width: 80%;
+            height: 500px;
+            margin:30px auto ;
+        } 
+
         .page_5_banner {
             width: 100%;
             height: 760px;
@@ -68,6 +89,7 @@
         }
 
         .wedding_titleContent {
+            margin: auto;
             text-align: center;
             white-space: nowrap;
             line-height: 43px;
@@ -346,7 +368,18 @@
             }
         }
 
+        @media (max-width: 849px) {
+            .fas{
+                transform:unset
+            }
+            .wedding_themeGroup{
+                display: none;
+            }
+            .mobile_swiper{
+            display: block;
+            }
 
+        }
         @media (max-width:540px) {
 
             .page_5_banner {
@@ -368,8 +401,28 @@
             .wedding_titleBox {
                 width: unset;
                 margin: 40px auto 0px;
+                border: unset;
+                position: relative;
             }
 
+            .wedding_titleBox::after {
+                content: "";
+                position: absolute;
+                background-color: #F6D3E2;
+                width: 250px;
+                height: 2px;
+                left: 50%;
+                bottom: -6px;
+                transform: translateX(-50%);
+            }
+            .wedding_titleContent{
+                font-size: 14px;
+                margin: 0px auto -54px;
+            }
+
+            .wedding_title{
+                font-size: 23px;
+            }
             .wedding_theme {
                 height: unset;
             }
@@ -392,6 +445,17 @@
                 font-size: 14px;
                 line-height: 20px;
 
+            }
+        }
+
+        @media (max-width:370px) {
+            .wedding_theme_imgBox {
+                width: 300px;
+                height: 300px;
+            }
+
+            .page5_toFooterSpace {
+                font-size: 12px;       
             }
         }
     </style>
@@ -482,7 +546,7 @@
             <div class="wedding_titleBox">
                 <div class="wedding_title">WEDDING</div>
             </div>
-            <div class="wedding_titleContent m-auto">
+            <div class="wedding_titleContent ">
                 <p>安妮邀您一起見證幸福</p>
             </div>
         </div>
@@ -532,6 +596,98 @@
             </div>
         </div>
 
+
+        <div class="swiper-container1 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_01.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_02.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_03.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_04.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_05.jpg)">
+                </div>
+                <div class="swiper-slide specialSwipper" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_07.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_08.jpg)">
+                </div>
+            </div>
+
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-container2 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_01.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_02.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_03.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_04.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_05.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_06.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_07.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_photo/photo_08.jpg)">
+            </div>
+            </div>
+
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-container3 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_01.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_02.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_03.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_04.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_05.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_06.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_07.jpg)">
+            </div>
+            <div class="swiper-slide"
+                style="background-image:url(./素材/05-見證幸福/swiper_pic_proposal/proposal_08.jpg)">
+            </div>
+            </div>
+
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
         <div class="box_container page5_toFooterSpace">
             <p>告白、求婚、生日、結婚紀念日、彌月、訂婚、 各種讓人歡喜幸福的特殊日子，</p>
             <p>讓安妮與您一起安排完全客製化的Party，歡迎來電洽詢 04-25931567(8) 林小姐!</p>
@@ -576,14 +732,13 @@
                         </div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_05.jpg)">
                         </div>
-                        <div class="swiper-slide specialSwipper"
-                            style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
+                        <div class="swiper-slide specialSwipper" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_07.jpg)">
                         </div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_08.jpg)">
                         </div>
                     </div>
-                    <!-- Add Arrows -->
+                  
                     <div class="swiper-button-next swiper-button-white"></div>
                     <div class="swiper-button-prev swiper-button-white"></div>
                 </div>
@@ -599,8 +754,7 @@
                         </div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_05.jpg)">
                         </div>
-                        <div class="swiper-slide specialSwipper"
-                            style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
+                        <div class="swiper-slide specialSwipper" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_06.jpg)"></div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_07.jpg)">
                         </div>
                         <div class="swiper-slide" style="background-image:url(./素材/05-見證幸福/swiper_pic_BTS/BTS_08.jpg)">
@@ -608,6 +762,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="imgShow">
                 <div class="back"></div>
                 <div class="canclePoint">
@@ -742,7 +897,8 @@
             </div>
         </div>
 
-
+        
+       
 
         <div class="returnBut">
             <div class="returnBut_text">Top</div>
@@ -767,6 +923,7 @@
                 slidesPerView: 4,
                 loop: true,
                 freeMode: true,
+                initialSlide:4,
                 loopedSlides: 5, //looped slides should be the same
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
@@ -774,6 +931,7 @@
             var galleryTop = new Swiper('.swiper-top', {
                 spaceBetween: 10,
                 loop: true,
+                initialSlide:4,
                 loopedSlides: 5, //looped slides should be the same
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -789,14 +947,17 @@
                 slidesPerView: 4,
                 loop: true,
                 freeMode: true,
+                initialSlide:8,
                 loopedSlides: 5, //looped slides should be the same
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
             });
             var galleryTop2 = new Swiper('.swiper-top2', {
                 spaceBetween: 10,
+                initialSlide:8,
                 loop: true,
                 loopedSlides: 5, //looped slides should be the same
+                
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -811,12 +972,14 @@
                 slidesPerView: 4,
                 loop: true,
                 freeMode: true,
+                initialSlide:8,
                 loopedSlides: 5, //looped slides should be the same
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
             });
             var galleryTop3 = new Swiper('.swiper-top3', {
                 spaceBetween: 10,
+                initialSlide:8,
                 loop: true,
                 loopedSlides: 5, //looped slides should be the same
                 navigation: {
@@ -828,121 +991,56 @@
                 },
             });
         </script>
-        <!-- <script>
-        var galleryThumbs = new Swiper('.swiper-thumbs', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop = new Swiper('.swiper-top1', {
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs,
-            },
-        });
+        <script>
+            var swiper = new Swiper('.swiper-container1', {
+                effect: 'flip',
+                grabCursor: true,
+                updateOnWindowResize:true,
+                speed: 3500,
+    
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
 
-        var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop2 = new Swiper('.swiper-top2', {
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs2,
-            },
-        });
-    </script> -->
-        <!-- <script>
-        var galleryThumbs1 = new Swiper('.swiper-thumbs1', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop1 = new Swiper('.swiper-top1', {
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs1,
-            },
-        });
+            var swiper2 = new Swiper('.swiper-container2', {
+                effect: 'flip',
+                grabCursor: true,
+                updateOnWindowResize:true,
+                speed: 3500,
+    
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
 
-        var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop2 = new Swiper('.swiper-top2', {
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs2,
-            },
-        });
+            var swiper3 = new Swiper('.swiper-container3', {
+                effect: 'flip',
+                grabCursor: true,
+                updateOnWindowResize:true,
+                speed: 3500,
+    
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
        
-        var galleryThumbs3 = new Swiper('.swiper-thumbs3', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            loop: true,
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop3 = new Swiper('.swiper-top3', {
-            spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5, //looped slides should be the same
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs3,
-            },
-        });
-
-
-
-    </script> -->
         <script>
             var triggers = document.querySelectorAll(".trigger")
             var imgShows = document.querySelectorAll(".imgShow")
@@ -965,6 +1063,10 @@
                 Triggers.onclick = function () {
                     $(".fulscreen_mask").toggle()
                     clearAllactive3();
+                    setTimeout(() => {
+                        galleryThumbs.update(), galleryThumbs2.update(), galleryThumbs3.update(),
+                            galleryTop.update(), galleryTop2.update(), galleryTop3.update()
+                    }, 500)
 
                     ImgShows.classList.add("active")
                 }
@@ -978,7 +1080,23 @@
 
         </script>
 
-
+        <script>
+            var windowWidth=$(window).width()
+            if(windowWidth<600){
+                setTimeout(() => {
+                    swiper.update(), swiper2.update(), swiper3.update()
+                           
+                    }, 500)
+            }
+            // $(function(){
+            //     $(window).on("resize",function(){
+            //         setTimeout(() => {
+            //         swiper.update(), swiper2.update(), swiper3.update()
+                           
+            //         }, 300)
+            //     })
+            // })
+        </script>
 
         <!-- <script>
 
