@@ -15,7 +15,72 @@
     <link rel="stylesheet" href="./template.css">
     <title>Document</title>
     <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
         .extraPage_princess_banner {
+            width: 100%;
+            height: 760px;
+            background-image: url("./素材/10-公主故事屋/princess_banner.jpg");
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* padding-top: 319px; */
+            /* padding-top: 42%; */
+            position: relative;
+
+        }
+
+        .extraPage_princess_banner .banner_decorationBox {
+            width: 933px;
+            height: 138px;
+            background-color: rgba(255, 255, 255, 0.63);
+            /* transform: translate(988px,319px); */
+            /* margin-left: 988px; */
+            /* margin-left: 51.4%; */
+            position: absolute;
+            left: 0;
+            top: 319px;
+
+        }
+
+        .extraPage_princess_banner .banner_text {
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px black;
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-44px);
+        }
+        .extraPage_princess_titleBox {
+            width: 444.5px;
+            border-bottom: 1px #DAB059 solid;
+            margin: 46px auto;
+            letter-spacing: 3px;
+        }
+
+        .extraPage_princess_title {
+            text-align: center;
+            font-family: "Gentium Book Basic";
+            font-size: 39px;
+            font-weight: bold;
+            color: #DAB059;
+            white-space: nowrap;
+            letter-spacing: 1.5px;
+        }
+
+        .extraPage_princess_titleContent {
+            margin: auto;
+            text-align: center;
+           
+            line-height: 43px;
+            font-size: 26px;
+            font-weight: lighter;
+            letter-spacing: 1.5px;
+            color: #97908D;
+        }
+        /* .extraPage_princess_banner {
             width: 100%;
             height: 760px;
             background-image: url("./素材/10-公主故事屋/princess_banner.jpg");
@@ -67,14 +132,14 @@
             color: #DAB059;
             white-space: nowrap;
             letter-spacing: 1.5px;
-        }
+        } */
 
         .extraPage_princess_titleContent {
             text-align: center;
 
             white-space: nowrap;
             line-height: 43px;
-            font-size: 32px;
+            font-size: 27px;
             font-weight: lighter;
             letter-spacing: 3px;
 
@@ -120,8 +185,71 @@
         }
 
         .extraPage_princess_toFooterSpace {
-            margin-bottom: 252px;
+            /* margin-bottom: 230px; */
 
+        }
+        .returnPrePage_Box{
+            width: 166px;
+            margin:100px auto ;
+            font-size: 22px;
+            text-align: center;
+            background-color: white;
+            border: 3px solid #E05D7F;
+            border-radius: 25px;
+            padding: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        
+
+        @media (max-width:1000px) {
+            .extraPage_princess_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+        }
+        @media (max-width:540px) {
+            .extraPage_princess_banner {
+                height: 248px;
+            }
+
+            .extraPage_princess_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .extraPage_princess_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .extraPage_princess_titleBox {
+                width: unset;
+                margin: 40px auto 0px;
+                border: unset;
+                position: relative;
+            }
+
+            .extraPage_princess_titleBox::after {
+                content: "";
+                position: absolute;
+                background-color: #F6D3E2;
+                width: 250px;
+                height: 2px;
+                left: 50%;
+                bottom: -6px;
+                transform: translateX(-50%);
+            }
+            .extraPage_princess_titleContent{
+                font-size: 14px;
+                margin: 0px auto -54px;
+            }
+
+            .extraPage_princess_title{
+                font-size: 23px;
+            }
         }
     </style>
 </head>
@@ -219,43 +347,45 @@
         <div class="box_container ">
             <div class="extraPage_princess_imgBoxGroup extraPage_princess_toFooterSpace  ">
                 <div class="imgBox_t">
-                    <div class="imgBox_t_l imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_t_l imgBox" data-aos="flip-up" data-aos-duration="1400">
+                        <img src="./素材/10-公主故事屋/princess_01.jpg" alt="">
                     </div>
-                    <div class="imgBox_t_m imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_t_m imgBox" data-aos="flip-up" data-aos-duration="2000">
+                        <img src="./素材/10-公主故事屋/princess_02.jpg" alt="">
                     </div>
-                    <div class="imgBox_t_r imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_t_r imgBox" data-aos="flip-up" data-aos-duration="2600">
+                        <img src="./素材/10-公主故事屋/princess_03.jpg" alt="">
                     </div>
                 </div>
                 <div class="imgBox_m">
-                    <div class="imgBox_m_l imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_m_l imgBox" data-aos="flip-up" data-aos-duration="1400">
+                        <img src="./素材/10-公主故事屋/princess_04.jpg" alt="">
                     </div>
-                    <div class="imgBox_m_m imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_m_m imgBox" data-aos="flip-up" data-aos-duration="2000">
+                        <img src="./素材/10-公主故事屋/princess_05.jpg" alt="">
                     </div>
-                    <div class="imgBox_m_r imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_m_r imgBox" data-aos="flip-up" data-aos-duration="2600">
+                        <img src="./素材/10-公主故事屋/princess_06.jpg" alt="">
                     </div>
                 </div>
                 <div class="imgBox_b">
-                    <div class="imgBox_b_l imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_b_l imgBox" data-aos="flip-up" data-aos-duration="1400">
+                        <img src="./素材/10-公主故事屋/princess_07.jpg" alt="">
                     </div>
-                    <div class="imgBox_b_m imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_b_m imgBox" data-aos="flip-up" data-aos-duration="2000">
+                        <img src="./素材/10-公主故事屋/princess_08.jpg" alt="">
                     </div>
-                    <div class="imgBox_b_r imgBox">
-                        <img src="" alt="">
+                    <div class="imgBox_b_r imgBox" data-aos="flip-up" data-aos-duration="2600">
+                        <img src="./素材/10-公主故事屋/princess_09.jpg" alt="">
                     </div>
                 </div>
             </div>
 
         </div>
 
-
+        <a href="./guide-index.html"><div class="returnPrePage_Box">
+            回園區導覽
+        </div></a>
 
         <div class="footer">
             <div class="footer_box">
@@ -281,6 +411,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="returnBut">
             <div class="returnBut_text">Top</div>
         </div>
