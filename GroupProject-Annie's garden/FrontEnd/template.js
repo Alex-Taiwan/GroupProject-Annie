@@ -49,7 +49,7 @@ $(function () {
             $(".burger_decoration1").removeClass("active")
             $(".burger_decoration2").removeClass("active")
             $(".burger_decoration3").removeClass("active")
-
+            $(".fas").removeClass("active")
             // if ($(".mobile_nav_btns").hasClass("active")) {
             //     $(".mobile_nav_btns").removeClass("active")
             // }
@@ -84,6 +84,7 @@ $(function () {
    
     $(".nav_btn_guide i").on("click", function () {
         if ($(".guide_extraPages").hasClass("active")) {
+            $(".fas").removeClass("active")
             $(".guide_extraPages").removeClass("active")
             // $(".nav_btn_eat").removeClass("specialActive")
             // $(".nav_btn_wedding ").removeClass("specialActive")
@@ -92,6 +93,7 @@ $(function () {
 
         }
         else {
+            $(".fas").addClass("active")
             $(".guide_extraPages").addClass("active")
             // $(".nav_btn_eat").addClass("specialActive")
             // $(".nav_btn_wedding ").addClass("specialActive")

@@ -627,9 +627,12 @@ position: relative;
     }
 
     .fas {
-        transform: translate(92px, -23px);
+        transform: translate(92px, -23px) ;
         color    : white;
         cursor   : pointer;
+    }
+    .fas.active{
+        transform: translate(92px, -23px) rotate(180deg);
     }
 
     .guide_extraPages.active {
