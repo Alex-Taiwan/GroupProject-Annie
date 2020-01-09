@@ -54,6 +54,7 @@
             border-bottom: 1px #DAB059 solid;
             margin: 46px auto;
             letter-spacing: 3px;
+
         }
 
         .pancake_title {
@@ -91,12 +92,13 @@
             position: relative;
             margin-bottom: 100px;
             box-shadow: 7px 7px 5px rgba(191, 75, 139, 0.75);
+
         }
 
         .pancake_menuBox::after {
             content: "";
-            width: 1200px;
-            height: 430px;
+            width: 100%;
+            height: 100%;
             background-color: #F6D3E2;
             border: 1px solid white;
             position: absolute;
@@ -116,6 +118,7 @@
             letter-spacing: 3px;
             -webkit-text-stroke: 1px #AA8243;
             color: white;
+            text-shadow: 7px 7px 5px #BCA14B;
         }
 
         .pancake_menuBox .titleBox::after {
@@ -361,8 +364,8 @@
         }
 
         .pancake_menuBox2 {
-            width: 1000px;
-            height: 750px;
+            width: 46.5%;
+            height: 670px;
             background-image: url("./素材/08-鬆餅小屋/pancake_pop_up-reverse.png");
             background-position: center;
             background-repeat: no-repeat;
@@ -372,33 +375,40 @@
             position: relative;
         }
 
-        .pancake_menuBox2 .decorationBox {
-            width: 800px;
-            height: 182px;
+        .pancake_menuBox2::after {
+            content: "";
+            background-image: url("./素材/08-鬆餅小屋/pancake_flag1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 659px;
+            height: 150px;
             position: absolute;
-            top: 470px;
-            right: 917px;
+            top: 436px;
+            right: 815px;
+            z-index: -1;
         }
 
         .pancake_menuBox2 .titleBox {
             position: absolute;
-            left: 426px;
-            top: 186px;
-            font-size: 40px;
+            left: 175px;
+            top: 177px;
+            font-size: 36px;
             font-weight: bold;
+
         }
 
         .pancake_menuBox2 .text {
-            width: 505px;
+            width: 55%;
             position: absolute;
-            top: 293px;
-            left: 270px;
+            top: 229px;
+            left: 179px;
             height: 160px;
-            font-size: 28px;
+            font-size: 25px;
             font-weight: bold;
             display: grid;
             grid-auto-rows: 1fr 1fr 1fr 1fr;
-            grid-auto-columns: 3fr 1fr 60px;
+            grid-auto-columns: 3fr 1fr 1fr;
             grid-template-areas:
                 ". temperature_2 temperature2_2"
                 "item1_2 cost1_2 cost4_2"
@@ -470,8 +480,8 @@
 
         .pancake_menuBox3::after {
             content: "";
-            width: 1119px;
-            height: 366px;
+            width: 100%;
+            height: 100%;
             background-color: #F6D3E2;
             border: 1px solid white;
             position: absolute;
@@ -491,6 +501,7 @@
             letter-spacing: 3px;
             -webkit-text-stroke: 1px #AA8243;
             color: white;
+            text-shadow: 7px 7px 5px #BCA14B;
         }
 
         .pancake_menuBox3 .titleBox::after {
@@ -564,41 +575,49 @@
 
 
         .pancake_menuBox4 {
-            width: 1000px;
-            height: 750px;
+            width: 46.5%;
+            height: 670px;
             background-image: url("./素材/08-鬆餅小屋/pancake_pop_up.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            margin-right: 200px;
+            margin-left: 200px;
             margin-bottom: 100px;
             position: relative;
         }
 
-        .pancake_menuBox4 .decorationBox {
-            width: 800px;
-            height: 182px;
+        .pancake_menuBox4::after {
+            width: 659px;
+            height: 150px;
             position: absolute;
-            top: 453px;
-            left: 916px;
-
+            content: "";
+            background-image: url("./素材/08-鬆餅小屋/pancake_flag1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 659px;
+            height: 150px;
+            position: absolute;
+            top: 397px;
+            right: -588px;
+            z-index: -1;
         }
 
         .pancake_menuBox4 .titleBox {
             position: absolute;
-            left: 450px;
-            top: 139px;
-            font-size: 40px;
+            left: 378px;
+            top: 99px;
+            font-size: 36px;
             font-weight: bold;
         }
 
         .pancake_menuBox4 .text {
-            width: 440px;
+            width: 55%;
             position: absolute;
-            top: 207px;
-            left: 270px;
-            height: 360px;
-            font-size: 28px;
+            top: 167px;
+            left: 209px;
+            height: 325px;
+            font-size: 25px;
             font-weight: bold;
             display: grid;
             grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -617,7 +636,9 @@
             ;
         }
 
-
+        .text_mobile {
+            display: none;
+        }
 
         .pancake_menuBox4 .item1 {
             grid-area: item1_4
@@ -697,8 +718,8 @@
 
         .pancake_menuBox5::after {
             content: "";
-            width: 1200px;
-            height: 430px;
+            width: 100%;
+            height: 100%;
             background-color: #F6D3E2;
             border: 1px solid white;
             position: absolute;
@@ -718,6 +739,7 @@
             letter-spacing: 3px;
             -webkit-text-stroke: 1px #AA8243;
             color: white;
+            text-shadow: 7px 7px 5px #BCA14B;
         }
 
         .pancake_menuBox5 .titleBox::after {
@@ -845,8 +867,8 @@
         }
 
         .pancake_menuBox6 {
-            width: 1000px;
-            height: 750px;
+            width: 46.5%;
+            height: 670px;
             background-image: url("./素材/08-鬆餅小屋/pancake_pop_up-reverse.png");
             background-position: center;
             background-repeat: no-repeat;
@@ -856,29 +878,43 @@
             position: relative;
         }
 
-        .pancake_menuBox6 .decorationBox {
-            width: 800px;
-            height: 182px;
+        .pancake_menuBox6::after {
+            width: 659px;
+            height: 150px;
             position: absolute;
-            top: 470px;
-            right: 917px;
+            content: "";
+            background-image: url("./素材/08-鬆餅小屋/pancake_flag1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 659px;
+            height: 150px;
+            position: absolute;
+            top: 438px;
+            right: 814px;
+            z-index: -1;
         }
 
         .pancake_menuBox6 .titleBox {
             position: absolute;
             left: 426px;
             top: 186px;
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
         }
 
         .pancake_menuBox6 .text {
-            width: 396px;
+
+            width: 55%;
+            position: absolute;
+            top: 229px;
+            left: 179px;
+            /* width: 396px;
             position: absolute;
             top: 250px;
-            left: 290px;
+            left: 290px; */
             height: 148px;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
             display: grid;
             grid-auto-rows: 1fr 1fr 1fr 1fr;
@@ -938,8 +974,8 @@
 
         .pancake_menuBox7::after {
             content: "";
-            width: 1120px;
-            height: 430px;
+            width: 100%;
+            height: 100%;
             background-color: #F6D3E2;
             border: 1px solid white;
             position: absolute;
@@ -959,6 +995,7 @@
             letter-spacing: 3px;
             -webkit-text-stroke: 1px #AA8243;
             color: white;
+            text-shadow: 7px 7px 5px #BCA14B;
         }
 
         .pancake_menuBox7 .titleBox::after {
@@ -1073,41 +1110,54 @@
 
 
         .pancake_menuBox8 {
-            width: 1000px;
-            height: 750px;
+            width: 46.5%;
+            height: 670px;
             background-image: url("./素材/08-鬆餅小屋/pancake_pop_up.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            margin-right: 200px;
+            margin-left: 200px;
             margin-bottom: 100px;
             position: relative;
         }
 
-        .pancake_menuBox8 .decorationBox {
-            width: 800px;
-            height: 182px;
+        .pancake_menuBox8::after {
+            width: 659px;
+            height: 150px;
             position: absolute;
-            top: 453px;
-            left: 916px;
-
+            content: "";
+            background-image: url("./素材/08-鬆餅小屋/pancake_flag1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 659px;
+            height: 150px;
+            position: absolute;
+            top: 421px;
+            right: -582px;
+            z-index: -1;
         }
 
         .pancake_menuBox8 .titleBox {
             position: absolute;
             left: 394px;
             top: 186px;
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
         }
 
         .pancake_menuBox8 .text {
-            width: 554px;
+            width: 55%;
+            position: absolute;
+            top: 229px;
+            left: 179px;
+
+            /* width: 554px;
             position: absolute;
             top: 283px;
-            left: 175px;
+            left: 175px; */
             height: 178px;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
             display: grid;
             grid-auto-rows: 1fr 1fr 1fr 1fr;
@@ -1173,6 +1223,7 @@
             padding: 20px;
             font-weight: bold;
             color: black;
+            cursor: pointer;
         }
 
         .pancake_footerDecoration {
@@ -1182,19 +1233,338 @@
             top: -130px;
             left: 200px;
         }
-        @media (max-width:1700px) {
-           
+
+        @media (max-width:1500px) {
+            .pancake_menuBox {
+                max-width: 768px;
+            }
+
+            .pancake_menuBox3 {
+                max-width: 768px;
+            }
+
+            .pancake_menuBox5 {
+                max-width: 768px;
+            }
+
+            .pancake_menuBox7 {
+                max-width: 768px;
+            }
+
+            .pancake_menuBox2 {
+                margin-right: unset;
+                width: 60%;
+            }
+
+            .pancake_menuBox4 {
+                margin-left: unset;
+                width: 60%;
+            }
+
+            .pancake_menuBox4 .text {
+                width: 45%
+            }
+
+            .pancake_menuBox6 {
+                margin-right: unset;
+                width: 60%;
+            }
+
+
+            .pancake_menuBox4::after {
+                width: 580px;
+                right: -513px;
+            }
+
+            .pancake_menuBox8 {
+                margin-left: unset;
+                width: 60%;
+            }
+
+            .pancake_menuBox8::after {
+                width: 580px;
+                right: -513px;
+            }
         }
 
 
-        @media (max-width:1000px) {
+        @media (max-width:1100px) {
+            .pc_touse {
+                display: none;
+            }
+
+            .pancake_menuBox .titleBox {
+                top: 15px;
+            }
+
+            .pancake_menuBox5 .titleBox {
+                top: 0px;
+                left: 237px;
+            }
+            .pancake_menuBox5 .titleBox::after {
+               width: 380px;
+            }
+            .pancake_menuBox6 .titleBox {
+                left: 331px;
+                top: 164px;
+            }
+            .pancake_menuBox7 .titleBox {
+                top: 11px;
+            }
+          
+            .pancake_menuBox2 {
+                width: 90%;
+            }
+
+            .pancake_menuBox2::after {
+                display: none;
+            }
+
+            .pancake_menuBox4 {
+                width: 90%;
+            }
+
+            .pancake_menuBox4::after {
+                display: none;
+            }
+
+            .pancake_menuBox6 {
+                width: 90%
+            }
+
+            .pancake_menuBox6::after {
+                display: none;
+            }
+
+            .pancake_menuBox8 {
+                width: 90%
+            }
+
+            .pancake_menuBox8::after {
+                display: none;
+            }
+
+
             .page_pancake_banner .banner_decorationBox {
                 width: 433px;
                 height: 100px;
             }
         }
 
-        @media (max-width:540px) {
+        @media (max-width:768px) {
+            .pancake_menuBox {
+                max-width: 550px;
+            }
+
+            .section3 {
+                justify-content: unset;
+            }
+
+            .pancake_menuBox3 {
+                max-width: 550px;
+            }
+
+            .pancake_menuBox5 {
+                max-width: 550px;
+            }
+
+            .pancake_menuBox7 {
+                max-width: 550px;
+            }
+
+            .pancake_menuBox .titleBox {
+                left: 149px;
+                top: 4px;
+                font-size: 36px;
+            }
+
+            .pancake_menuBox .titleBox::after {
+                width: 250px;
+            }
+
+            .pancake_menuBox .text {
+                right: -24px;
+                bottom: 23px;
+                width: 474px;
+                font-size: 25px;
+            }
+
+            .pancake_menuBox3 .titleBox {
+                right: 303px;
+                top: 24px;
+                font-size: 36px;
+            }
+
+            .pancake_menuBox3 .titleBox::after {
+                width: 250px;
+                left: unset;
+                top: 54px;
+                right: -7px;
+            }
+
+            .pancake_menuBox3 .titleBox::before {
+                top: 46px;
+                left: 83px;
+            }
+
+            .pancake_menuBox3 .text {
+                left: 35px;
+                bottom: 54px;
+                height: 164px;
+                width: 499px;
+                font-size: 25px;
+
+            }
+
+            .pancake_menuBox4 .titleBox {
+                left: 280px;
+                top: 179px;
+            }
+
+            .pancake_menuBox4 .text {
+                left: 199px;
+                top: 251px;
+                height: 194px;
+                font-size: 25px;
+                grid-auto-rows: 1fr 1fr 1fr 1fr;
+                grid-auto-columns: 3fr 1fr;
+                grid-template-areas:
+                    "item1_4 cost1_4 "
+                    "item2_4 cost2_4 "
+                    "item3_4 cost3_4 "
+                    "item4_4 cost4_4 "
+                ;
+            }
+
+            .pancake_menuBox5 .titleBox {
+                left: 118px;
+                top: 7px;
+                font-size: 36px;
+            }
+
+            .pancake_menuBox5 .titleBox::after {
+                width: 250px;
+                left: unset;
+                top: 54px;
+                right: -7px;
+            }
+
+            .pancake_menuBox5 .titleBox::before {
+                top: 46px;
+                right: -15px;
+            }
+
+            .pancake_menuBox5 .text {
+                right: -27px;
+                bottom: 20px;
+                width: 543px;
+                font-size: 25px;
+            }
+
+            .pancake_menuBox6 .titleBox {
+                left: 262px;
+                top: 177px;
+            }
+
+            .section7 {
+                justify-content: unset
+            }
+
+            .pancake_menuBox7 .titleBox {
+                right: 303px;
+                top: 20px;
+                font-size: 36px;
+            }
+
+            .pancake_menuBox7 .titleBox::after {
+                width: 250px;
+                left: unset;
+                top: 54px;
+                right: -7px;
+            }
+
+            .pancake_menuBox7 .titleBox::before {
+                top: 46px;
+                left: 198px;
+            }
+
+            .pancake_menuBox7 .text {
+                left: 115px;
+                bottom: 38px;
+                width: 375px;
+                height: 308px;
+                font-size: 25px;
+            }
+
+
+
+
+
+            .pancake_menuBox8 .titleBox {
+                left: 307px;
+                top: 152px;
+            }
+
+            .pancake_menuBox8 .text {
+                top: 210px;
+                left: 171px;
+            }
+
+
+            .crown1 {
+                display: none;
+            }
+
+            .crown2 {
+                display: none;
+            }
+
+            .crown3 {
+                display: none;
+            }
+
+            .crown4 {
+                display: none;
+            }
+
+            .crown5 {
+                display: none;
+            }
+
+            .crown6 {
+                display: none;
+            }
+
+            .crown7 {
+                display: none;
+            }
+
+            .crown8 {
+                display: none;
+            }
+
+            .crown9 {
+                display: none;
+            }
+
+            .crown10 {
+                display: none;
+            }
+
+            .crown11 {
+                display: none;
+            }
+
+            .crown12 {
+                display: none;
+            }
+
+            .returnPrePage_Box {
+                display: none;
+            }
+        }
+
+        @media (max-width:576px) {
             .page_pancake_banner {
                 height: 248px;
             }
@@ -1238,7 +1608,381 @@
                 font-size: 23px;
             }
 
+            .pancake_sloganBox {
+                width: 66px;
+                height: 60px;
+                margin: 90px auto 60px;
+            }
 
+            .pancake_menuBox {
+
+                max-width: 300px;
+                height: 200px;
+            }
+
+            .pancake_menuBox::after {
+                top: 13px;
+                left: 9px;
+            }
+
+            .section2 {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .pancake_menuBox2 {
+                width: 310px;
+                height: 242px;
+            }
+
+
+            .section3 {
+                justify-content: unset;
+            }
+
+            .pancake_menuBox3 {
+                max-width: 300px;
+                height: 366px;
+                margin-right: unset;
+
+                height: 200px;
+            }
+
+            .pancake_menuBox3::after {
+                top: 13px;
+                left: 9px;
+            }
+
+            .section4 {
+                display: flex;
+                justify-content: flex-end;
+
+            }
+
+            .pancake_menuBox4 {
+                width: 310px;
+                height: 242px;
+                background-image: url("./素材/08-鬆餅小屋/pancake_pop_up-reverse.png");
+            }
+
+            .pancake_menuBox5 {
+                height: 200px;
+                max-width: 300px;
+            }
+
+            .pancake_menuBox5::after {
+                top: 13px;
+                left: 9px;
+            }
+
+
+            .section6 {
+                justify-content: flex-end;
+            }
+
+            .pancake_menuBox6 {
+                width: 310px;
+                height: 242px;
+            }
+
+            .section7 {
+                justify-content: unset;
+            }
+
+            .pancake_menuBox7 {
+                height: 200px;
+                max-width: 300px;
+                margin-right: unset;
+            }
+
+            .pancake_menuBox7::after {
+                top: 13px;
+                left: 9px;
+            }
+
+            .section8 {
+                /* width: 310px;
+                height: 242px; */
+                display: flex;
+                justify-content: flex-end;
+
+            }
+
+            .pancake_menuBox8 {
+                width: 310px;
+                height: 242px;
+                background-image: url("./素材/08-鬆餅小屋/pancake_pop_up-reverse.png");
+            }
+
+            .pancake_menuBox .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                left: 108px;
+                top: -3px;
+
+            }
+
+            .pancake_menuBox .titleBox::before {
+                top: 23px;
+                right: -22px;
+                height: 15px;
+                width: 15px;
+            }
+
+            .pancake_menuBox .titleBox::after {
+                height: 5px;
+                width: 177px;
+                top: 28px;
+                right: -19px;
+
+            }
+
+            .pancake_menuBox2 .titleBox {
+
+                font-size: 20px;
+                font-weight: bold;
+                left: 90px;
+                top: 33px;
+            }
+
+            .pancake_menuBox3 .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                right: 141px;
+                top: 1px;
+            }
+
+            .pancake_menuBox3 .titleBox::before {
+                top: 23px;
+                left: 51px;
+                height: 15px;
+                width: 15px;
+            }
+
+            .pancake_menuBox3 .titleBox::after {
+                width: 177px;
+                top: 28px;
+                left: -112px;
+                height: 5px;
+            }
+
+
+            .pancake_menuBox4 .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+                left: 62px;
+                top: 37px;
+
+            }
+
+            .pancake_menuBox5 .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                left: 75px;
+                top: -3px;
+            }
+
+            .pancake_menuBox5 .titleBox::before {
+                top: 21px;
+                right: -17px;
+                height: 15px;
+                width: 15px;
+            }
+
+            .pancake_menuBox5 .titleBox::after {
+                width: 150px;
+                top: 26px;
+                right: -6px;
+                height: 5px;
+            }
+
+
+            .pancake_menuBox6 .titleBox {
+                left: 111px;
+                top: 39px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .pancake_menuBox7 .titleBox {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                right: 134px;
+                top: 0px;
+            }
+
+            .pancake_menuBox7 .titleBox::before {
+                top: 23px;
+                left: 122px;
+                height: 15px;
+                width: 15px;
+            }
+
+            .pancake_menuBox7 .titleBox::after {
+                width: 177px;
+                top: 28px;
+                left: -49px;
+                height: 5px;
+            }
+
+            .pancake_menuBox8 .titleBox {
+                left: 91px;
+                top: 47px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .pancake_menuBox .text {
+                width: 80%;
+                font-size: 14px;
+                height: 150px;
+                right: -10px;
+                bottom: 29px;
+            }
+
+            .pancake_menuBox2 .text {
+                width: 65%;
+                font-size: 14px;
+                top: 62px;
+                left: 54px;
+                height: 107px;
+            }
+
+            .pancake_menuBox3 .text {
+                height: 144px;
+                width: 85%;
+                font-size: 14px;
+                left: 32px;
+                bottom: 7px;
+            }
+
+
+
+            .pancake_menuBox4 .text {
+                width: 80%;
+                font-size: 14px;
+                display: none;
+            }
+
+            .text_mobile {
+                width: 80%;
+                font-size: 14px;
+                position: absolute;
+                top: 70px;
+                left: 60px;
+                height: 109px;
+                font-weight: bold;
+                display: grid;
+                grid-auto-rows: 1fr 1fr 1fr 1fr;
+                grid-auto-columns: 2fr 1fr;
+                grid-template-areas:
+                    "item1_4 cost1_4 "
+                    "item2_4 cost2_4 "
+                    "item3_4 cost3_4 "
+                    "item4_4 cost4_4 "
+                ;
+            }
+
+            .pancake_menuBox4 .text {
+                display: none;
+            }
+
+            .pancake_menuBox5 .text {
+                width: 80%;
+                font-size: 14px;
+                height: 188px;
+                right: 2px;
+                bottom: 0px;
+            }
+
+            .pancake_menuBox6 .text {
+                width: 65%;
+                font-size: 14px;
+                top: 61px;
+                left: 47px;
+                height: 105px;
+            }
+
+            .pancake_menuBox7 .text {
+                width: 80%;
+                font-size: 14px;
+                left: 49px;
+                bottom: 70px;
+                height: 108px;
+            }
+
+            .pancake_menuBox8 .text {
+                width: 76%;
+                font-size: 14px;
+                grid-auto-columns: 2fr 1fr 1fr;
+                top: 69px;
+                left: 49px;
+                height: 105px;
+                letter-spacing: -1px;
+            }
+
+
+
+            .pancake_footerDecoration {
+                display: none;
+            }
+
+
+            .crown1 {
+                display: none;
+            }
+
+            .crown2 {
+                display: none;
+            }
+
+            .crown3 {
+                display: none;
+            }
+
+            .crown4 {
+                display: none;
+            }
+
+            .crown5 {
+                display: none;
+            }
+
+            .crown6 {
+                display: none;
+            }
+
+            .crown7 {
+                display: none;
+            }
+
+            .crown8 {
+                display: none;
+            }
+
+            .crown9 {
+                display: none;
+            }
+
+            .crown10 {
+                display: none;
+            }
+
+            .crown11 {
+                display: none;
+            }
+
+            .crown12 {
+                display: none;
+            }
+
+            .returnPrePage_Box {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1385,9 +2129,9 @@
                     <div class="cost5">100</div>
                     <div class="cost6">100</div>
                 </div>
-                <div class="decorationBox">
+                <!-- <div class="decorationBox">
                     <img src="./素材/08-鬆餅小屋/pancake_flag1.png" alt="">
-                </div>
+                </div> -->
             </div>
         </section>
         <section class="section3">
@@ -1421,27 +2165,39 @@
                 <div class="crown7">
                     <img src="./素材/08-鬆餅小屋/crown_pink.png" alt="">
                 </div>
+
                 <div class="text">
                     <div class="item1">藍莓蛋糕</div>
                     <div class="item2">重乳酪蛋糕</div>
                     <div class="item3">巧克力蛋糕</div>
                     <div class="item4">英式提拉米蘇</div>
-                    <div class="item5">法式檸檬蛋糕</div>
-                    <div class="item6">魔鬼天使蛋糕</div>
-                    <div class="item7">安妮公主蛋糕</div>
-                    <div class="item8">南瓜乳酪慕斯</div>
+                    <div class="item5 pc_touse">法式檸檬蛋糕</div>
+                    <div class="item6 pc_touse">魔鬼天使蛋糕</div>
+                    <div class="item7 pc_touse">安妮公主蛋糕</div>
+                    <div class="item8 pc_touse">南瓜乳酪慕斯</div>
                     <div class="cost1">90</div>
                     <div class="cost2">90</div>
                     <div class="cost3">90</div>
                     <div class="cost4">90</div>
-                    <div class="cost5">90</div>
-                    <div class="cost6">100</div>
-                    <div class="cost7">100</div>
-                    <div class="cost8">100</div>
+                    <div class="cost5 pc_touse">90</div>
+                    <div class="cost6 pc_touse">100</div>
+                    <div class="cost7 pc_touse">100</div>
+                    <div class="cost8 pc_touse">100</div>
                 </div>
-                <div class="decorationBox">
+                <div class="text_mobile">
+                    <div class="item1">藍莓蛋糕</div>
+                    <div class="item2">重乳酪蛋糕</div>
+                    <div class="item3">巧克力蛋糕</div>
+                    <div class="item4">英式提拉米蘇</div>
+
+                    <div class="cost1">90</div>
+                    <div class="cost2">90</div>
+                    <div class="cost3">90</div>
+                    <div class="cost4">90</div>
+                </div>
+                <!-- <div class="decorationBox">
                     <img src="./素材/08-鬆餅小屋/pancake_flag1.png" alt="">
-                </div>
+                </div> -->
             </div>
         </section>
         <section class="section5">
@@ -1489,9 +2245,7 @@
                     <div class="cost2">160</div>
                     <div class="cost3">160</div>
                 </div>
-                <div class="decorationBox">
-                    <img src="./素材/08-鬆餅小屋/pancake_flag1.png" alt="">
-                </div>
+
             </div>
         </section>
         <section class="section7">
@@ -1542,9 +2296,6 @@
                     <div class="cost2">160</div>
                     <div class="cost3">160</div>
                     <div class="cost4">160</div>
-                </div>
-                <div class="decorationBox">
-                    <img src="./素材/08-鬆餅小屋/pancake_flag1.png" alt="">
                 </div>
             </div>
         </section>
