@@ -15,10 +15,32 @@
     <link rel="stylesheet" href="./template.css">
     <title>Document</title>
     <style>
-        img{
+        img {
             width: 100%;
             height: 100%;
         }
+
+        .mobile_swiper {
+            display: none;
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 400px;
+            margin: 80px auto 100px;
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
         .extraPage_princess_banner {
             width: 100%;
             height: 760px;
@@ -53,6 +75,7 @@
             color: rgba(255, 255, 255, 1);
             transform: translateY(-44px);
         }
+
         .extraPage_princess_titleBox {
             width: 444.5px;
             border-bottom: 1px #DAB059 solid;
@@ -73,13 +96,14 @@
         .extraPage_princess_titleContent {
             margin: auto;
             text-align: center;
-           
+
             line-height: 43px;
             font-size: 26px;
             font-weight: lighter;
             letter-spacing: 1.5px;
             color: #97908D;
         }
+
         /* .extraPage_princess_banner {
             width: 100%;
             height: 760px;
@@ -152,17 +176,529 @@
         .imgBox_t {
             width: 100%;
             height: 272px;
-            margin-bottom: 39px;
+            margin-bottom: 100px;
             display: flex;
             justify-content: space-between;
+            position: relative;
+        }
+
+        .imgBox_t::before {
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            content: "";
+            height: 66px;
+            width: 99px;
+            background-image: url("./素材/10-公主故事屋/red-pocker-new.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: pockerAct1;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+
+
+        @keyframes pockerAct1 {
+            0% {
+                left: 50px;
+                transform: rotate(15deg);
+
+            }
+
+            5% {
+                left: 140px;
+                transform: rotate(-15deg);
+
+            }
+
+            10% {
+                left: 230px;
+                transform: rotate(15deg);
+            }
+
+            15% {
+                left: 320px;
+                transform: rotate(-15deg);
+            }
+
+            20% {
+                left: 410px;
+                transform: rotate(15deg);
+            }
+
+            25% {
+                left: 500px;
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                left: 590px;
+                transform: rotate(15deg);
+            }
+
+            35% {
+                left: 680px;
+                transform: rotate(-15deg);
+            }
+
+            40% {
+                left: 770px;
+                transform: rotate(15deg);
+            }
+
+            45% {
+                left: 860px;
+                transform: rotate(-15deg);
+            }
+
+
+
+            50% {
+                left: 1050px;
+                transform: rotate(-15deg) rotateY(-180deg)
+            }
+
+            55% {
+                left: 960px;
+                transform: rotate(15deg) rotateY(-180deg)
+            }
+
+            60% {
+                left: 870px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            65% {
+                left: 780px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            70% {
+                left: 690px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            75% {
+                left: 590px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            80% {
+                left: 490px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            85% {
+                left: 420px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            90% {
+                left: 330px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            95% {
+                left: 240px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            100% {
+                left: 50px;
+                transform: rotate(-15deg);
+            }
+        }
+
+        .imgBox_t::after {
+            position: absolute;
+            left: 233px;
+            top: 272px;
+            content: "";
+            height: 88px;
+            width: 42px;
+            background-image: url("./素材/10-公主故事屋/black-pocker-new.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: pockerAct2;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+
+        @keyframes pockerAct2 {
+            0% {
+                left: 200px;
+                transform: rotate(-15deg);
+            }
+
+            5% {
+                left: 290px;
+                transform: rotate(15deg);
+            }
+
+            10% {
+                left: 380px;
+                transform: rotate(-15deg);
+            }
+
+            15% {
+                left: 470px;
+                transform: rotate(15deg);
+            }
+
+            20% {
+                left: 560px;
+                transform: rotate(-15deg);
+            }
+
+            25% {
+                left: 650px;
+                transform: rotate(15deg);
+            }
+
+            30% {
+                left: 740px;
+                transform: rotate(-15deg);
+            }
+
+            35% {
+                left: 830px;
+                transform: rotate(15deg);
+            }
+
+            40% {
+                left: 920px;
+                transform: rotate(-15deg);
+            }
+
+            45% {
+                left: 1010px;
+                transform: rotate(15deg);
+            }
+
+            50% {
+                left: 950px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            55% {
+                left: 860px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            60% {
+                left: 770px;
+                transform: rotate(15deg)rotateY(180deg);
+            }
+
+            65% {
+                left: 680px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            70% {
+                left: 590px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            75% {
+                left: 500px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            80% {
+                left: 410px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            85% {
+                left: 320px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            90% {
+                left: 230px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            95% {
+                left: 140px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            100% {
+                left: 200px;
+                transform: rotate(15deg);
+            }
         }
 
         .imgBox_m {
             width: 100%;
             height: 272px;
-            margin-bottom: 39px;
+            margin-bottom: 100px;
             display: flex;
             justify-content: space-between;
+            position: relative;
+        }
+
+        .imgBox_m::before {
+            position: absolute;
+
+            left: 233px;
+            top: 300px;
+            content: "";
+            height: 66px;
+            width: 99px;
+            background-image: url("./素材/10-公主故事屋/red-pocker-reverse-new.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: pockerAct3;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+
+        @keyframes pockerAct3 {
+            0% {
+                left: 150px;
+                transform: rotate(-15deg);
+            }
+
+            5% {
+                left: 240px;
+                transform: rotate(15deg);
+            }
+
+            10% {
+                left: 330px;
+                transform: rotate(-15deg);
+            }
+
+            15% {
+                left: 420px;
+                transform: rotate(15deg);
+            }
+
+            20% {
+                left: 510px;
+                transform: rotate(-15deg);
+            }
+
+            25% {
+                left: 600px;
+                transform: rotate(15deg);
+            }
+
+            30% {
+                left: 690px;
+                transform: rotate(-15deg);
+            }
+
+            35% {
+                left: 780px;
+                transform: rotate(15deg);
+            }
+
+            40% {
+                left: 870px;
+                transform: rotate(-15deg);
+            }
+
+            45% {
+                left: 960px;
+                transform: rotate(15deg);
+            }
+
+            50% {
+                left: 900px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            55% {
+                left: 810px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            60% {
+                left: 720px;
+                transform: rotate(15deg)rotateY(180deg);
+            }
+
+            65% {
+                left: 630px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            70% {
+                left: 540px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            75% {
+                left: 450px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            80% {
+                left: 360px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            85% {
+                left: 270px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            90% {
+                left: 180px;
+                transform: rotate(15deg) rotateY(180deg);
+            }
+
+            95% {
+                left: 90px;
+                transform: rotate(-15deg) rotateY(180deg);
+            }
+
+            100% {
+                left: 200px;
+                transform: rotate(15deg);
+            }
+        }
+
+
+        .imgBox_m::after {
+            position: absolute;
+            top: 272px;
+            left: 50px;
+            content: "";
+            height: 88px;
+            width: 42px;
+            background-image: url("./素材/10-公主故事屋/black-pocker-reverse-new.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: pockerAct4;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes pockerAct4 {
+            0% {
+                left: 50px;
+                transform: rotate(15deg);
+
+            }
+
+            5% {
+                left: 140px;
+                transform: rotate(-15deg);
+
+            }
+
+            10% {
+                left: 230px;
+                transform: rotate(15deg);
+            }
+
+            15% {
+                left: 320px;
+                transform: rotate(-15deg);
+            }
+
+            20% {
+                left: 410px;
+                transform: rotate(15deg);
+            }
+
+            25% {
+                left: 500px;
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                left: 590px;
+                transform: rotate(15deg);
+            }
+
+            35% {
+                left: 680px;
+                transform: rotate(-15deg);
+            }
+
+            40% {
+                left: 770px;
+                transform: rotate(15deg);
+            }
+
+            45% {
+                left: 860px;
+                transform: rotate(-15deg);
+            }
+
+
+
+            50% {
+                left: 1050px;
+                transform: rotate(-15deg) rotateY(-180deg)
+            }
+
+            55% {
+                left: 960px;
+                transform: rotate(15deg) rotateY(-180deg)
+            }
+
+            60% {
+                left: 870px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            65% {
+                left: 780px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            70% {
+                left: 690px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            75% {
+                left: 590px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            80% {
+                left: 490px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            85% {
+                left: 420px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            90% {
+                left: 330px;
+                transform: rotate(-15deg) rotateY(-180deg);
+            }
+
+            95% {
+                left: 240px;
+                transform: rotate(15deg) rotateY(-180deg);
+            }
+
+            100% {
+                left: 50px;
+                transform: rotate(-15deg);
+            }
         }
 
         .imgBox_b {
@@ -173,24 +709,28 @@
         }
 
         .extraPage_princess_imgBoxGroup .imgBox {
-            width: 360px;
+            width: 32%;
             height: 100%;
             background-color: #FCC4E1;
+            overflow: hidden;
         }
 
-        .extraPage_princess_imgBoxGroup .imgBox:hover {
-            transform: scale(1.1);
+        .extraPage_princess_imgBoxGroup .imgBox img:hover{
+            transform: scale(1.4);
+            transition: .5s ease-in-out;
             border: 15px solid white;
             box-shadow: 0 0 10px 3px black;
+           
         }
 
-        .extraPage_princess_toFooterSpace {
-            /* margin-bottom: 230px; */
+        .extraPage_princess_toUperSpace {
+            margin-top: 100px;
 
         }
-        .returnPrePage_Box{
+
+        .returnPrePage_Box {
             width: 166px;
-            margin:100px auto ;
+            margin: 100px auto;
             font-size: 22px;
             text-align: center;
             background-color: white;
@@ -199,16 +739,92 @@
             padding: 20px;
             font-weight: bold;
             color: black;
+            cursor: pointer;
         }
-        
 
-        @media (max-width:1000px) {
+
+        @media (max-width:1100px) {
             .extraPage_princess_banner .banner_decorationBox {
                 width: 433px;
                 height: 100px;
             }
+            .imgBox_t{
+                margin-bottom: 50px;
+            }
+            .imgBox_t::before {
+                display: none;
+            }
+
+            .imgBox_t::after {
+                display: none;
+            }
+            
+            .imgBox_m {
+                margin-bottom: 50px;
+            }
+            .imgBox_m::before {
+                display: none;
+            }
+
+            .imgBox_m::after {
+                display: none;
+            }
+
+           
+
         }
-        @media (max-width:540px) {
+
+        @media (max-width:768px) {
+            .pc_box {
+                display: none;
+            }
+
+            .mobile_swiper {
+                display: block;
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: -6%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -6%;
+                left: auto;
+            }
+
+            .extraPage_princess_titleContent {
+                letter-spacing: 1px;
+            }
+
+            .returnPrePage_Box {
+                display: none;
+            }
+
+        }
+
+        @media (max-width:576px) {
+
+            .swiper-container {
+                width: 294px;
+                height: 221px;
+
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: 0%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: 0%;
+                left: auto;
+            }
+
             .extraPage_princess_banner {
                 height: 248px;
             }
@@ -242,12 +858,14 @@
                 bottom: -6px;
                 transform: translateX(-50%);
             }
-            .extraPage_princess_titleContent{
-                font-size: 14px;
+
+            .extraPage_princess_titleContent {
+                font-size: 12px;
                 margin: 0px auto -54px;
+                letter-spacing: 0px;
             }
 
-            .extraPage_princess_title{
+            .extraPage_princess_title {
                 font-size: 23px;
             }
         }
@@ -341,11 +959,11 @@
                 <div class="extraPage_princess_title">PRINCESS’S HOUSE</div>
             </div>
             <div class="extraPage_princess_titleContent m-auto">
-                <p>公主故事屋是公主最愛的小房間，裡面擺滿著公主最常穿的衣服和配件…</p>
+                <p>安妮公主最愛的房間，裡面擺滿著最常穿的衣服和配件…</p>
             </div>
         </div>
-        <div class="box_container ">
-            <div class="extraPage_princess_imgBoxGroup extraPage_princess_toFooterSpace  ">
+        <div class="box_container pc_box">
+            <div class="extraPage_princess_imgBoxGroup extraPage_princess_toUperSpace  ">
                 <div class="imgBox_t">
                     <div class="imgBox_t_l imgBox" data-aos="flip-up" data-aos-duration="1400">
                         <img src="./素材/10-公主故事屋/princess_01.jpg" alt="">
@@ -383,10 +1001,30 @@
 
         </div>
 
-        <a href="./guide-index.html"><div class="returnPrePage_Box">
-            回園區導覽
-        </div></a>
+        <a href="./guide-index.html">
+            <div class="returnPrePage_Box">
+                回園區導覽
+            </div>
+        </a>
+        <!-- swiper -->
+        <div class="swiper-container mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_01.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_02.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_03.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_04.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_05.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_06.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_08.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./素材/10-公主故事屋/princess_09.jpg)"></div>
 
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- swiper -->
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
@@ -412,24 +1050,58 @@
             </div>
         </div>
     </div>
-        <div class="returnBut">
-            <div class="returnBut_text">Top</div>
-        </div>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="./template.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!-- <script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'fade',
+            grabCursor: true,
+            updateOnWindowResize: true,
+            speed: 3500,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+    <!-- <script>
+            var windowWidth = $(window).width()
+            if (windowWidth < 1500) {
+                setTimeout(() => {
+                    swiper.update()
+    
+                }, 500)
+            }
+    
+        </script> -->
+    <!-- <script>
 
 
         $(window).on("scroll", function () {
@@ -451,9 +1123,9 @@
             return false;
         })
     </script> -->
-        <script>
+    <script>
 
-        </script>
+    </script>
 </body>
 
 </html>

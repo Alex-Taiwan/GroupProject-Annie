@@ -86,21 +86,13 @@ $(function () {
         if ($(".guide_extraPages").hasClass("active")) {
             $(".fas").removeClass("active")
             $(".guide_extraPages").removeClass("active")
-            // $(".nav_btn_eat").removeClass("specialActive")
-            // $(".nav_btn_wedding ").removeClass("specialActive")
-            // $(".nav_btn_talk").removeClass("specialActive")
-            // $(".nav_btn_homestay").removeClass("specialActive")
+           
 
         }
         else {
             $(".fas").addClass("active")
             $(".guide_extraPages").addClass("active")
-            // $(".nav_btn_eat").addClass("specialActive")
-            // $(".nav_btn_wedding ").addClass("specialActive")
-            // $(".nav_btn_talk").addClass("specialActive")
-            // $(".nav_btn_homestay").addClass("specialActive")
         }
-
     })
 
 

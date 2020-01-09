@@ -586,7 +586,7 @@ position: relative;
     .mobile_nav_btn.active:nth-child(1) {
 
         animation-name           : btn_growth_1;
-        animation-duration       : 0.6ㄞs;
+        animation-duration       : 0.6s;
         animation-iteration-count: 1;
         animation-fill-mode      : forwards;
         transform                : translateX(-100%);
@@ -666,16 +666,12 @@ position: relative;
 
     .guide_extraPages div:nth-child(1) {
         border-bottom: 2px solid #9F416B;
-        /* position  : absolute;
-        left         : 0;
-        top          : 171px; */
+       
     }
 
     .guide_extraPages div:nth-child(2) {
         border-bottom: 2px solid #9F416B;
-        /* position  : absolute;
-        left         : 0;
-        top          : 228px; */
+      
     }
 
    
