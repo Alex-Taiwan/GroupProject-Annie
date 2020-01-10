@@ -86,12 +86,15 @@ $(function () {
         if ($(".guide_extraPages").hasClass("active")) {
             $(".fas").removeClass("active")
             $(".guide_extraPages").removeClass("active")
-           
-
+            $(".nav_btn_guide").addClass("mobile_afterSite")  
+            $(".nav_btn_guide").removeClass("heightChange")   
+               
         }
         else {
             $(".fas").addClass("active")
             $(".guide_extraPages").addClass("active")
+            $(".nav_btn_guide").removeClass("mobile_afterSite")
+            $(".nav_btn_guide").addClass("heightChange")   
         }
     })
 
