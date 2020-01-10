@@ -109,9 +109,19 @@
 
         .information_titleBox {
             max-width: 444.5px;
-            border-bottom: 1px #DAB059 solid;
-            ;
-            margin: 100px auto;
+            margin: 100px auto 50px;
+            position: relative;
+        }
+
+        .information_titleBox::after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DAB059;
         }
 
         .information_title {
@@ -141,6 +151,14 @@
 
         .information_titleContent .interSpace {
             margin-right: 30px;
+        }
+
+        .information_titleContent a {
+            color: #989597;
+        }
+
+        .information_titleContent a:hover {
+            color: blue
         }
 
         /* .page2_specialContainer {
@@ -230,7 +248,7 @@
         }
 
 
-    
+
 
         .Container2 {
             max-width: 1140px;
@@ -265,9 +283,9 @@
             height: 100%;
         }
 
-       
 
-       
+
+
         .Container2_img3 {
             display: none;
         }
@@ -355,7 +373,7 @@
             display: none;
         }
 
-      
+
         .Container5 {
             margin: 150px auto 150px;
             padding-top: 114px;
@@ -653,19 +671,25 @@
             .page_2_decoration4 {
 
                 height: 100px;
-                top: 1664px;
+                top: 1670px;
                 display: block;
             }
 
             .page_2_decoration5 {
                 height: 100px;
-                top: 2442px;
+                top: 2452px;
                 display: block;
             }
 
             .information_titleBox {
                 width: 224px;
-                margin: 37px auto 27px;
+                margin: 50px auto 50px;
+            }
+
+            .information_titleBox::after {
+
+                width: 100%;
+
             }
 
             .information_title {
@@ -787,8 +811,8 @@
             .Container2_img3 {
                 display: block;
                 position: relative;
-                width: 221px;
-                height: 148px;
+                width: 164px;
+                height: 110px;
                 margin: auto;
             }
 
@@ -863,15 +887,15 @@
 
             .Container7_img2 {
                 display: block;
-                width: 121px;
-                height: 122px;
+                width: 150px;
+                height: 152px;
                 margin: auto;
                 opacity: unset;
             }
 
             .Container8_img {
-                width: 150px;
-                height: 134px;
+                width: 132px;
+                height: 108px;
                 position: unset;
                 margin: auto;
                 opacity: unset;
@@ -934,7 +958,7 @@
                 position: unset;
             }
 
-        
+
 
             .pc_use {
                 display: none;
@@ -950,10 +974,13 @@
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;">
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
+            <!-- <div class="burger_decoration1 burger_decorations"></div>
+            <div class="burger_decoration2 burger_decorations"></div>
+            <div class="burger_decoration3 burger_decorations"></div> -->
             <div class="nav_btn_about nav_btn_space nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
@@ -983,18 +1010,29 @@
             <div class="burger_decoration3 burger_decorations"></div>
         </div>
         <div class="mobile_nav_btns">
-            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./index.html">關於安妮公主</a>
             </div>
-            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./info-index.html">園區資訊</a>
             </div>
-            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
             </div>
             <div class="guide_extraPages">
-                <div class="pancakePage">
+                <ul>
+                    <li class="pancakePage ">
+                        <a href="./pancake-index.html" class="changeSite">鬆餅小屋</a>
+                    </li>
+                    <li class="diyPage">
+                        <a href="./diy-index.html" class="changeSite2">手作Diy</a>
+                    </li>
+                    <li class="princessPage">
+                        <a href="./princess-index.html" class="changeSite">公主故事屋</a>
+                    </li>
+                </ul>
+                <!-- <div class="pancakePage">
                     <a href="./pancake-index.html">鬆餅小屋</a>
                 </div>
                 <div class="diyPage">
@@ -1002,15 +1040,15 @@
                 </div>
                 <div class="princessPage">
                     <a href="./princess-index.html">公主故事屋</a>
-                </div>
+                </div> -->
             </div>
-            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
             </div>
-            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./wedding-index.html">見證幸福</a>
             </div>
-            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./talk-index.html" class="">安妮悄悄話</a>
             </div>
             <div class="mobile_nav_btn">
@@ -1036,23 +1074,23 @@
             <div class="information_titleBox">
                 <div class="information_title">INFORMATION</div>
             </div>
-            <div class="information_titleContent m-auto ">
-                <div class="div interSpace">入園方式</div>
-                <div class="div interSpace">預約用餐</div>
-                <div class="div interSpace">家裡毛小孩</div>
-                <div class="div ">園區導覽</div>
+            <div class="information_titleContent ">
+                <div class="div interSpace"><a href="#" class=" link">入園方式</a></div>
+                <div class="div interSpace"><a href="#" class=" link">預約用餐</a></div>
+                <div class="div interSpace"><a href="#" class=" link">家裡毛小孩</a></div>
+                <div class="div "><a href="#" class="Link4 link">園區導覽</a></div>
             </div>
 
-            <div class="information_titleContent m-auto ">
-                <div class="div interSpace">婚紗拍攝</div>
-                <div class="div interSpace">客製化聚餐</div>
-                <div class="div interSpace">親子DIY</div>
-                <div class="div">有愛無礙</div>
+            <div class="information_titleContent ">
+                <div class="div interSpace"><a href="#" class=" link">婚紗拍攝</a></div>
+                <div class="div interSpace"><a href="#" class=" link">客製化聚餐</a></div>
+                <div class="div interSpace"><a href="#" class=" link">親子DIY</a></div>
+                <div class="div"><a href="#" class=" link">有愛無礙</a></div>
             </div>
 
         </div>
         <section class="page_2_section1">
-            <div class=" Container1 ">
+            <div class=" Container1   anchor">
                 <div class="Container1_img1 page_2_img">
                     <img src="./素材/02-園區資訊/info_circle_ticket.png" alt="" class="">
                 </div>
@@ -1071,15 +1109,15 @@
             </div>
         </section>
         <section class="page_2_section2">
-            <div class="Container2 ">
+            <div class="Container2   anchor">
                 <div class="Container2_img1">
                     <img src="./素材/02-園區資訊/info_plate.png" alt="" class="page_2_img">
                 </div>
-               
+
 
                 <div class="Container2_img3">
                     <img src="./素材/02-園區資訊/info_plate.png" alt="" class="page_2_img">
-                    
+
                 </div>
 
                 <div class="Container2_textBox page2_textBox">
@@ -1094,7 +1132,7 @@
             </div>
         </section>
         <section>
-            <div class="Container3">
+            <div class="Container3   anchor">
                 <div class="Container3_img1">
                     <img src="./素材/02-園區資訊/info_cat.png" alt="" class="page_2_img">
                 </div>
@@ -1125,7 +1163,7 @@
             </div>
         </section>
         <section class="page_2_section4">
-            <div class=" Container4 ">
+            <div class=" Container4   anchor">
                 <div class="Container4_img1">
                     <img src="./素材/02-園區資訊/info_circle_loud_speaker.png" alt="" class="page_2_img">
                 </div>
@@ -1145,7 +1183,7 @@
             </div>
         </section>
         <section class="page_2_section5">
-            <div class=" Container5">
+            <div class=" Container5   anchor">
                 <div class="Container5_img1">
                     <img src="./素材/02-園區資訊/info_marrage.png" alt="">
                 </div>
@@ -1165,7 +1203,7 @@
             </div>
         </section>
         <section>
-            <div class="Container6">
+            <div class="Container6   anchor">
                 <div class="Container6_img1">
                     <img src="./素材/02-園區資訊/info_cake.png" alt="" class="page_2_img">
                 </div>
@@ -1189,7 +1227,7 @@
             </div>
         </section>
         <section>
-            <div class="Container7">
+            <div class="Container7   anchor">
                 <div class="Container7_img1">
                     <img src="./素材/02-園區資訊/info_circle_flower_cart.png" alt="" class="page_2_img">
                 </div>
@@ -1218,8 +1256,8 @@
             </div>
         </section>
         <section>
-            <div class="Container8">
-                <div class="Container8_img ">
+            <div class="Container8   anchor">
+                <div class="Container8_img " data-aos="fade-left" data-aos-duration="1300">
                     <img src="./素材/02-園區資訊/info_baby_cart-new.png" alt="" class="page_2_img">
                 </div>
 
@@ -1249,8 +1287,8 @@
                     </div>
                     <div class=" footer_iconGroupBox">
                         <div class="footer_iconGroup">
-                            <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
-                                    alt="" class="footer_fbIcon" title="FB"></a>
+                            <a href="https://zh-tw.facebook.com/annies0425931567"><img
+                                    src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon" title="FB"></a>
                             <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon.png" alt=""
                                     class="footer_lineIcon" title="Line"></a>
                             <a href="https://www.instagram.com/explore/locations/246263666/"><img
@@ -1283,27 +1321,111 @@
     <script>
         AOS.init();
     </script>
-    <!-- <script>
+    <script>
+        var anchor = document.querySelectorAll(".anchor")
+        var link = document.querySelectorAll(".link")
+        console.log(anchor);
+        console.log(link);
 
-
-        $(window).on("scroll", function () {
-            var windowScrollTop = $(window).scrollTop()
-            if (windowScrollTop > 100) {
-                $(".returnBut").fadeIn()
-            }
-            else {
-                $(".returnBut").fadeOut()
-            }
-        })
-
-        $(".returnBut").on("click", function () {
+        for (i = 0; i < link.length; i++) {
+            const Anchor = anchor[i]
+            const Link = link[i]
 
 
 
-            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
+            $(Link).on("click", function () {
+                $("html, body").animate({
+                    scrollTop: $(Anchor).offset().top
+                }, { duration: 1000, easing: "swing" });
 
-            return false;
-        })
+            })
+        }
+
+
+
+
+        // $(".Link1").on("click", function () {
+        //             $("html, body").animate({
+        //                 scrollTop: $(".anchor7").offset().top
+        //             }, { duration: 5000, easing: "swing" });
+
+        //         })
+
+
+
+    //     $(document).ready(function() {
+    // $(".Link1").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor1").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+    // $(".Link2").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor2").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+    // $(".Link3").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor3").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+    // $(".Link1").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor1").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+    // $(".Link2").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor2").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+    // $(".Link3").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor3").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+
+    // $(".Link1").click(function() {
+    // $("html, body").animate({
+    // scrollTop: $(".anchor1").offset().top }, {duration: 1000,easing: "swing"});
+    // return false;
+    // });
+
+    // });
+    </script>
+   
+   <!-- ////貓探頭//// -->
+   <!-- <script>
+    var catAnchor=$(".Container3").offset().top
+    var windowHeight=$(window).height()
+    var windowScrolltop=$(window).scrollTop()
+    console.log(catAnchor);
+
+    if(catAnchor-windowHeight/2<windowScrolltop && catAnchor-windowHeight/2<windowScrolltop ){
+
+    }
+    
+    </script>
+   -->
+
+    <!-- <script >
+    $(document).ready(function() {
+    $("#Container1").click(function() {
+    $("html, body").animate({
+    scrollTop: $(".Container1").offset().top }, {duration: 500,easing: "swing"});
+    return false;
+    });
+    $("#div2Link").click(function() {
+    $("html, body").animate({
+    scrollTop: $("#div2").offset().top }, {duration: 500,easing: "swing"});
+    return false;
+    });
+    $("#div3Link").click(function() {
+    $("html, body").animate({
+    scrollTop: $("#div3").offset().top }, {duration: 500,easing: "swing"});
+    return false;
+    });
+    });
     </script> -->
 </body>
 

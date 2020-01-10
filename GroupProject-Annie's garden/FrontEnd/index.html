@@ -27,8 +27,7 @@
         .swiper-container {
             width: 100%;
             height: 760px;
-
-            margin-bottom: 40px;
+            margin-bottom: 100px;
         }
 
 
@@ -56,14 +55,27 @@
             /* padding-top: 319px; */
             /* padding-top: 42%; */
             display: none;
+            overflow: hidden;
         }
 
 
 
         .about_titleBox {
             margin: auto;
-            /* width: 444.5px; */
-            border-bottom: 1px #DAB059 solid;
+            width: 445px;
+            position: relative;
+            /* border-bottom: 1px #DAB059 solid; */
+        }
+
+        .about_titleBox::after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DAB059;
         }
 
         .about_title {
@@ -142,7 +154,7 @@
             margin-top: 293px; */
         }
 
-        @media (max-width:850px) {
+        @media (max-width:900px) {
 
             .swiper-container {
                 display: none;
@@ -164,9 +176,12 @@
 
             .page_1_banner {
                 display: block;
+                width: 100%;
                 height: 250px;
                 background-position: bottom;
             }
+
+
 
             .about_content {
                 justify-content: center;
@@ -201,15 +216,17 @@
         }
 
         @media (max-width:550px) {
-            /* .page_1_banner {
-        
-            background-image: url("./素材/01-首頁/main_annie_new.png");
-          
-        } */
-            .about_titleBox {
-                margin: 30px auto 0px;
+            .page_1_banner img {
+                transform: scaleX(1.1) translate(-14px, 0px);
             }
 
+            .about_titleBox {
+                margin: 50px auto 0px;
+            }
+            .about_titleBox::after {
+                width: 95%;
+            }
+         
             .about_title {
                 font-size: 23px;
             }
@@ -239,6 +256,19 @@
 
             }
         }
+
+        @media (max-width: 400px) {
+            .page_1_banner img {
+                transform: scaleX(1.3) translate(-26px, 0px);
+            }
+        }
+
+        @media (max-width: 350px) {
+
+            .page_1_banner img {
+                transform: scaleX(1.4) translate(-26px, 0px);
+            }
+        }
     </style>
 
     <style id="css"></style>
@@ -247,9 +277,9 @@
 
 <body>
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;">
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -283,18 +313,29 @@
             <div class="burger_decoration3 burger_decorations"></div>
         </div>
         <div class="mobile_nav_btns">
-            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./index.html">關於安妮公主</a>
             </div>
-            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./info-index.html">園區資訊</a>
             </div>
-            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
             </div>
             <div class="guide_extraPages">
-                <div class="pancakePage">
+                <ul>
+                    <li class="pancakePage ">
+                        <a href="./pancake-index.html" class="changeSite">鬆餅小屋</a>
+                    </li>
+                    <li class="diyPage">
+                        <a href="./diy-index.html" class="changeSite2">手作Diy</a>
+                    </li>
+                    <li class="princessPage">
+                        <a href="./princess-index.html" class="changeSite">公主故事屋</a>
+                    </li>
+                </ul>
+                <!-- <div class="pancakePage">
                     <a href="./pancake-index.html">鬆餅小屋</a>
                 </div>
                 <div class="diyPage">
@@ -302,15 +343,15 @@
                 </div>
                 <div class="princessPage">
                     <a href="./princess-index.html">公主故事屋</a>
-                </div>
+                </div> -->
             </div>
-            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
             </div>
-            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./wedding-index.html">見證幸福</a>
             </div>
-            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./talk-index.html" class="">安妮悄悄話</a>
             </div>
             <div class="mobile_nav_btn">
@@ -336,7 +377,10 @@
             <div class="swiper-button-next swiper-button-white"></div>
             <div class="swiper-button-prev swiper-button-white"></div>
         </div>
-        <div class="page_1_banner"></div>
+        <!-- <div class="page_1_banner"></div> -->
+        <div class="page_1_banner">
+            <img src="./素材/01-首頁/main_banner_01.jpg" alt="">
+        </div>
         <div class="box_container page1_toFooterSpace">
             <div class="about_titleBox">
                 <div class="about_title">ABOUT ANNIE</div>
@@ -361,7 +405,7 @@
                     <p>歡迎您與安妮預謀一場幸福魔法派對，將夢想成真!</p>
                 </div>
                 <div class="about_imgBox">
-                    <img src="./素材/01-首頁/main_annie-new.png" alt="" class="about_img1 testUse">
+                    <img src="./素材/01-首頁/main_annie-new.png" alt="" class="about_img1 ">
                     <img src="./素材/01-首頁/main_flower.png" alt="" class="about_img2">
                 </div>
 

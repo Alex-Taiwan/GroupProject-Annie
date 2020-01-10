@@ -52,9 +52,19 @@
 
         .talk_titleBox {
             width: 444.5px;
-            border-bottom: 1px #DAB059 solid;
-            ;
-            margin: 46px auto;
+            margin: 100px auto 0px;
+            position: relative;
+        }
+
+        .talk_titleBox::after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DAB059;
         }
 
         .talk_title {
@@ -72,6 +82,7 @@
             white-space: nowrap;
             line-height: 43px;
             font-size: 32px;
+            margin-bottom: 100px;
             font-weight: lighter;
             letter-spacing: 3px;
             color: #97908D
@@ -304,19 +315,12 @@
             .talk_titleBox {
                 width: unset;
                 border-bottom: unset;
-                margin: 40px auto;
+                margin: 50px auto;
                 position: relative;
             }
 
-            .talk_titleBox::after {
-                content: "";
-                position: absolute;
-                background-color: #F6D3E2;
-                width: 250px;
-                height: 2px;
-                left: 50%;
-                bottom: -6px;
-                transform: translateX(-50%);
+            .talk_titleBox::after {               
+                width: 55%;    
             }
 
             .talk_title {
@@ -381,9 +385,9 @@
 
 <body>
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;"> 
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -417,18 +421,29 @@
             <div class="burger_decoration3 burger_decorations"></div>
         </div>
         <div class="mobile_nav_btns">
-            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./index.html">關於安妮公主</a>
             </div>
-            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./info-index.html">園區資訊</a>
             </div>
-            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger" ></i>
             </div>
             <div class="guide_extraPages">
-                <div class="pancakePage">
+                <ul>
+                    <li class="pancakePage ">
+                        <a href="./pancake-index.html" class="changeSite">鬆餅小屋</a>
+                    </li>
+                    <li class="diyPage">
+                        <a href="./diy-index.html" class="changeSite2">手作Diy</a>
+                    </li>
+                    <li class="princessPage">
+                        <a href="./princess-index.html" class="changeSite">公主故事屋</a>
+                    </li>
+                </ul>
+                <!-- <div class="pancakePage">
                     <a href="./pancake-index.html">鬆餅小屋</a>
                 </div>
                 <div class="diyPage">
@@ -436,15 +451,15 @@
                 </div>
                 <div class="princessPage">
                     <a href="./princess-index.html">公主故事屋</a>
-                </div>
+                </div> -->
             </div>
-            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
             </div>
-            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./wedding-index.html">見證幸福</a>
             </div>
-            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./talk-index.html" class="">安妮悄悄話</a>
             </div>
             <div class="mobile_nav_btn">
@@ -464,7 +479,7 @@
             <div class="talk_titleBox">
                 <div class="talk_title">CONTACT US</div>
             </div>
-            <div class="talk_titleContent m-auto">
+            <div class="talk_titleContent">
                 <p>有悄悄話也歡迎跟安妮公主說喔</p>
             </div>
         </div>

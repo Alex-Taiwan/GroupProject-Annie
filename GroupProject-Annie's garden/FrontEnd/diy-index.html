@@ -16,6 +16,38 @@
     <title>Document</title>
 
     <style>
+        .mobile_swiper {
+            display: none;
+        }
+
+        .swiper-container1 {
+            width: 80%;
+            height: 500px;
+            margin: 30px auto;
+        }
+
+        .swiper-container2 {
+            width: 80%;
+            height: 500px;
+            margin: 30px auto;
+        }
+
+        .swiper-container3 {
+            width: 80%;
+            height: 500px;
+            margin: 30px auto;
+        }
+
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            color: #E05D7F
+        }
+
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            color: #E05D7F
+        }
+
         .extraPage_diy_banner {
             width: 100%;
             height: 760px;
@@ -50,9 +82,19 @@
 
         .extraPage_diy_titleBox {
             width: 444.5px;
-            border-bottom: 1px #DAB059 solid;
-            ;
-            margin: 46px auto;
+            margin: 100px auto;
+            letter-spacing: 3px;
+        }
+
+        .extraPage_diy_titleBox::after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #DAB059;
         }
 
         .extraPage_diy_title {
@@ -66,19 +108,21 @@
         }
 
         .extraPage_diy_titleContent {
+            margin: auto;
             text-align: center;
-
             white-space: nowrap;
             line-height: 43px;
-            font-size: 32px;
+            font-size: 26px;
             font-weight: lighter;
             letter-spacing: 3px;
-
+            color: #97908D;
         }
+
+
 
         .extraPage_diy_themeGroup {
             max-width: 1440px;
-            margin: 119px auto 118px;
+            margin: 130.065px auto 118px;
             display: flex;
             justify-content: space-between;
 
@@ -110,6 +154,80 @@
             box-shadow: 3px 3px 5px black;
         }
 
+
+        .extraPage_diy_theme_imgBox {
+            width: 450px;
+            height: 450px;
+            position: relative;
+        }
+
+        .extraPage_diy_theme_imgBox:hover .extraPage_diy_mask {
+
+            animation-name: imgshow;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes imgshow {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .extraPage_diy_theme_imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .extraPage_diy_mask {
+            height: 76.4%;
+            width: 76.4%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            z-index: 55;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+
+
+        }
+
+        /* .extraPage_diy_mask.active {
+            display: block;
+        } */
+
+        .mask_text-t {
+            margin-top: 22%;
+            font-family: "Times New Roman";
+            font-size: 35px;
+            letter-spacing: 3px;
+            color: #DDB259;
+        }
+
+        .mask_text-m {
+            margin-top: 2%;
+            font-size: 35px;
+            letter-spacing: 1.5px;
+
+        }
+
+        .mask_text-b {
+            margin-top: 6%;
+            font-family: "Times New Roman";
+            font-size: 23px;
+            letter-spacing: 3px;
+            color: #DDB259;
+        }
+
+
         .extraPage_diy_theme_m .extraPage_diy_theme_titleBox_decorationBox {
             background-color: #FAEC21;
         }
@@ -127,19 +245,6 @@
         }
 
 
-        .extraPage_diy_mask {
-            height: 76.4%;
-            width: 76.4%;
-            background-color: rgba(255, 255, 255, 0.8);
-            position: absolute;
-            z-index: 55;
-            top: calc(50% - 172px);
-            left: calc(50% - 172px);
-            text-align: center;
-            display: none;
-
-
-        }
 
         .extraPage_diy_mask.active {
             display: block;
@@ -153,15 +258,236 @@
             letter-spacing: 3px;
 
         }
+
+
+        .fulscreen_mask {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999999999999999;
+            display: none;
+        }
+
+        .canclepoint {
+            position: absolute;
+            top: -23px;
+            right: -23px;
+            z-index: 2;
+        }
+
+        .back {
+            position: absolute;
+            top: -21px;
+            right: -21px;
+            z-index: 2;
+            background-color: black;
+            border-radius: 50%;
+            width: 42px;
+            height: 43px;
+        }
+
+        .imgShow {
+            height: 90%;
+            width: 70%;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .imgShow.active {
+            display: block;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        @media (max-width:1250px) {
+
+
+            .extraPage_diy_theme_imgBox {
+                width: 350px;
+                height: 350px;
+            }
+
+        }
+
+        @media (max-width:1000px) {
+
+            .extraPage_diy_banner .banner_decorationBox {
+                width: 433px;
+                height: 100px;
+            }
+
+            .extraPage_diy_themeGroup {
+
+                flex-flow: column;
+                align-items: center;
+            }
+
+            .extraPage_diy_theme {
+                width: unset;
+
+
+            }
+
+            .extraPage_diy_lastContent {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* .fas {
+                transform: unset
+            } */
+
+            .extraPage_diy_themeGroup {
+                display: none;
+            }
+
+            .mobile_swiper {
+                display: block;
+            }
+        }
+
+
+
+
+
+
+
+        @media (max-width:576px) {
+            .swiper-container1 {
+                width: 80%;
+                height: 300px;
+                margin: 30px auto 70px;
+            }
+
+            .swiper-container2 {
+                width: 80%;
+                height: 300px;
+                margin: 30px auto 70px;
+            }
+
+            .swiper-container3 {
+                width: 80%;
+                height: 300px;
+                margin: 30px auto 70px;
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                left: -11%;
+                right: auto;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -11%;
+                left: auto;
+            }
+
+            .extraPage_diy_banner {
+                height: 248px;
+            }
+
+            .extraPage_diy_banner .banner_decorationBox {
+                width: 297px;
+                height: 44.09px;
+                top: 119px;
+
+            }
+
+            .extraPage_diy_banner .banner_text {
+                font-size: 32px;
+                transform: translateY(-23px);
+            }
+
+            .extraPage_diy_titleBox {
+                width: unset;
+                margin: 40px auto 0px;
+                border: unset;
+                position: relative;
+            }
+
+            .extraPage_diy_titleBox::after {
+                content: "";
+                position: absolute;
+                width: 70%;
+                height: 1px;
+                top: 95%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #DAB059;
+            }
+
+            .extraPage_diy_titleContent {
+                font-size: 14px;
+                margin: 0px auto 40px;
+            }
+
+            .extraPage_diy_title {
+                font-size: 23px;
+            }
+
+
+
+            .extraPage_diy_lastContent {
+                margin: 112px auto 112px;
+                font-size: 14px;
+                line-height: 20px;
+
+            }
+        }
+
+        @media (max-width:370px) {
+
+            .extraPage_diy_lastContent {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;">
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -195,18 +521,29 @@
             <div class="burger_decoration3 burger_decorations"></div>
         </div>
         <div class="mobile_nav_btns">
-            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./index.html">關於安妮公主</a>
             </div>
-            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./info-index.html">園區資訊</a>
             </div>
-            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
             </div>
             <div class="guide_extraPages">
-                <div class="pancakePage">
+                <ul>
+                    <li class="pancakePage ">
+                        <a href="./pancake-index.html" class="changeSite">鬆餅小屋</a>
+                    </li>
+                    <li class="diyPage">
+                        <a href="./diy-index.html" class="changeSite2">手作Diy</a>
+                    </li>
+                    <li class="princessPage">
+                        <a href="./princess-index.html" class="changeSite">公主故事屋</a>
+                    </li>
+                </ul>
+                <!-- <div class="pancakePage">
                     <a href="./pancake-index.html">鬆餅小屋</a>
                 </div>
                 <div class="diyPage">
@@ -214,15 +551,15 @@
                 </div>
                 <div class="princessPage">
                     <a href="./princess-index.html">公主故事屋</a>
-                </div>
+                </div> -->
             </div>
-            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
             </div>
-            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./wedding-index.html">見證幸福</a>
             </div>
-            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./talk-index.html" class="">安妮悄悄話</a>
             </div>
             <div class="mobile_nav_btn">
@@ -256,7 +593,7 @@
                     <div class="extraPage_diy_mask">
                         <p class="mask_text-t">Behind the Scene</p>
                         <p class="mask_text-m">手繪明信片</p>
-                        <p class="mask_text-b cursor">MORE</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
                     </div>
                     <img src="./素材/09-手作DIY/diy_hand_draw.png" alt="" class="extraPage_diy_img">
                 </div>
@@ -271,7 +608,7 @@
                     <div class="extraPage_diy_mask">
                         <p class="mask_text-t">Proposal</p>
                         <p class="mask_text-m">葉拓染布</p>
-                        <p class="mask_text-b cursor">MORE</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
                     </div>
                     <img src="./素材/09-手作DIY/diy_hand_draw.png" alt="" class="extraPage_diy_img">
                 </div>
@@ -286,13 +623,95 @@
                     <div class="extraPage_diy_mask">
                         <p class="mask_text-t">Photography</p>
                         <p class="mask_text-m">香草精油提煉</p>
-                        <p class="mask_text-b cursor">MORE</p>
+                        <p class="mask_text-b cursor trigger">MORE</p>
                     </div>
                     <img src="./素材/09-手作DIY/diy_essential_oil.png" alt="" class="extraPage_diy_img">
                 </div>
             </div>
         </div>
 
+        <!-- swiper -->
+
+        <div class="swiper-container1 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_01.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_02.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_03.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_04.jpg)">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_05.jpg)">
+                </div>
+                <div class="swiper-slide specialSwipper"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_06.jpg)"></div>
+                <div class="swiper-slide"
+                    style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_07.jpg)">
+                </div>
+            </div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-container2 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_01.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_02.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_03.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_04.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_05.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_06.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_07.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_08.jpg)">
+                </div>
+            </div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper-container3 mobile_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_01.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_02.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_03.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_04.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_05.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_06.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_07.jpg)">
+                </div>
+                <div class="swiper-slide" style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_08.jpg)">
+                </div>
+            </div>
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- swiper -->
         <div class="extraPage_diy_lastContent">
             <p>除了上述體驗活動之外，安妮也會不定期推出新的體驗活動，歡迎來電洽詢 04-25931567(8) 林小姐!</p>
 
@@ -321,26 +740,386 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- swiper -->
+    <div class="fulscreen_mask">
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclepoint">
 
-        <div class="returnBut">
-            <div class="returnBut_text">Top</div>
+                <i class="fas fa-times-circle fa-3x " style="color:white ; "></i>
+            </div>
+
+            <div class="swiper-container gallery-top swiper-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_05.jpg)">
+                    </div>
+                    <div class="swiper-slide specialSwipper"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_06.jpg)"></div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_07.jpg)">
+                    </div>
+                </div>
+
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs swiper-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_05.jpg)">
+                    </div>
+                    <div class="swiper-slide specialSwipper"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_06.jpg)"></div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_essential_oil/essential_oil_07.jpg)">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclepoint">
+                <i class="fas fa-times-circle fa-3x " style="color:white ;"></i>
+            </div>
+            <div class="swiper-container gallery-top swiper-top2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_05.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_06.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_07.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_08.jpg)">
+                    </div>
+                </div>
+
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs swiper-thumbs2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_05.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_06.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_07.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_hand_draw/hand_draw_08.jpg)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="imgShow">
+            <div class="back"></div>
+            <div class="canclepoint">
+
+                <i class="fas fa-times-circle fa-3x " style="color:white ;"></i>
+            </div>
+            <div class="swiper-container gallery-top swiper-top3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_05.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_06.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_07.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_08.jpg)">
+                    </div>
+                </div>
+
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs swiper-thumbs3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_01.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_02.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_03.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_04.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_05.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_06.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_07.jpg)">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url(./素材/09-手作DIY/swiper_monotype/monotype_08.jpg)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- swiper -->
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script> -->
-        <script src="./template.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!-- <script>
+    <script src="./template.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        var galleryThumbs = new Swiper('.swiper-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            initialSlide: 4,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.swiper-top', {
+            spaceBetween: 10,
+            loop: true,
+            initialSlide: 4,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+
+        var galleryThumbs2 = new Swiper('.swiper-thumbs2', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            initialSlide: 8,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop2 = new Swiper('.swiper-top2', {
+            spaceBetween: 10,
+            initialSlide: 8,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs2,
+            },
+        });
+
+        var galleryThumbs3 = new Swiper('.swiper-thumbs3', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            initialSlide: 8,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop3 = new Swiper('.swiper-top3', {
+            spaceBetween: 10,
+            initialSlide: 8,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs3,
+            },
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container1', {
+            effect: 'flip',
+            grabCursor: true,
+            updateOnWindowResize: true,
+            speed: 3500,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var swiper2 = new Swiper('.swiper-container2', {
+            effect: 'flip',
+            grabCursor: true,
+            updateOnWindowResize: true,
+            speed: 3500,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var swiper3 = new Swiper('.swiper-container3', {
+            effect: 'flip',
+            grabCursor: true,
+            updateOnWindowResize: true,
+            speed: 3500,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        var triggers = document.querySelectorAll(".trigger")
+        var imgShows = document.querySelectorAll(".imgShow")
+        console.log(triggers);
+        console.log(imgShows);
+
+        // $(".trigger").on("click", function () {
+        //     $(".fulscreen_mask").toggle()
+        // })
+        $(".canclepoint").on("click", function () {
+            $(".fulscreen_mask").toggle()
+        })
+
+        for (let i = 0; i < triggers.length; i++) {
+            const Triggers = triggers[i]
+            const ImgShows = imgShows[i]
+            console.log(imgShows[i]);
+
+
+            Triggers.onclick = function () {
+                $(".fulscreen_mask").toggle()
+                clearAllactive3();
+                setTimeout(() => {
+                    galleryThumbs.update(), galleryThumbs2.update(), galleryThumbs3.update(),
+                        galleryTop.update(), galleryTop2.update(), galleryTop3.update()
+                }, 500)
+
+                ImgShows.classList.add("active")
+            }
+        }
+        function clearAllactive3() {
+            for (var a = 0; a < triggers.length; a++) {
+                imgShows[a].classList.remove("active");
+
+            }
+        }
+
+    </script>
+    <!-- <script>
 
 
         $(window).on("scroll", function () {
@@ -362,32 +1141,68 @@
             return false;
         })
     </script> -->
-        <script>
+    <!-- /////////////////////////////js做hover效果 -->
+    <!-- <script>
 
-            var diy_img = document.querySelectorAll(".extraPage_diy_img")
-            var diy_mask = document.querySelectorAll(".extraPage_diy_mask")
-            console.log(wedding_img);
-            console.log(wedding_mask);
-            for (let i = 0; i < diy_img.length; i++) {
-                const Diy_img = diy_img[i];
-                const Diy_mask = diy_mask[i]
+        var diy_img = document.querySelectorAll(".extraPage_diy_img")
+        var diy_mask = document.querySelectorAll(".extraPage_diy_mask")
+        console.log(diy_img);
+        console.log(diy_mask);
+        for (let i = 0; i < diy_img.length; i++) {
+            const Diy_img = diy_img[i];
+            const Diy_mask = diy_mask[i]
 
 
+            $(Diy_img).on("mouseover", function () {
 
-                $(Diy_img).on("mouseover", function () {
+                $(Diy_mask).fadeIn()
+            })
+            $(".extraPage_diy_theme_imgBox").on("mouseleave", function () {
+                $(Diy_mask).fadeOut()
+            })
 
-                    $(Diy_mask).fadeIn()
-                })
-                $(".extraPage_diy_theme_imgBox").on("mouseleave", function () {
-                    $(Diy_mask).fadeOut()
-                })
+        }
+
+    </script> -->
+    <!-- ///////////////////////////////////// -->
+    <!-- <script>
+        var triggers = document.querySelectorAll(".trigger")
+        var imgShows = document.querySelectorAll(".imgShow")
+        console.log(triggers);
+        console.log(imgShows);
+
+        // $(".trigger").on("click", function () {
+        //     $(".fulscreen_mask").toggle()
+        // })
+        $(".canclePoint").on("click", function () {
+            $(".fulscreen_mask").toggle()
+        })
+
+        for (let i = 0; i < triggers.length; i++) {
+            const Triggers = triggers[i]
+            const ImgShows = imgShows[i]
+            console.log(imgShows[i]);
+
+
+            Triggers.onclick = function () {
+                $(".fulscreen_mask").toggle()
+                clearAllactive3();
+                setTimeout(() => {
+                    galleryThumbs.update(), galleryThumbs2.update(), galleryThumbs3.update(),
+                        galleryTop.update(), galleryTop2.update(), galleryTop3.update()
+                }, 500)
+
+                ImgShows.classList.add("active")
+            }
+        }
+        function clearAllactive3() {
+            for (var a = 0; a < triggers.length; a++) {
+                imgShows[a].classList.remove("active");
 
             }
+        }
 
-        </script>
-        <script>
-
-        </script>
+    </script> -->
 
 </body>
 
