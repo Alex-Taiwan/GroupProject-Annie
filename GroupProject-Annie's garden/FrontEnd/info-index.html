@@ -339,7 +339,9 @@
 
         .Container3_img3 {
             display: none;
+            overflow: hidden;
         }
+
 
         .Container4 {
             margin: auto;
@@ -759,6 +761,34 @@
                 padding-top: 74px;
             }
 
+            .cat {
+                transform: translateY(60px);
+            }
+
+            .cat.active {
+                animation-name: catAct;
+                animation-duration: 2.5s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(.57, 1.04, .21, 1.29);
+                /* animation-timing-function: cubic-bezier(.57,1.04,.66,.38);    */
+            }
+
+            @keyframes catAct {
+                0% {
+                    transform: translateY(60px);
+                }
+
+                80% {
+                    transform: translateY(2px)
+                }
+
+                100% {
+                    transform: translateY(0px);
+                }
+
+            }
+
             .Container4 {
                 padding-top: 74px;
                 height: unset;
@@ -1140,7 +1170,7 @@
                     <img src="./素材/02-園區資訊/info_flower.png" alt="" class="page_2_img">
                 </div>
                 <div class="Container3_img3">
-                    <img src="./素材/02-園區資訊/info_cat.png" alt="" class="page_2_img">
+                    <img src="./素材/02-園區資訊/info_cat.png" alt="" class="page_2_img cat">
                     <div class="Container3_img4">
                         <img src="./素材/02-園區資訊/info_flower.png" alt="" class="page_2_img">
                     </div>
@@ -1294,8 +1324,9 @@
                             <a href="https://www.instagram.com/explore/locations/246263666/"><img
                                     src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon" title="IG">
                             </a>
-                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" class="footer_gmailIcon"
-                                title="annie0942593931567@gmail.com">
+                            <div class="footer_gmailIcon">
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1393,20 +1424,27 @@
 
     // });
     </script>
-   
-   <!-- ////貓探頭//// -->
-   <!-- <script>
-    var catAnchor=$(".Container3").offset().top
-    var windowHeight=$(window).height()
-    var windowScrolltop=$(window).scrollTop()
-    console.log(catAnchor);
 
-    if(catAnchor-windowHeight/2<windowScrolltop && catAnchor-windowHeight/2<windowScrolltop ){
+    <!-- ////貓探頭//// -->
+    <script>
+        var catAnchor = $(".Container3").offset().top
 
-    }
-    
+        console.log(catAnchor);
+
+        $(window).on("scroll", function () {
+            var windowHeight = $(window).height()
+            var windowScrolltop = $(window).scrollTop()
+
+            if (catAnchor - windowHeight * 2 / 3 < windowScrolltop && catAnchor + windowHeight / 2 > windowScrolltop) {
+                $(".cat").addClass("active")
+            }
+            else {
+                $(".cat").removeClass("active")
+            }
+        })
+
     </script>
-   -->
+
 
     <!-- <script >
     $(document).ready(function() {
