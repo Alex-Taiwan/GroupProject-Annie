@@ -42,12 +42,9 @@ $(function () {
     $(window).on("resize", function () {
         var wdth = $(window).width();
         if (wdth > 850) {
-            // $(".nav_btn_guide").hide()
-            $(".guide_extraPages").removeClass("active")
+            $(".nav_btn_guide").hide()
             $(".mobile_nav_btns").removeClass("active")
             $(".mobile_nav_btn").removeClass("active")
-            $(".nav_btn_guide").removeClass("heightChange")  
-            $(".nav_btn_guide").addClass("mobile_afterSite") 
             $(".mobile_mask").hide()
             $(".burger_decoration1").removeClass("active")
             $(".burger_decoration2").removeClass("active")
@@ -67,8 +64,7 @@ $(function () {
             // }
         }
         if (wdth <= 850) {
-            // $(".nav_btn_guide").show()
-
+            $(".nav_btn_guide").show()
             // $(".nav_btn_guide i").on("click", function () {
             //     if ($(".guide_extraPages").hasClass("active")) {
             //         $(".guide_extraPages").removeClass("active")
@@ -90,16 +86,21 @@ $(function () {
         if ($(".guide_extraPages").hasClass("active")) {
             $(".fas").removeClass("active")
             $(".guide_extraPages").removeClass("active")
-            $(".nav_btn_guide").addClass("mobile_afterSite")  
-            $(".nav_btn_guide").removeClass("heightChange")   
-               
+            // $(".nav_btn_eat").removeClass("specialActive")
+            // $(".nav_btn_wedding ").removeClass("specialActive")
+            // $(".nav_btn_talk").removeClass("specialActive")
+            // $(".nav_btn_homestay").removeClass("specialActive")
+
         }
         else {
             $(".fas").addClass("active")
             $(".guide_extraPages").addClass("active")
-            $(".nav_btn_guide").removeClass("mobile_afterSite")
-            $(".nav_btn_guide").addClass("heightChange")   
+            // $(".nav_btn_eat").addClass("specialActive")
+            // $(".nav_btn_wedding ").addClass("specialActive")
+            // $(".nav_btn_talk").addClass("specialActive")
+            // $(".nav_btn_homestay").addClass("specialActive")
         }
+
     })
 
 

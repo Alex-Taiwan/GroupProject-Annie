@@ -11,9 +11,8 @@ body {
     height            : 100%;
     /* scroll-behavior: smooth; */
 }
-
-img {
-    width : 100%;
+img{
+    width: 100%;
     height: 100%;
 }
 
@@ -22,22 +21,18 @@ p {
 }
 
 a {
-    display: block;
-    color  : white;
+    display        : block;
+    color          : white;
 }
-
-a:hover {
+a:hover{
     text-decoration: none;
 }
-
-input {
+input{
     outline: none;
 }
-
-textarea {
+textarea{
     outline: none;
 }
-
 .page {
     width     : 100%;
     position  : relative;
@@ -109,9 +104,7 @@ textarea {
     font-size  : 16px;
     font-weight: bold;
 }
-.nav_btn_guide{
-    display: block;
-}
+
 .mobile_nav_btn {
     height     : 100%;
     text-align : center;
@@ -143,7 +136,7 @@ textarea {
 
     height      : 100%;
     z-index     : 99;
-
+    /* transform: translateX(-677px); */
 
 }
 
@@ -167,24 +160,37 @@ textarea {
     justify-content : center;
     align-items     : center;
     position        : relative;
-}
-.footer_box {
-    display        : flex;
-    width          : 1000px;
-    margin         : auto;
-    justify-content: space-around;
 
+
+
+}
+
+/* .container{
+    background-color: bisque;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+
+} */
+
+.footer_box {
+    display       : flex;
+    width: 1000px;
+    margin: auto;
+    justify-content: space-around;
+    
 }
 
 .footer_text {
-    font-size   : 18px;
+    font-size  : 18px;
     margin-right: 70px;
-    color       : white;
-    display     : flex;
-    flex-flow   : column;
-
+    color      : white;
+    display: flex;
+    flex-flow: column;
+    
     line-height: 40px;
 }
+
 
 .mobile_use {
     display: none;
@@ -197,9 +203,9 @@ textarea {
 }
 
 .footer_iconGroup {
-    display    : flex;
+    display     : flex;
     margin-left: 70px;
-    align-items: flex-end;
+    align-items : flex-end;
 }
 
 .footer_lineIcon {
@@ -220,9 +226,8 @@ textarea {
     margin-right: 15px;
 
 }
-
-.gmail_iconBox {
-    position: relative;
+.gmail_iconBox{
+position: relative;
 
 }
 
@@ -231,18 +236,18 @@ textarea {
     display: none;
 } */
 /* .gmail_iconBox::after{
-    content    : "annie0942593931567@gmail.com";
-    position   : absolute;
-    text-align : center;
+    content: "annie0942593931567@gmail.com";
+    position: absolute;
+    text-align: center;
     line-height: 10px;
-    padding    : 6px;
+    padding: 6px;
     
-    height          : 25px;
+    height: 25px;
     background-color: black;
-    right           : -78px;
-    bottom          : 36px;
-    color           : white;
-    border          : 2px solid white;
+    right: -78px;
+    bottom: 36px;
+    color: white;
+    border: 2px solid white;
 } */
 
 .footer_gmailIcon {
@@ -267,7 +272,7 @@ textarea {
     bottom                   : 0;
     display                  : none;
     cursor                   : pointer;
-    z-index                  : 999999999;
+    z-index: 999999999;
 }
 
 
@@ -288,6 +293,11 @@ textarea {
 .returnBut_text {
     text-align : center;
     line-height: 191.054px;
+    /* cursor  : pointer; */
+
+    /* position              : fixed;
+    right                    : 80.527px;
+    bottom                   : 80.527px; */
     font-size                : 65px;
     color                    : white;
     font-weight              : bold;
@@ -319,16 +329,16 @@ textarea {
     }
 
     .footer_box {
-        display        : flex;
-        flex-flow      : column;
-        align-items    : center;
+        display    : flex;
+        flex-flow  : column;
+        align-items: center;
         justify-content: unset;
     }
 
     .footer_text {
-        text-align  : center;
+        text-align : center;
         margin-right: unset;
-        line-height : 30px;
+        line-height: 30px;
     }
 
     .mobile_use {
@@ -338,23 +348,19 @@ textarea {
     .mobile_use:nth-child(3) {
         margin-bottom: 20px;
     }
-
-    .footer {
-        height : unset;
+    .footer{
+        height: unset;
         padding: 35px 0px;
     }
-
     .pc_use {
         display: none;
     }
-
-    .footer_iconGroupBox {
+    .footer_iconGroupBox{
         justify-content: center;
-        margin-top     : 20px;
+        margin-top: 20px;
     }
-
-    .footer_iconGroup {
-        margin-left : unset;
+    .footer_iconGroup{
+        margin-left: unset;
         margin-right: unset;
 
     }
@@ -362,7 +368,7 @@ textarea {
 
 @media(max-width:850px) {
 
-   
+
     .page {
         margin-top: 46px;
     }
@@ -397,13 +403,13 @@ textarea {
             } */
 
     .mobile_nav_btn {
-        /* display         : none; */
-        width              : unset;
-        height             : 69px;
-        padding            : 20px;
+        /* display      : none; */
+        width           : unset;
+        height          : 69px;
+        padding         : 20px;
         /* background-color: #9F416B; */
-        background-color   : #E05D7F;
-        line-height        : unset;
+        background-color: #E05D7F;
+        line-height     : unset;
 
 
     }
@@ -537,21 +543,16 @@ textarea {
     
     } */
     .mobile_afterSite::after {
-        content            : "";
-        position           : absolute;
-        top                : 65px;
-        left               : 50%;
-        transform          : translateX(-50%);
-        height             : 2px;
-        width              : 80%;
+        content: "";
+        position: absolute;
+        top: 65px;
+        left: 63px;
+        height: 2px;
+        width: 80%;
         /* background-color: #F7A9C1; */
-        border-bottom      : 2px #F7A9C1 dashed;
+        border-bottom: 2px #F7A9C1 dashed;
     }
-
-    .heightChange {
-        height     : 20px;
-        line-height: 1px;
-    }
+   
 
     .mobile_nav_btns.active {
         display: block;
@@ -585,7 +586,7 @@ textarea {
     .mobile_nav_btn.active:nth-child(1) {
 
         animation-name           : btn_growth_1;
-        animation-duration       : 0.6s;
+        animation-duration       : 0.6ㄞs;
         animation-iteration-count: 1;
         animation-fill-mode      : forwards;
         transform                : translateX(-100%);
@@ -625,14 +626,13 @@ textarea {
         margin: auto;
     }
 
-    .extraPage_trigger{
-        transform: translate(92px, -23px);
+    .fas {
+        transform: translate(92px, -23px) ;
         color    : white;
         cursor   : pointer;
     }
-
-    .extraPage_trigger.active {
-        transform: translate(92px, -8px) rotate(180deg);
+    .fas.active{
+        transform: translate(92px, -23px) rotate(180deg);
     }
 
     .guide_extraPages.active {
@@ -650,16 +650,6 @@ textarea {
         animation-fill-mode      : forwards;
     }
 
-    .guide_extraPages.active li {
-        width                    : 100vw;
-        background-color         : rgba(240, 171, 201, 0.8);
-        /* border-bottom         : 2px solid #9F416B; */
-        animation-name           : extra_btn_growth;
-        animation-duration       : 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode      : forwards;
-    }
-
     @keyframes extra_btn_growth {
         from {
             height: 0px;
@@ -670,122 +660,25 @@ textarea {
         }
     }
 
-    li {
-        padding : 0;
-        position: relative;
-
-    }
-
-    /* li::before {
-        content          : '';
-        position         : absolute;
-        height           : 20px;
-        width            : 20px;
-        background-size  : 20px;
-        background-image : url("./素材/08-鬆餅小屋/crown_white.png");
-        background-repeat: no-repeat;
-        left             : 117px;
-        top              : 22px;
-    } */
-    /* .guide_extraPages a::before {
-        content          : '';
-        position         : absolute;
-        height           : 20px;
-        width            : 20px;
-        background-size  : 20px;
-        background-image : url("./素材/08-鬆餅小屋/crown_white.png");
-        background-repeat: no-repeat;
-        left             : -22px;
-        top              : 22px;
-    } */
-
-    ul {
-        padding        : 0;
-        margin         : 0;
-        list-style-type: none;
-        text-align     : left;
-    }
-
-    /* .guide_extraPages a {
-
-        line-height   : 60px;
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-18%);
-    } */
-    /* .guide_extraPages a:nth-child(1){
-        line-height   : 60px;
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-18%);
-    }
-    .guide_extraPages a:nth-child(2){
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-50%);
-    }
-    .guide_extraPages a:nth-child(3){
-        line-height   : 60px;
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-18%);
-    } */
-    .changeSite::before{
-        content          : '';
-        position         : absolute;
-        height           : 20px;
-        width            : 20px;
-        background-size  : 20px;
-        background-image : url("./素材/08-鬆餅小屋/crown_white.png");
-        background-repeat: no-repeat;
-        left             : -22px;
-        top              : 22px;
-    }
-    .changeSite2::before{
-        content          : '';
-        position         : absolute;
-        height           : 20px;
-        width            : 20px;
-        background-size  : 20px;
-        background-image : url("./素材/08-鬆餅小屋/crown_white.png");
-        background-repeat: no-repeat;
-        left             : -22px;
-        top              : 22px;
-    }
-    .changeSite:nth-child(1) {
-        line-height   : 60px;
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-18%);
-    }
-
-    .changeSite2{
-        line-height   : 60px;
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-23%);
+    .guide_extraPages a {
+        padding: 20px;
     }
 
     .guide_extraPages div:nth-child(1) {
         border-bottom: 2px solid #9F416B;
-
+        /* position  : absolute;
+        left         : 0;
+        top          : 171px; */
     }
 
     .guide_extraPages div:nth-child(2) {
         border-bottom: 2px solid #9F416B;
-
+        /* position  : absolute;
+        left         : 0;
+        top          : 228px; */
     }
 
-    .guide_extraPages li:nth-child(1) {
-        border-bottom: 2px solid #9F416B;
-
-    }
-
-    .guide_extraPages li:nth-child(2) {
-        border-bottom: 2px solid #9F416B;
-
-    }
-
+   
     /* .mobile_nav_btn.active:nth-child(4){
         
         animation-name           : btn_growth_1;
@@ -899,20 +792,19 @@ textarea {
     .footer_text {
         line-height: 30px;
     }
-
     /* .gmail_iconBox::after{
-        content    : "annie0942593931567@gmail.com";
-        position   : absolute;
-        text-align : center;
+        content: "annie0942593931567@gmail.com";
+        position: absolute;
+        text-align: center;
         line-height: 10px;
-        padding    : 6px;
+        padding: 6px;
        
-        height          : 25px;
+        height: 25px;
         background-color: black;
-        right           : -78px;
-        bottom          : 36px;
-        color           : white;
-        border          : 2px solid white;
+        right: -78px;
+        bottom: 36px;
+        color: white;
+        border: 2px solid white;
     } */
     .returnBut {
         right: -55px;
@@ -960,10 +852,9 @@ textarea {
     .mobile_use:nth-child(3) {
         margin-bottom: 10px;
     }
-
     .footer_text {
         line-height: 25px;
-        font-size  : 12px;
+        font-size: 12px;
     }
 
     @keyframes circle {

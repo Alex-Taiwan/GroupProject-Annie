@@ -45,14 +45,12 @@
         .swiper-container-rtl .swiper-button-next {
             left: -8%;
             right: auto;
-            color: #E05D7F
         }
 
         .swiper-button-next,
         .swiper-container-rtl .swiper-button-prev {
             right: -8%;
             left: auto;
-            color: #E05D7F
         }
 
         .page_3_slide {
@@ -146,10 +144,6 @@
             position: relative;
         }
 
-        .map_moblieLink {
-            display: none;
-        }
-
         .trigger_imgBox1 {
             position: absolute;
             width: 355px;
@@ -189,15 +183,14 @@
 
         }
 
-        .trigger_imgBox5 {
+        /* .trigger_imgBox5 {
             position: absolute;
-            width: 166px;
+            width: 355px;
             height: 355px;
-            top: 520px;
-            left: 827px;
-            z-index: 1;
-        }
+            top: -30px;
+            left: 453px;
 
+        } */
         .trigger_imgBox6 {
             position: absolute;
             width: 120px;
@@ -207,46 +200,35 @@
             z-index: 1;
             display: none;
         }
-
         .trigger_imgBox7 {
             position: absolute;
             width: 147px;
             height: 122px;
-            top: 310px;
+            top: 367px;
             left: 151px;
             z-index: 2;
             display: none;
         }
-
-        .trigger_imgBox8 {
+          .trigger_imgBox8 {
             position: absolute;
             width: 159px;
             height: 125px;
-            top: 403px;
+            top: 463px;
             left: 51px;
             z-index: 3;
             display: none;
         }
-
         .trigger_imgBox9 {
             position: absolute;
             width: 192px;
-            height: 122px;
-            top: 420px;
+            height: 192px;
+            top: 481px;
             left: 200px;
             z-index: 4;
             display: none;
         }
-
-        .trigger_imgBox10 {
-            position: absolute;
-            width: 84px;
-            height: 79px;
-            top: 526px;
-            left: 865px;
-            z-index: 0;
-            display: none;
-        }
+       
+       
 
 
         .trigger_imgBox1:hover {
@@ -257,26 +239,6 @@
 
         }
 
-        /* .trigger_imgBox1:hover::after{
-            content: "";
-            position: absolute;
-          
-            width: 120px;
-            height: 255px;
-            top: 18px;
-            left: 206px;
-            z-index: 1;
-           
-            background-image: url("./素材/03-園區導覽/告示牌.png");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation-name: billboardAct;
-            animation-duration: 1s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        } */
-
         .trigger_imgBox1:hover~.trigger_imgBox6 {
             display: block;
             animation-name: billboardAct;
@@ -284,7 +246,6 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-
         .trigger_imgBox2:hover~.trigger_imgBox7 {
             display: block;
             animation-name: billboardAct;
@@ -292,7 +253,6 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-
         .trigger_imgBox3:hover~.trigger_imgBox8 {
             display: block;
             animation-name: billboardAct;
@@ -300,7 +260,6 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-
         .trigger_imgBox4:hover~.trigger_imgBox9 {
             display: block;
             animation-name: billboardAct;
@@ -308,15 +267,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-
-        .trigger_imgBox5:hover~.trigger_imgBox10 {
-            display: block;
-            animation-name: billboardAct;
-            animation-duration: 1s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-
+       
         .trigger_imgBox2:hover {
 
             animation-name: act;
@@ -341,13 +292,6 @@
 
         }
 
-        .trigger_imgBox5:hover {
-
-            animation-name: act;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-
-        }
 
         /* .trigger_imgBox6:hover {
 
@@ -518,14 +462,17 @@
         }
 
         @media (max-width: 1110px) {
-
             .imgBox_Map {
                 width: 762px;
                 height: 488px;
             }
 
+            .trigger_imgBox1 {
+                top: -36px;
+                left: 301px;
+                width: 242px;
+            }
 
-            /* 
             .trigger_imgBox2 {
                 top: 243px;
                 left: 98px;
@@ -543,104 +490,6 @@
                 left: 137px;
                 width: 134px;
             }
-            .trigger_imgBox1 {
-            position: absolute;
-            width: 355px;
-            height: 355px;
-            top: -42px;
-            left: 454px;
-            z-index: 2;
-
-        } */
-            .trigger_imgBox1 {
-                width: 241px;
-                height: 355px;
-                top: -34px;
-                left: 299px;
-            }
-
-            .trigger_imgBox2 {
-                position: absolute;
-                width: 105px;
-                height: 122px;
-                top: 239px;
-                left: 99px;
-                z-index: 3;
-            }
-
-            .trigger_imgBox3 {
-                position: absolute;
-                height: 125px;
-                width: 110px;
-                top: 308px;
-                left: 34px;
-
-            }
-
-            .trigger_imgBox4 {
-                position: absolute;
-                width: 192px;
-                height: 192px;
-                top: 481px;
-                left: 200px;
-                z-index: 5;
-
-            }
-
-            .trigger_imgBox5 {
-                position: absolute;
-                width: 166px;
-                height: 355px;
-                top: 520px;
-                left: 827px;
-                z-index: 1;
-            }
-
-            .trigger_imgBox6 {
-                width: 100px;
-                top: 6px;
-                left: 302px;
-            }
-
-            .trigger_imgBox7 {
-                position: absolute;
-                width: 109px;
-                height: 87px;
-                top: 204px;
-                left: 94px;
-                z-index: 2;
-                display: none;
-            }
-
-            .trigger_imgBox8 {
-                position: absolute;
-                width: 115px;
-                height: 84px;
-                top: 272px;
-                left: 24px;
-                z-index: 3;
-                display: none;
-            }
-
-            .trigger_imgBox9 {
-                position: absolute;
-                width: 192px;
-                height: 122px;
-                top: 420px;
-                left: 200px;
-                z-index: 4;
-                display: none;
-            }
-
-            .trigger_imgBox10 {
-                position: absolute;
-                width: 84px;
-                height: 79px;
-                top: 526px;
-                left: 865px;
-                z-index: 0;
-                display: none;
-            }
 
             .page_3_banner .banner_decorationBox {
                 width: 433px;
@@ -648,7 +497,7 @@
             }
         }
 
-        @media (max-width:768px) {
+        @media (max-width:750px) {
             .pc_box {
                 display: none;
             }
@@ -682,39 +531,6 @@
                 display: none;
             }
 
-            .map_moblieLink {
-                display: block;
-                font-size: 14px;
-                letter-spacing: 3px;
-                width: 286px;
-                text-align: center;
-                margin: 20px auto 20px;
-            }
-
-            .map_LinkText_intraspace {
-                margin-bottom: 20px;
-            }
-            .Link1_space{
-                margin-right: 10px;
-            }
-            .Link2_space{
-                margin: 0px 10px;
-            }
-            .Link3_space{
-                margin-left: 10px;
-            }
-            .Link5_space{
-                margin-right: 10px;
-            }
-            .Link5_space{
-                margin-left: 10px;
-            }
-            .map_LinkText {
-                display: inline-block;
-                color: #513508;
-                cursor: pointer;
-            }
-
             .swiperBox {
                 height: 221px;
                 max-width: 620px;
@@ -737,7 +553,7 @@
             }
         }
 
-        @media (max-width:576px) {
+        @media (max-width:550px) {
 
             .guide_title {
                 font-size: 23px;
@@ -766,7 +582,8 @@
             }
 
             .page_3_mapBox {
-                margin: 0px auto 65px;
+
+                margin: 0px auto 86px;
             }
 
             .ecology_titleBox {
@@ -838,9 +655,9 @@
 
 <body>
     <nav class="nav" id="nav">
-        <a href="./index.html" style=" height:100%;"> 
-            <div class="nav_logo"></div>
-        </a>
+        <div class="nav_logo">
+
+        </div>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -874,29 +691,18 @@
             <div class="burger_decoration3 burger_decorations"></div>
         </div>
         <div class="mobile_nav_btns">
-            <div class="nav_btn_about nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_about nav_btn_space mobile_nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
-            <div class="nav_btn_information nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_information nav_btn_space mobile_nav_btn ">
                 <a href="./info-index.html">園區資訊</a>
             </div>
-            <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_guide nav_btn_space mobile_nav_btn ">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
+                <i class="fas fa-angle-down fa-lg"></i>
             </div>
             <div class="guide_extraPages">
-                <ul>
-                    <li class="pancakePage ">
-                        <a href="./pancake-index.html" class="changeSite">鬆餅小屋</a>
-                    </li>
-                    <li class="diyPage">
-                        <a href="./diy-index.html" class="changeSite2">手作Diy</a>
-                    </li>
-                    <li class="princessPage">
-                        <a href="./princess-index.html" class="changeSite">公主故事屋</a>
-                    </li>
-                </ul>
-                <!-- <div class="pancakePage">
+                <div class="pancakePage">
                     <a href="./pancake-index.html">鬆餅小屋</a>
                 </div>
                 <div class="diyPage">
@@ -904,15 +710,15 @@
                 </div>
                 <div class="princessPage">
                     <a href="./princess-index.html">公主故事屋</a>
-                </div> -->
+                </div>
             </div>
-            <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_eat nav_btn_space mobile_nav_btn ">
                 <a href="./eat-index.html">主廚上菜</a>
             </div>
-            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_wedding nav_btn_space mobile_nav_btn ">
                 <a href="./wedding-index.html">見證幸福</a>
             </div>
-            <div class="nav_btn_talk nav_btn_space mobile_nav_btn mobile_afterSite">
+            <div class="nav_btn_talk nav_btn_space mobile_nav_btn ">
                 <a href="./talk-index.html" class="">安妮悄悄話</a>
             </div>
             <div class="mobile_nav_btn">
@@ -925,7 +731,7 @@
     <div class="page_3 page">
         <div class="page_3_banner">
             <div class="banner_decorationBox">
-                <div class="banner_text ">園區導覽</div>
+                <div class="banner_text "><a href="./diy-index.html">園區導覽</a></div>
             </div>
         </div>
         <div class="guide_titleBox">
@@ -937,7 +743,7 @@
                 <p>園區地圖</p>
             </div>
             <div class="imgBox_Map">
-                <img src="./素材/03-園區導覽/guide_map-1.jpg" alt="" class="map">
+                <img src="./素材/03-園區導覽/guide_map.jpg" alt="" class="map">
 
                 <div class="trigger_imgBox1 triggerBoxs">
                     <a href="./eat-index.html">
@@ -948,66 +754,40 @@
                     </div> -->
                 </div>
                 <div class="trigger_imgBox6 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/billboard-eat.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
-
 
                 <div class="trigger_imgBox2 triggerBoxs ">
                     <a href="./diy-index.html">
-                        <img src="./素材/03-園區導覽/map_icon_diy-new.png" alt="" title="diy我來測試看看">
+                        <img src="./素材/03-園區導覽/map_icon_diy-new.png" alt="" title="diy我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
-
+                
                 <div class="trigger_imgBox7 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/billboard-diy.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
-
                 <div class="trigger_imgBox3 triggerBoxs">
-                    <a href="./pancake-index.html">
-                        <img src="./素材/03-園區導覽/map_icon_pancake-new.png" alt="" title="鬆餅 我來測試看看">
+                    <a href="./wedding-index.html">
+                        <img src="./素材/03-園區導覽/map_icon_pancake-new.png" alt="" title="鬆餅 我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
 
                 <div class="trigger_imgBox8 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/billboard-pancake.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
                 <div class="trigger_imgBox4 triggerBoxs">
                     <a href="./princess-index.html">
-                        <img src="./素材/03-園區導覽/map_icon_princess-new.png" alt="" title=" 公主 我來測試看看">
+                        <img src="./素材/03-園區導覽/map_icon_princess-new.png" alt="" title=" 公主 我來測試看看拉哈哈哈哈">
                     </a>
                 </div>
 
                 <div class="trigger_imgBox9 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/billboard-princess.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
+                <div class="trigger_imgBox5"></div>
 
-                <div class="trigger_imgBox5 triggerBoxs">
-                    <a href="./wedding-index.html">
-                        <img src="./素材/03-園區導覽/map_icon_wedding.png" alt="" title=" 婚禮 我來測試看看">
-                    </a>
-                </div>
-
-                <div class="trigger_imgBox10 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/billboard-wedding.png" alt="" title="我來測試看看拉哈哈哈哈">
-                </div>
-
-            </div>
-            <div class="map_moblieLink">
-                <div class="map_LinkText_intraspace">
-                    <a href="./eat-index.html" class="map_LinkText Link1_space">主題餐廳 </a>
-                    |
-                    <a href="./wedding-index.html" class="map_LinkText Link2_space">戶外婚禮</a>
-                    |
-                    <a href="./pancake-index.html" class="map_LinkText Link3_space">鬆餅小屋</a>
-                </div>
-
-                <div>
-                    <a href="./diy-index.html" class="map_LinkText Link4_space">手作diy </a>
-                    |
-                    <a href="./princess-index.html"class="map_LinkText Link5_space ">公主故事屋</a>
-                </div>
             </div>
         </div>
         <div class="box_container  ">
@@ -1112,7 +892,7 @@
             </div>
         </div> -->
 
-
+        
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
