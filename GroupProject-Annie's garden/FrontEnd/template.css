@@ -361,7 +361,7 @@ textarea {
     }
     .footer_gmailIcon:hover::after{  
         top: -18px;
-        left: -121px; 
+        left: -147px; 
     }
     .pc_use {
         display: none;
