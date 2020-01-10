@@ -164,9 +164,12 @@
 
             .page_1_banner {
                 display: block;
+                width: 100%;
                 height: 250px;
                 background-position: bottom;
             }
+
+
 
             .about_content {
                 justify-content: center;
@@ -201,11 +204,10 @@
         }
 
         @media (max-width:550px) {
-            /* .page_1_banner {
-        
-            background-image: url("./素材/01-首頁/main_annie_new.png");
-          
-        } */
+            .page_1_banner img {
+                transform: scaleX(1.1) translate(-14px, 0px);
+            }
+
             .about_titleBox {
                 margin: 30px auto 0px;
             }
@@ -239,6 +241,18 @@
 
             }
         }
+
+        @media (max-width: 400px) {    
+            .page_1_banner img {
+                transform: scaleX(1.3) translate(-26px, 0px);
+            }
+        }
+        @media (max-width: 350px) {
+            
+            .page_1_banner img {
+                transform: scaleX(1.4) translate(-26px, 0px);
+            }
+        }
     </style>
 
     <style id="css"></style>
@@ -247,9 +261,9 @@
 
 <body>
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;">
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -291,7 +305,7 @@
             </div>
             <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
             </div>
             <div class="guide_extraPages">
                 <ul>
@@ -347,7 +361,10 @@
             <div class="swiper-button-next swiper-button-white"></div>
             <div class="swiper-button-prev swiper-button-white"></div>
         </div>
-        <div class="page_1_banner"></div>
+        <!-- <div class="page_1_banner"></div> -->
+        <div class="page_1_banner">
+            <img src="./素材/01-首頁/main_banner_01.jpg" alt="">
+        </div>
         <div class="box_container page1_toFooterSpace">
             <div class="about_titleBox">
                 <div class="about_title">ABOUT ANNIE</div>

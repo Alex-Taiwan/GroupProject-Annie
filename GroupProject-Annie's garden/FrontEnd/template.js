@@ -42,9 +42,12 @@ $(function () {
     $(window).on("resize", function () {
         var wdth = $(window).width();
         if (wdth > 850) {
-            $(".nav_btn_guide").hide()
+            // $(".nav_btn_guide").hide()
+            $(".guide_extraPages").removeClass("active")
             $(".mobile_nav_btns").removeClass("active")
             $(".mobile_nav_btn").removeClass("active")
+            $(".nav_btn_guide").removeClass("heightChange")  
+            $(".nav_btn_guide").addClass("mobile_afterSite") 
             $(".mobile_mask").hide()
             $(".burger_decoration1").removeClass("active")
             $(".burger_decoration2").removeClass("active")
@@ -64,7 +67,8 @@ $(function () {
             // }
         }
         if (wdth <= 850) {
-            $(".nav_btn_guide").show()
+            // $(".nav_btn_guide").show()
+
             // $(".nav_btn_guide i").on("click", function () {
             //     if ($(".guide_extraPages").hasClass("active")) {
             //         $(".guide_extraPages").removeClass("active")

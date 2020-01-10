@@ -686,15 +686,35 @@
                 display: block;
                 font-size: 14px;
                 letter-spacing: 3px;
-                width: 246px;
+                width: 286px;
                 text-align: center;
                 margin: 20px auto 20px;
             }
-            .map_LinkText{
+
+            .map_LinkText_intraspace {
+                margin-bottom: 20px;
+            }
+            .Link1_space{
+                margin-right: 10px;
+            }
+            .Link2_space{
+                margin: 0px 10px;
+            }
+            .Link3_space{
+                margin-left: 10px;
+            }
+            .Link5_space{
+                margin-right: 10px;
+            }
+            .Link5_space{
+                margin-left: 10px;
+            }
+            .map_LinkText {
                 display: inline-block;
                 color: #513508;
                 cursor: pointer;
             }
+
             .swiperBox {
                 height: 221px;
                 max-width: 620px;
@@ -818,9 +838,9 @@
 
 <body>
     <nav class="nav" id="nav">
-        <div class="nav_logo">
-
-        </div>
+        <a href="./index.html" style=" height:100%;"> 
+            <div class="nav_logo"></div>
+        </a>
         <div class="nav_btnGroup">
             <!-- <div class="burger_decoration1 burger_decorations"></div>
             <div class="burger_decoration2 burger_decorations"></div>
@@ -862,7 +882,7 @@
             </div>
             <div class="nav_btn_guide nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./guide-index.html" class="special_a">園區導覽</a>
-                <i class="fas fa-angle-down fa-lg"></i>
+                <i class="fas fa-angle-down fa-lg extraPage_trigger"></i>
             </div>
             <div class="guide_extraPages">
                 <ul>
@@ -917,7 +937,7 @@
                 <p>園區地圖</p>
             </div>
             <div class="imgBox_Map">
-                <img src="./素材/03-園區導覽/guide_map.jpg" alt="" class="map">
+                <img src="./素材/03-園區導覽/guide_map-1.jpg" alt="" class="map">
 
                 <div class="trigger_imgBox1 triggerBoxs">
                     <a href="./eat-index.html">
@@ -928,7 +948,7 @@
                     </div> -->
                 </div>
                 <div class="trigger_imgBox6 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/billboard-eat.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
 
@@ -939,7 +959,7 @@
                 </div>
 
                 <div class="trigger_imgBox7 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/billboard-diy.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
 
@@ -950,7 +970,7 @@
                 </div>
 
                 <div class="trigger_imgBox8 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/billboard-pancake.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
                 <div class="trigger_imgBox4 triggerBoxs">
@@ -960,7 +980,7 @@
                 </div>
 
                 <div class="trigger_imgBox9 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/billboard-princess.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
                 <div class="trigger_imgBox5 triggerBoxs">
@@ -970,17 +990,24 @@
                 </div>
 
                 <div class="trigger_imgBox10 triggerBox Billboard">
-                    <img src="./素材/03-園區導覽/告示牌.png" alt="" title="我來測試看看拉哈哈哈哈">
+                    <img src="./素材/03-園區導覽/billboard-wedding.png" alt="" title="我來測試看看拉哈哈哈哈">
                 </div>
 
             </div>
             <div class="map_moblieLink">
-          
-            <p> <a href="./eat-index.html" class="map_LinkText">主題餐廳 </a> | <a href="./wedding-index.html" class="map_LinkText" >戶外婚禮</a> |<a href="./pancake-index.html" class="map_LinkText">鬆餅小屋</a> </p>
-                <!-- <a href="./wedding-index.html">戶外婚禮</a> | 
-                <a href="./pancake-index.html">鬆餅小屋</a>  -->
-              
-                <p>手作DIY | 公主故事屋</p>
+                <div class="map_LinkText_intraspace">
+                    <a href="./eat-index.html" class="map_LinkText Link1_space">主題餐廳 </a>
+                    |
+                    <a href="./wedding-index.html" class="map_LinkText Link2_space">戶外婚禮</a>
+                    |
+                    <a href="./pancake-index.html" class="map_LinkText Link3_space">鬆餅小屋</a>
+                </div>
+
+                <div>
+                    <a href="./diy-index.html" class="map_LinkText Link4_space">手作diy </a>
+                    |
+                    <a href="./princess-index.html"class="map_LinkText Link5_space ">公主故事屋</a>
+                </div>
             </div>
         </div>
         <div class="box_container  ">

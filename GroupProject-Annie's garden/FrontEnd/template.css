@@ -109,7 +109,9 @@ textarea {
     font-size  : 16px;
     font-weight: bold;
 }
-
+.nav_btn_guide{
+    display: block;
+}
 .mobile_nav_btn {
     height     : 100%;
     text-align : center;
@@ -141,7 +143,7 @@ textarea {
 
     height      : 100%;
     z-index     : 99;
-    /* transform: translateX(-677px); */
+
 
 }
 
@@ -165,19 +167,7 @@ textarea {
     justify-content : center;
     align-items     : center;
     position        : relative;
-
-
-
 }
-
-/* .container{
-    background-color: bisque;
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-
-} */
-
 .footer_box {
     display        : flex;
     width          : 1000px;
@@ -195,7 +185,6 @@ textarea {
 
     line-height: 40px;
 }
-
 
 .mobile_use {
     display: none;
@@ -299,11 +288,6 @@ textarea {
 .returnBut_text {
     text-align : center;
     line-height: 191.054px;
-    /* cursor  : pointer; */
-
-    /* position              : fixed;
-    right                    : 80.527px;
-    bottom                   : 80.527px; */
     font-size                : 65px;
     color                    : white;
     font-weight              : bold;
@@ -378,7 +362,7 @@ textarea {
 
 @media(max-width:850px) {
 
-
+   
     .page {
         margin-top: 46px;
     }
@@ -641,13 +625,13 @@ textarea {
         margin: auto;
     }
 
-    .fas {
+    .extraPage_trigger{
         transform: translate(92px, -23px);
         color    : white;
         cursor   : pointer;
     }
 
-    .fas.active {
+    .extraPage_trigger.active {
         transform: translate(92px, -8px) rotate(180deg);
     }
 
@@ -668,7 +652,7 @@ textarea {
 
     .guide_extraPages.active li {
         width                    : 100vw;
-        background-color         : #F0ABC9;
+        background-color         : rgba(240, 171, 201, 0.8);
         /* border-bottom         : 2px solid #9F416B; */
         animation-name           : extra_btn_growth;
         animation-duration       : 1s;
