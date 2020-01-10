@@ -750,7 +750,7 @@ textarea {
         left          : 50%;
         transform     : translateX(-18%);
     } */
-    .changeSite::before{
+    .changeSite1::before{
         content          : '';
         position         : absolute;
         height           : 20px;
@@ -772,11 +772,42 @@ textarea {
         left             : -22px;
         top              : 22px;
     }
-    .changeSite:nth-child(1) {
+    .changeSite3::before{
+        content          : '';
+        position         : absolute;
+        height           : 20px;
+        width            : 20px;
+        background-size  : 20px;
+        background-image : url("./素材/08-鬆餅小屋/crown_white.png");
+        background-repeat: no-repeat;
+        left             : -22px;
+        top              : 22px;
+    }
+    /* .changeSite:nth-of-type(1) {
         line-height   : 60px;
         position      : absolute;
         left          : 50%;
-        transform     : translateX(-18%);
+        transform     : translateX(-19%);
+    }
+
+    .changeSite:nth-of-type(2)  {
+        line-height   : 60px;
+        position      : absolute;
+        left          : 50%;
+        transform     : translateX(-23%);
+    }
+
+    .changeSite:nth-of-type(3){
+        line-height   : 60px;
+        position      : absolute;
+        left          : 50%;
+        transform     : translateX(-16%);
+    } */
+   .changeSite1 {
+        line-height   : 60px;
+        position      : absolute;
+        left          : 50%;
+        transform     : translateX(-20%);
     }
 
     .changeSite2{
@@ -784,6 +815,13 @@ textarea {
         position      : absolute;
         left          : 50%;
         transform     : translateX(-23%);
+    }
+
+    .changeSite3{
+        line-height   : 60px;
+        position      : absolute;
+        left          : 50%;
+        transform     : translateX(-16%);
     }
 
     .guide_extraPages div:nth-child(1) {
