@@ -16,6 +16,7 @@
     <title>Document</title>
 
     <style>
+
         .mobile_swiper {
             display: none;
         }
@@ -82,7 +83,7 @@
 
         .extraPage_diy_titleBox {
             width: 444.5px;
-            margin: 100px auto;
+            margin: 100px auto 0px;
             letter-spacing: 3px;
         }
 
@@ -122,7 +123,7 @@
 
         .extraPage_diy_themeGroup {
             max-width: 1440px;
-            margin: 130.065px auto 118px;
+            margin: 100px auto 100px;
             display: flex;
             justify-content: space-between;
 
@@ -151,7 +152,7 @@
             bottom: 0;
             z-index: -2;
             background-color: #F0ABC9;
-            box-shadow: 3px 3px 5px black;
+            box-shadow: 4px 4px 4px 1px rgba(191, 75, 139, 0.75);
         }
 
 
@@ -228,9 +229,6 @@
         }
 
 
-        .extraPage_diy_theme_m .extraPage_diy_theme_titleBox_decorationBox {
-            background-color: #FAEC21;
-        }
 
         .extraPage_diy_theme_imgBox {
             width: 450px;
@@ -251,7 +249,6 @@
         }
 
         .extraPage_diy_lastContent {
-            margin-bottom: 206.253px;
             text-align: center;
             font-size: 23px;
             line-height: 38px;
@@ -335,6 +332,20 @@
         .gallery-thumbs .swiper-slide-thumb-active {
             opacity: 1;
         }
+        
+        .returnPrePage_Box {
+            width: 166px;
+            margin: 100px auto;
+            font-size: 22px;
+            text-align: center;
+            background-color: white;
+            border: 3px solid #E05D7F;
+            border-radius: 25px;
+            padding: 20px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
 
         @media (max-width:1250px) {
 
@@ -357,6 +368,7 @@
 
                 flex-flow: column;
                 align-items: center;
+                margin: 100px auto 0px;
             }
 
             .extraPage_diy_theme {
@@ -378,9 +390,11 @@
             .extraPage_diy_themeGroup {
                 display: none;
             }
-
             .mobile_swiper {
                 display: block;
+            }
+            .returnPrePage_Box {
+                display: none;
             }
         }
         @media (max-width:576px) {
@@ -584,7 +598,6 @@
             <div class="extraPage_diy_theme_m extraPage_diy_theme">
                 <div class="extraPage_diy_theme_titleBox">
                     <div class="extraPage_diy_theme_titleText">葉拓染布</div>
-
                     <div class="extraPage_diy_theme_titleBox_decorationBox"></div>
                 </div>
                 <div class="extraPage_diy_theme_imgBox">
@@ -699,6 +712,12 @@
             <p>除了上述體驗活動之外，安妮也會不定期推出新的體驗活動，歡迎來電洽詢 04-25931567(8) 林小姐!</p>
 
         </div>
+
+        <a href="./guide-index.html" >
+            <div class="returnPrePage_Box">
+                回園區導覽
+            </div>
+        </a>
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
