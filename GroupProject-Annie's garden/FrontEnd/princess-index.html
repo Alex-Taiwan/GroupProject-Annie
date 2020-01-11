@@ -184,7 +184,7 @@
         .extraPage_princess_imgBoxGroup_imgBoxGroup {
             max-width: 1140px;
         }
-
+     
         .imgBox_t {
             width: 100%;
             height: 272px;
@@ -725,12 +725,24 @@
             height: 100%;
             background-color: #FCC4E1;
             overflow: hidden;
+            cursor: pointer;
+          
         }
 
+        .extraPage_princess_imgBoxGroup .imgBox img {
+            /* transform: scale(1); */
+            transition-property:transform ;
+            transition-duration:.8s ;
+        }
+
+    
+
         .extraPage_princess_imgBoxGroup .imgBox img:hover {
-            transform: scale(1.4);
-            transition: .5s ease-in-out;
-            border: 15px solid white;
+            /* transition-property: transform; */
+            transform: scale(1.3);
+            /* transition: .3s ease-in-out; */
+            /* transition: .5s ease-in-out; */
+            /* border: 15px solid white; */
             box-shadow: 0 0 10px 3px black;
 
         }
@@ -754,9 +766,59 @@
             cursor: pointer;
         }
 
+        .fullScreen_mask {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999999;
+            display: none;
+
+        }
+
+        .fullScreen_mask.active {
+            display: block;
+        }
+
+        .imgShow {
+            width: 60%;
+            height: 85%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .canclePoint {
+            position: absolute;
+            top: -23px;
+            right: -23px;
+            z-index: 2;
+        }
+
+        .back {
+            position: absolute;
+            top: -24px;
+            right: -24px;
+            z-index: 2;
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 51px;
+        }
+
+        @media (max-width:1400px) {
+            .imgShow {
+                width: 75%;
+                height: 80%;
+            }
+        }
 
         @media (max-width:1100px) {
-            .extraPage_princess_banner .banner_decorationBox {    
+            .extraPage_princess_banner .banner_decorationBox {
                 height: 100px;
             }
 
@@ -784,7 +846,10 @@
                 display: none;
             }
 
-
+            .imgShow {
+                width: 90%;
+                height: 70%;
+            }
 
         }
 
@@ -841,7 +906,7 @@
                 height: 248px;
             }
 
-            .extraPage_princess_banner .banner_decorationBox {   
+            .extraPage_princess_banner .banner_decorationBox {
                 height: 44.09px;
                 top: 119px;
 
@@ -888,7 +953,7 @@
             <div class="nav_logo"></div>
         </a>
         <div class="nav_btnGroup">
-  
+
             <div class="nav_btn_about nav_btn_space nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
@@ -940,7 +1005,7 @@
                         <a href="./princess-index.html" class="changeSite3 ">公主故事屋</a>
                     </li>
                 </ul>
-        
+
             </div>
             <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
@@ -1034,7 +1099,7 @@
             <div class="swiper-button-next"></div>
         </div>
         <!-- swiper -->
-        
+
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
@@ -1046,18 +1111,111 @@
                 </div>
                 <div class=" footer_iconGroupBox">
                     <div class="footer_iconGroup">
-                        <a href="https://zh-tw.facebook.com/annies0425931567"><img
-                                src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon" title="FB"></a>
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon" title="FB"></a>
                         <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon.png" alt=""
                                 class="footer_lineIcon" title="Line"></a>
                         <a href="https://www.instagram.com/explore/locations/246263666/"><img
                                 src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon" title="IG">
                         </a>
                         <div class="footer_gmailIcon">
-                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_01.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_02.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_03.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_04.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_05.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_06.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_07.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_08.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_09.jpg" alt="">
+            </div>
+        </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
+                    <i class="fas fa-times-circle fa-3x  cancel" style="color:white ; "></i>
+                </div>
+                <img src="./素材/10-公主故事屋/princess_10.jpg" alt="">
             </div>
         </div>
     </div>
@@ -1102,7 +1260,46 @@
         });
     </script>
 
+    <script>
+        var princess_imgBox = document.querySelectorAll(".imgBox")
+        var fullScreen_mask = document.querySelectorAll(".fullScreen_mask")
+        console.log(princess_imgBox);
+        for (let i = 0; i < princess_imgBox.length; i++) {
+            const Princess_imgBox = princess_imgBox[i];
+            const FullScreen_mask = fullScreen_mask[i]
 
+            $(Princess_imgBox).on("click", function () {
+                clearAllactive4()
+                $(FullScreen_mask).addClass("active")
+
+            })
+
+            $(".canclePoint").on("click", function () {
+                clearAllactive4()
+            })
+        }
+
+
+        function clearAllactive4() {
+            for (var a = 0; a < princess_imgBox.length; a++) {
+                fullScreen_mask[a].classList.remove("active");
+
+            }
+        }
+
+        if ($(window).width() < 768) {
+            $(fullScreen_mask).removeClass("active")
+        }
+        $(window).on("resize", function () {
+            var windowWidth = $(window).width()
+            if (windowWidth < 768) {
+                $(fullScreen_mask).removeClass("active")
+            }
+        })
+    // $(".canclePoint").on("click", function () {
+    //     $(".fullScreen_mask").remove("active")
+    // })
+    </script>
 
     <!-- <script>
             var windowWidth = $(window).width()
