@@ -666,10 +666,11 @@ textarea {
         color    : white;
         cursor   : pointer;
         width : 60px;
+        height: 30px;
     }
 
     .extraPage_trigger.active {
-        transform: translate(92px, -8px) rotate(180deg);
+        transform: translate(92px, -22px) rotate(180deg);
     }
    
     .guide_extraPages.active {
