@@ -475,17 +475,23 @@ textarea {
         position: absolute;
         top     : 25%;
         left    : 50%;
+        transition-property: top;
+        transition-duration: 1s;
     }
 
     .burger_decoration1.active {
-        animation-name           : burger_act1;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition-property:transform ;
+        transition-duration:1.5s ;
+        /* animation-name           : burger_act1;
         animation-duration       : 2s;
         animation-iteration-count: 1;
         animation-fill-mode      : forwards;
-        animation-delay          : 0.1s;
+        animation-delay          : 0.1s; */
 
     }
-
+/* 
     @keyframes burger_act1 {
         from {
             transform: translate(0, 0) rotate(0)
@@ -495,35 +501,45 @@ textarea {
             transform: translate(-50%, 8px) rotate(45deg)
         }
 
-    }
+    } */
 
     .burger_decoration2 {
         position: absolute;
         top     : 50%;
         left    : 50%;
+        opacity: 1;
+        transition-property:opacity;
+        transition-duration: 1s;
+
     }
 
     .burger_decoration2.active {
-
-        display: none;
-
+        opacity: 0;
+        transition-property:opacity;
+        transition-duration: 1s;
+        /* display: none; */
     }
 
     .burger_decoration3 {
         position: absolute;
         top     : 75%;
         left    : 50%;
-
+        transition-property: top;
+        transition-duration: 1s;
     }
 
     .burger_decoration3.active {
-        animation-name           : burger_act3;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition-property: transform;
+        transition-duration: 1.5s;
+        /* animation-name           : burger_act3;
         animation-duration       : 2s;
         animation-iteration-count: 1;
         animation-fill-mode      : forwards;
-        animation-delay          : 0.1s;
+        animation-delay          : 0.1s; */
     }
-
+/* 
     @keyframes burger_act3 {
         from {
             transform: translate(0, 0) rotate(0)
@@ -533,7 +549,7 @@ textarea {
             transform: translate(-50%, -15px) rotate(-45deg)
         }
 
-    }
+    } */
 
     .mobile_mask {
         /* position     : absolute; */
@@ -563,7 +579,7 @@ textarea {
         left               : 50%;
         transform          : translateX(-50%);
         height             : 2px;
-        width              : 80%;
+        width              : 70%;
         /* background-color: #F7A9C1; */
         border-bottom      : 2px #F7A9C1 dashed;
     }
@@ -640,15 +656,16 @@ textarea {
         width                    : 100vw;
     }
 
-    .special_a {
-        width : 100px;
+     .special_a {
+        width : 90px;
         margin: auto;
-    }
+    } 
 
     .extraPage_trigger{
         transform: translate(92px, -23px);
         color    : white;
         cursor   : pointer;
+        width : 60px;
     }
 
     .extraPage_trigger.active {
@@ -657,8 +674,10 @@ textarea {
 
     .guide_extraPages.active {
         display: block;
-        border : unset
+        border : unset;
     }
+
+
 
     .guide_extraPages.active div {
         width                    : 100vw;
@@ -835,13 +854,31 @@ textarea {
     }
 
     .guide_extraPages li:nth-child(1) {
-        border-bottom: 2px solid #9F416B;
+        /* border-bottom: 2px dashed #9F416B; */
 
     }
+  
 
-    .guide_extraPages li:nth-child(2) {
-        border-bottom: 2px solid #9F416B;
+    .diyPage::after {
+        content: "";
+        position: absolute;
+        top:-3px;
+        left:50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width:  70%;
+        border-bottom: 2px dashed #E05D7F;
+    }
 
+    .princessPage::after {
+        content: "";
+        position: absolute;
+        top:-3px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width:  70%;
+        border-bottom: 2px dashed #E05D7F;
     }
 
     /* .mobile_nav_btn.active:nth-child(4){

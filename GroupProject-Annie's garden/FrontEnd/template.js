@@ -92,7 +92,7 @@ $(function () {
             $(".guide_extraPages").removeClass("active")
             $(".nav_btn_guide").addClass("mobile_afterSite")  
             $(".nav_btn_guide").removeClass("heightChange")   
-               
+             
         }
         else {
             $(".fas").addClass("active")
@@ -129,7 +129,9 @@ $(".nav_btnGroup_mobile ").on("click", function () {
         $(".burger_decoration1").removeClass("active")
         $(".burger_decoration2").removeClass("active")
         $(".burger_decoration3").removeClass("active")
-        
+        $(".nav_btn_guide").removeClass("heightChange")
+        $(".extraPage_trigger").removeClass("active")  
+        $(".nav_btn_guide").addClass("mobile_afterSite")  
     }
     else {
         $(".burger_decoration1").addClass("active")
