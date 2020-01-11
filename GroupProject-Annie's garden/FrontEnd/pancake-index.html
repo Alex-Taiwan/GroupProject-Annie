@@ -14,6 +14,33 @@
     <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./template.css">
     <style>
+        /* 
+        .pancake_decorationBox1{
+            width: 100%;
+            height: 500px;
+            background-image: url("./素材/08-鬆餅小屋/57-01.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: -100;
+            top:1500px;
+            box-shadow:0 0 5px 3px white;
+        }
+        .pancake_decorationBox2{
+            width: 100%;
+            height: 500px;  
+            background-image: url("./素材/08-鬆餅小屋/57-01.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: -100;
+            top:2500px;
+            box-shadow:0 0 5px 3px white;
+
+        } */
+
         .page_pancake_banner {
             width: 100%;
             height: 760px;
@@ -100,11 +127,24 @@
             max-width: 1200px;
             height: 430px;
             background-color: rgba(224, 93, 127, 0.7);
-
             position: relative;
             margin-bottom: 100px;
             box-shadow: 7px 7px 5px rgba(191, 75, 139, 0.75);
 
+        }
+
+
+        .pancake_menuBox::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: #F6D3E2;
+            position: absolute;
+            top: 31px;
+            left: 28px;
+            margin-bottom: 600px;
+            box-shadow: 7px 7px 5px rgba(191, 75, 139, 0.75);
+            z-index: -1;
         }
 
         .pancake_menuBox .titleBox {
@@ -271,8 +311,8 @@
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 324px;
-            left: 200px;
+            top: 260px;
+            left: 121px;
         }
 
         .crown3 {
@@ -295,24 +335,24 @@
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 199px;
-            left: 215px;
+            top: 159px;
+            left: 155px;
         }
 
         .crown6 {
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 242px;
-            left: 215px;
+            top: 202px;
+            left: 155px;
         }
 
         .crown7 {
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 284px;
-            left: 215px;
+            top: 321px;
+            left: 155px;
         }
 
         .crown8 {
@@ -335,8 +375,8 @@
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 362px;
-            left: 230px;
+            top: 340px;
+            left: 126px;
         }
 
         .crown11 {
@@ -351,7 +391,7 @@
             width: 50px;
             height: 49px;
             position: absolute;
-            top: 319px;
+            top: 266px;
             left: 121px;
         }
 
@@ -2053,7 +2093,7 @@
             <div class="nav_logo"></div>
         </a>
         <div class="nav_btnGroup">
-  
+
             <div class="nav_btn_about nav_btn_space nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
@@ -2105,7 +2145,7 @@
                         <a href="./princess-index.html" class="changeSite3 ">公主故事屋</a>
                     </li>
                 </ul>
-        
+
             </div>
             <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
@@ -2122,6 +2162,9 @@
         </div>
 
     </nav>
+
+    <div class="pancake_decorationBox1"></div>
+    <div class="pancake_decorationBox2"></div>
     <div class="mobile_mask"></div>
     <div class="page_pancake page">
         <div class="page_pancake_banner">
@@ -2174,7 +2217,8 @@
             </div>
         </section>
         <section class="section2">
-            <div class="pancake_menuBox2 BoxStyle2">
+            <div class="pancake_menuBox2 BoxStyle2 " data-aos="zoom-out-right" data-aos-duration="1500"
+                data-aos-easing="ease-in-sine">
                 <div class="titleBox">手工咖啡</div>
                 <div class="crown2">
                     <img src="./素材/08-鬆餅小屋/crown_pink.png" alt="">
@@ -2217,7 +2261,8 @@
             </div>
         </section>
         <section class="section4">
-            <div class="pancake_menuBox4 BoxStyle4">
+            <div class="pancake_menuBox4 BoxStyle4" data-aos="zoom-out-right" data-aos-duration="1500"
+                data-aos-easing="ease-in-sine">
                 <div class="titleBox">甜蜜蛋糕</div>
                 <div class="crown5">
                     <img src="./素材/08-鬆餅小屋/crown_pink.png" alt="">
@@ -2294,7 +2339,8 @@
             </div>
         </section>
         <section class="section6">
-            <div class="pancake_menuBox6 BoxStyle2">
+            <div class="pancake_menuBox6 BoxStyle2" data-aos="zoom-out-right" data-aos-duration="1500"
+                data-aos-easing="ease-in-sine">
                 <div class="titleBox">果乾茶</div>
                 <div class="crown10">
                     <img src="./素材/08-鬆餅小屋/crown_pink.png" alt="">
@@ -2341,7 +2387,8 @@
             </div>
         </section>
         <section class="section8">
-            <div class="pancake_menuBox8 BoxStyle4">
+            <div class="pancake_menuBox8 BoxStyle4" data-aos="zoom-out-right" data-aos-duration="1500"
+                data-aos-easing="ease-in-sine">
                 <div class="titleBox">茶奶類</div>
                 <div class="crown12">
                     <img src="./素材/08-鬆餅小屋/crown_pink.png" alt="">
@@ -2379,15 +2426,15 @@
                 </div>
                 <div class=" footer_iconGroupBox">
                     <div class="footer_iconGroup">
-                        <a href="https://zh-tw.facebook.com/annies0425931567"><img
-                                src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon" title="FB"></a>
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon" title="FB"></a>
                         <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon.png" alt=""
                                 class="footer_lineIcon" title="Line"></a>
                         <a href="https://www.instagram.com/explore/locations/246263666/"><img
                                 src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon" title="IG">
                         </a>
                         <div class="footer_gmailIcon">
-                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="" >
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
                         </div>
                     </div>
                 </div>
