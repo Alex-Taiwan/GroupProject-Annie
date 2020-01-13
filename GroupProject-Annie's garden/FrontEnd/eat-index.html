@@ -28,7 +28,7 @@
         .page_4_decoration2 {
             width: 100%;
             height: 234px;
-            background-color:  #E25D7F;
+            background-color: #E25D7F;
             position: absolute;
             top: 3918.5px;
             z-index: -999;
@@ -37,19 +37,35 @@
         .page4_chiefImg {
             width: 223px;
             height: 447px;
-            background-image: url("./素材/04-主廚上菜/restaurant_chef.png");
+            background-image: url("./素材/04-主廚上菜/restaurant_chef-new.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            display: none;
-            position: absolute;
-            top: 100px;
+            /* display: none; */
+            position: fixed;
+            top: 0px;
             right: 10px;
             z-index: 9999;
             opacity: 0;
+            transition-property: top;
+            transition-duration: 1s;
         }
 
         .page4_chiefImg.active {
+            opacity: 1;
+            /* display: block; */
+            top: 250px;
+            animation: chiefShake;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        .page4_chiefImg.active2 {
+            opacity: 1;
+            /* display: block; */
+            top: 350px;
             animation: chiefShake;
             animation-duration: 5s;
             animation-iteration-count: infinite;
@@ -577,7 +593,7 @@
 
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1100px) {
 
             .page_4_decoration1 {
                 display: none
@@ -634,9 +650,12 @@
                 margin-bottom: 100px;
             }
 
+        
+
             .eat_show2 .titleBox {
                 position: unset;
             }
+        
 
             .eat_show4 .titleBox {
                 position: unset;
@@ -669,6 +688,9 @@
                 padding-top: unset;
             }
 
+            .eat_show1 .textBox {
+                bottom: -60px;
+            }
             .eat_show2 {
                 padding-top: unset;
                 margin-top: 100px;
@@ -684,6 +706,9 @@
             .eat_show3 {
                 padding-top: unset;
                 margin-top: 100px;
+            }
+            .eat_show3 .textBox {
+                bottom: -60px;
             }
 
             .eat_show4 {
@@ -702,7 +727,9 @@
                 padding-top: unset;
                 margin-top: 100px;
             }
-
+            .eat_show5 .textBox {
+                bottom: -60px;
+            }
 
 
             .page4_specialContainer .textBox {
@@ -1150,7 +1177,7 @@
         })
     </script> -->
     <script>
-        // var page4_decoration_1=$(".page_4_decoration1").scrollTop()
+        var page4_decoration_1 = $(".page_4_decoration1").scrollTop()
         // var page4_decoration_2=$(".page_4_decoration2").scrollTop()
         // console.log(page4_decoration_1);
         // console.log(page4_decoration_2);
@@ -1169,10 +1196,11 @@
             var eat_show4_offsetTop = $(".eat_show4").offset().top
             var windowHeight = $(window).height()
             var windowScrollTop = $(window).scrollTop()
-            var eat_show2_touchPoint = eat_show2_offsetTop - windowHeight
-            var eat_show4_touchPoint = eat_show4_offsetTop - windowHeight
+            var eat_show2_touchPoint = eat_show2_offsetTop
+            var eat_show4_touchPoint = eat_show4_offsetTop
+            var footer_touchPoint = $(".footer").offset().top
             var chiefVanishPoint = $(".eat_title").offset().top
-
+            var bodyHeight = $("body").height()
             var wdth = $(window).width();
             // console.log(eat_show2_offsetTop);
             // console.log(eat_show4_offsetTop); 
@@ -1183,43 +1211,75 @@
             // console.log(eat_show4_touchPoint - 0.5 * page4_decoration_2_height);
 
 
-            if (wdth > 1024) {
-                if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
-                    $(".page4_chiefImg").show()
-                    $(".page4_chiefImg").css({
-                        "top": "1634.5px"
-                    })
-                    $(".page4_chiefImg").animate({
-                        opacity: 1,
-                    }, 1000)
+            if (wdth >1000) {
+           
 
+
+                if (eat_show2_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show2_touchPoint - windowHeight / 5) {
+
+
+                    // $(".page4_chiefImg").animate({
+
+
+                    //     "top":"500px"
+
+                    // }, 1000)
                     $(".page4_chiefImg").addClass("active")
 
+                   
 
                 }
+                else if (eat_show4_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show4_touchPoint - windowHeight / 5) {
+                  
 
-                else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
-                    $(".page4_chiefImg").fadeIn()
-                    $(".page4_chiefImg").css({
-                        "top": "3531.5px"
-                    })
+                    //     $(".page4_chiefImg").animate({
+
+
+                    //       "top":"1000px"
+
+                    //   }, 1000)
                     $(".page4_chiefImg").addClass("active")
-                    $(".page4_chiefImg").animate({
-                        opacity: 1,
-                    }, 1000)
-
+                }
+                else if (windowScrollTop + windowHeight > footer_touchPoint) {
+                    $(".page4_chiefImg").addClass("active2")
                 }
                 else {
-                    $(".page4_chiefImg").hide()
+                  
+
                     $(".page4_chiefImg").removeClass("active")
-                    $(".page4_chiefImg").css({
-                        "top": "100px"
-                    })
-                    $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
+                    $(".page4_chiefImg").removeClass("active2")
+                    // $(".page4_chiefImg").animate({        
+                    // "top": "100px",
+                    //         })
                 }
+                // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
+                //     $(".page4_chiefImg").fadeIn()
+                //     $(".page4_chiefImg").css({
+                //         "top": "3531.5px"
+                //     })
+                //     $(".page4_chiefImg").addClass("active")
+                //     $(".page4_chiefImg").animate({
+                //         opacity: 1,
+                //     }, 1000)
+
+                // }
+                // else {
+                //     $(".page4_chiefImg").hide()
+                //     $(".page4_chiefImg").removeClass("active")
+                //     $(".page4_chiefImg").css({
+                //         "top": "100px"
+                //     })
+                //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
+                // }
             }
             else {
-                $(".page4_chiefImg").hide()
+                // $(".page4_chiefImg").animate({        
+                //         "top": "100px",
+
+                //   }, 1000)
+                $(".page4_chiefImg").stop(true)
+                $(".page4_chiefImg").removeClass("active")
+                $(".page4_chiefImg").removeClass("active2")
             }
             // if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
             //     $(".page4_chiefImg").show()
@@ -1257,8 +1317,8 @@
 
         })
     </script>
-     <script>
-        $(".banner_text2").on("click",function(){
+    <script>
+        $(".banner_text2").on("click", function () {
             $(".fullScreen_mask").toggle()
         })
 
