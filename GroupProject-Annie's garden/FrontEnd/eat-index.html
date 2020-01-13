@@ -13,13 +13,13 @@
     <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./template.css">
-    <title>Document</title>
+    <title>主廚上菜</title>
 
     <style>
         .page_4_decoration1 {
             width: 100%;
             height: 234px;
-            background-color: #E05D97;
+            background-color: #E25D7F;
             position: absolute;
             top: 2021.5px;
             z-index: -999;
@@ -28,7 +28,7 @@
         .page_4_decoration2 {
             width: 100%;
             height: 234px;
-            background-color: #E05D97;
+            background-color:  #E25D7F;
             position: absolute;
             top: 3918.5px;
             z-index: -999;
@@ -98,7 +98,7 @@
         }
 
         .page_4_banner .banner_decorationBox {
-            width: 70%;
+            width: 60%;
             height: 138px;
             background-color: rgba(255, 255, 255, 0.63);
             /* transform: translate(988px,319px); */
@@ -154,7 +154,7 @@
             margin: 100px auto 20px;
             position: relative;
         }
-        
+
         .eat_titleBox::after {
             content: "";
             position: absolute;
@@ -166,7 +166,7 @@
             background-color: #DAB059;
         }
 
-     
+
 
         .eat_title {
             text-align: center;
@@ -277,7 +277,7 @@
 
         .eat_show1 .imgBox {
             position: absolute;
-            top: 0;
+            top: -34px;
             right: 38.111px;
             z-index: 3;
             width: 537px;
@@ -294,7 +294,7 @@
             height: 315px;
             position: absolute;
             background-color: #F0ABC9;
-            top: 25px;
+            top: -9px;
             right: 0;
             z-index: -3;
         }
@@ -387,7 +387,7 @@
 
         .eat_show3 .imgBox {
             position: absolute;
-            top: 0;
+            top: -34px;
             right: 38.111px;
             z-index: 3;
             width: 537px;
@@ -404,7 +404,7 @@
             height: 315px;
             position: absolute;
             background-color: #F0ABC9;
-            top: 25px;
+            top: -9px;
             right: 0;
             z-index: -3;
         }
@@ -496,7 +496,7 @@
 
         .eat_show5 .imgBox {
             position: absolute;
-            top: 0;
+            top: -34px;
             right: 38.111px;
             z-index: 3;
             width: 537px;
@@ -514,7 +514,7 @@
             height: 315px;
             position: absolute;
             background-color: #F0ABC9;
-            top: 25px;
+            top: -9px;
             right: 0;
             z-index: -3;
         }
@@ -534,6 +534,46 @@
             text-align: center;
             color: #513508;
             background-color: white;
+
+        }
+
+        .fullScreen_mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999999999999;
+            /* display: none; */
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .imgShow {
+            width: 80%;
+            height: 85%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .canclePoint {
+            position: absolute;
+            top: -23px;
+            right: -23px;
+            z-index: 2;
+        }
+
+        .back {
+            position: absolute;
+            top: -24px;
+            right: -24px;
+            z-index: 2;
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 51px;
 
         }
 
@@ -577,7 +617,7 @@
                 position: relative;
             }
 
-           
+
 
             .eat_suggest_imgBox {
                 margin: auto;
@@ -729,7 +769,7 @@
 
             .page_4_banner .banner_text2 {
                 font-size: 12px;
-                
+
                 color: black;
                 left: -20px;
                 text-decoration: none;
@@ -764,7 +804,7 @@
                 height: 1px;
             }
 
-           
+
 
             .eat_suggest_text {
                 right: 15px;
@@ -821,9 +861,9 @@
                 height: unset;
                 margin-top: 100px;
             }
-           
-           
- 
+
+
+
         }
     </style>
 </head>
@@ -835,7 +875,7 @@
             <div class="nav_logo"></div>
         </a>
         <div class="nav_btnGroup">
-  
+
             <div class="nav_btn_about nav_btn_space nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
@@ -887,7 +927,7 @@
                         <a href="./princess-index.html" class="changeSite3 ">公主故事屋</a>
                     </li>
                 </ul>
-        
+
             </div>
             <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
@@ -916,7 +956,7 @@
 
             </div>
             <div class="banner_decorationBox2">
-                <div class="banner_text2 "><a href="./pancake-index.html"> >> MENU下載</a></div>
+                <div class="banner_text2 "> >> MENU下載</div>
             </div>
         </div>
         <div class="box_container ">
@@ -968,7 +1008,7 @@
                     <div class="decoration"></div>
                     <p>烤春雞</p>
                 </div>
-                <div class="textBox" data-aos="zoom-in-right"  data-aos-duration="1200">
+                <div class="textBox" data-aos="zoom-in-right" data-aos-duration="1200">
                     <p>安妮特別訂了出生才一個月左右小鮮肉的雞，肉質細嫩鮮美，</p>
                     <p>比一般放山雞體型比較小很多、骨架也比較軟，</p>
                     <p>摘了些百里香、迷迭香、茴香、鼠尾草，帶著這些香草，洗滌了幾次，</p>
@@ -982,7 +1022,7 @@
                     <img src="./素材/04-主廚上菜/restaurant_steak.jpg" alt="">
                 </div>
                 <div class="decorationBox" data-aos="fade-right" data-aos-duration="1300"></div>
-                <div class="titleBox"   data-aos="fade-right" data-aos-duration="1200">
+                <div class="titleBox" data-aos="fade-right" data-aos-duration="1200">
                     <div class="decoration"></div>
                     <p>紅磚牛排</p>
                 </div>
@@ -995,17 +1035,17 @@
                     <p>連皮帶肉搭配酸白菜、黃芥末的一口! 真期待!</p>
                 </div>
             </div>
-            <div class="page4_specialContainer eat_show4" >
+            <div class="page4_specialContainer eat_show4">
 
                 <div class="imgBox" data-aos="fade-right" data-aos-duration="900">
                     <img src="./素材/04-主廚上菜/restaurant_casserole.jpg" alt="">
                 </div>
                 <!-- <div class="decorationBox" data-aos="fade-left"  data-aos-duration="1300"></div> -->
-                <div class="titleBox" data-aos="zoom-in-right"  data-aos-duration="1200">
-                    <div class="decoration" ></div>
+                <div class="titleBox" data-aos="zoom-in-right" data-aos-duration="1200">
+                    <div class="decoration"></div>
                     <p>野菇焗烤飯</p>
                 </div>
-                <div class="textBox" data-aos="zoom-in-right"  data-aos-duration="1200">
+                <div class="textBox" data-aos="zoom-in-right" data-aos-duration="1200">
                     <p>安妮特別訂了出生才一個月左右小鮮肉的雞，肉質細嫩鮮美，</p>
                     <p>比一般放山雞體型比較小很多、骨架也比較軟，</p>
                     <p>摘了些百里香、迷迭香、茴香、鼠尾草，帶著這些香草，洗滌了幾次，</p>
@@ -1044,40 +1084,50 @@
                 </div>
                 <div class=" footer_iconGroupBox">
                     <div class="footer_iconGroup">
-                        <a href="https://zh-tw.facebook.com/annies0425931567"><img
-                                src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon" title="FB"></a>
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon" title="FB"></a>
                         <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon.png" alt=""
                                 class="footer_lineIcon" title="Line"></a>
                         <a href="https://www.instagram.com/explore/locations/246263666/"><img
                                 src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon" title="IG">
                         </a>
                         <div class="footer_gmailIcon">
-                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="fullScreen_mask">
+            <div class="imgShow">
+                <div class="back"></div>
+                <div class="canclePoint">
 
-        <div class="returnBut">
-            <div class="returnBut_text">Top</div>
+                    <i class="fas fa-times-circle fa-3x " style="color:white ;"></i>
+                </div>
+                <img src="./素材/04-主廚上菜/restaurant_menu_download.jpg" alt="">
+            </div>
         </div>
+    </div>
+    <div class="returnBut">
+        <div class="returnBut_text">Top</div>
+    </div>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="./template.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="./template.js"></script>
 
-        <script>
-            AOS.init();
-        </script>
-        <!-- <script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script>
 
 
         $(window).on("scroll", function () {
@@ -1099,118 +1149,124 @@
             return false;
         })
     </script> -->
-        <script>
-            // var page4_decoration_1=$(".page_4_decoration1").scrollTop()
-            // var page4_decoration_2=$(".page_4_decoration2").scrollTop()
-            // console.log(page4_decoration_1);
-            // console.log(page4_decoration_2);
+    <script>
+        // var page4_decoration_1=$(".page_4_decoration1").scrollTop()
+        // var page4_decoration_2=$(".page_4_decoration2").scrollTop()
+        // console.log(page4_decoration_1);
+        // console.log(page4_decoration_2);
 
-            var page4_decoration_1_height = $(".page_4_decoration1").height()
-            var page4_decoration_2_height = $(".page_4_decoration1").height()
-
-
+        var page4_decoration_1_height = $(".page_4_decoration1").height()
+        var page4_decoration_2_height = $(".page_4_decoration1").height()
 
 
-            $(window).on("scroll", function () {
-                // console.log(page4_decoration_2_height);
 
 
-                var eat_show2_offsetTop = $(".eat_show2").offset().top
-                var eat_show4_offsetTop = $(".eat_show4").offset().top
-                var windowHeight = $(window).height()
-                var windowScrollTop = $(window).scrollTop()
-                var eat_show2_touchPoint = eat_show2_offsetTop - windowHeight
-                var eat_show4_touchPoint = eat_show4_offsetTop - windowHeight
-                var chiefVanishPoint = $(".eat_title").offset().top
-
-                var wdth = $(window).width();
-                // console.log(eat_show2_offsetTop);
-                // console.log(eat_show4_offsetTop); 
-                // console.log(windowScrollTop);
-
-                // console.log(eat_show2_touchPoint + 0.5 * page4_decoration_1_height);
-
-                // console.log(eat_show4_touchPoint - 0.5 * page4_decoration_2_height);
+        $(window).on("scroll", function () {
+            // console.log(page4_decoration_2_height);
 
 
-                if (wdth > 1024) {
-                    if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
-                        $(".page4_chiefImg").show()
-                        $(".page4_chiefImg").css({
-                            "top": "1634.5px"
-                        })
-                        $(".page4_chiefImg").animate({
-                            opacity: 1,
-                        }, 1000)
+            var eat_show2_offsetTop = $(".eat_show2").offset().top
+            var eat_show4_offsetTop = $(".eat_show4").offset().top
+            var windowHeight = $(window).height()
+            var windowScrollTop = $(window).scrollTop()
+            var eat_show2_touchPoint = eat_show2_offsetTop - windowHeight
+            var eat_show4_touchPoint = eat_show4_offsetTop - windowHeight
+            var chiefVanishPoint = $(".eat_title").offset().top
 
-                        $(".page4_chiefImg").addClass("active")
+            var wdth = $(window).width();
+            // console.log(eat_show2_offsetTop);
+            // console.log(eat_show4_offsetTop); 
+            // console.log(windowScrollTop);
+
+            // console.log(eat_show2_touchPoint + 0.5 * page4_decoration_1_height);
+
+            // console.log(eat_show4_touchPoint - 0.5 * page4_decoration_2_height);
 
 
-                    }
+            if (wdth > 1024) {
+                if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
+                    $(".page4_chiefImg").show()
+                    $(".page4_chiefImg").css({
+                        "top": "1634.5px"
+                    })
+                    $(".page4_chiefImg").animate({
+                        opacity: 1,
+                    }, 1000)
 
-                    else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
-                        $(".page4_chiefImg").fadeIn()
-                        $(".page4_chiefImg").css({
-                            "top": "3531.5px"
-                        })
-                        $(".page4_chiefImg").addClass("active")
-                        $(".page4_chiefImg").animate({
-                            opacity: 1,
-                        }, 1000)
+                    $(".page4_chiefImg").addClass("active")
 
-                    }
-                    else {
-                        $(".page4_chiefImg").hide()
-                        $(".page4_chiefImg").removeClass("active")
-                        $(".page4_chiefImg").css({
-                            "top": "100px"
-                        })
-                        $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
-                    }
+
+                }
+
+                else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
+                    $(".page4_chiefImg").fadeIn()
+                    $(".page4_chiefImg").css({
+                        "top": "3531.5px"
+                    })
+                    $(".page4_chiefImg").addClass("active")
+                    $(".page4_chiefImg").animate({
+                        opacity: 1,
+                    }, 1000)
+
                 }
                 else {
                     $(".page4_chiefImg").hide()
+                    $(".page4_chiefImg").removeClass("active")
+                    $(".page4_chiefImg").css({
+                        "top": "100px"
+                    })
+                    $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
                 }
-                // if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
-                //     $(".page4_chiefImg").show()
-                //     $(".page4_chiefImg").css({
-                //         "top": "1634.5px"
-                //     })
-                //     $(".page4_chiefImg").animate({
-                //         opacity: 1,
-                //     }, 1000)
+            }
+            else {
+                $(".page4_chiefImg").hide()
+            }
+            // if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
+            //     $(".page4_chiefImg").show()
+            //     $(".page4_chiefImg").css({
+            //         "top": "1634.5px"
+            //     })
+            //     $(".page4_chiefImg").animate({
+            //         opacity: 1,
+            //     }, 1000)
 
-                //     $(".page4_chiefImg").addClass("active")
-
-
-                // }
-
-                // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
-                //     $(".page4_chiefImg").fadeIn()
-                //     $(".page4_chiefImg").css({
-                //         "top": "3531.5px"
-                //     })
-                //     $(".page4_chiefImg").addClass("active")
-                //     $(".page4_chiefImg").animate({
-                //         opacity: 1,
-                //     }, 1000)
-
-                // }
-                // else {
-                //     $(".page4_chiefImg").hide()
-                //     $(".page4_chiefImg").removeClass("active")
-                //     $(".page4_chiefImg").css({
-                //         "top": "100px"
-                //     })
-                //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
-                // }
-
-            })
+            //     $(".page4_chiefImg").addClass("active")
 
 
+            // }
 
+            // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
+            //     $(".page4_chiefImg").fadeIn()
+            //     $(".page4_chiefImg").css({
+            //         "top": "3531.5px"
+            //     })
+            //     $(".page4_chiefImg").addClass("active")
+            //     $(".page4_chiefImg").animate({
+            //         opacity: 1,
+            //     }, 1000)
 
-        </script>
+            // }
+            // else {
+            //     $(".page4_chiefImg").hide()
+            //     $(".page4_chiefImg").removeClass("active")
+            //     $(".page4_chiefImg").css({
+            //         "top": "100px"
+            //     })
+            //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
+            // }
+
+        })
+    </script>
+     <script>
+        $(".banner_text2").on("click",function(){
+            $(".fullScreen_mask").toggle()
+        })
+
+        $(".canclePoint").on("click", function () {
+            $(".fullScreen_mask").toggle()
+        })
+
+    </script>
 </body>
 
 </html>
