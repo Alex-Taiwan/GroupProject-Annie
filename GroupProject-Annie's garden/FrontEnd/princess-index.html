@@ -1261,6 +1261,8 @@
     </script>
 
     <script>
+        //點擊照片有lightBox效果
+
         var princess_imgBox = document.querySelectorAll(".imgBox")
         var fullScreen_mask = document.querySelectorAll(".fullScreen_mask")
         console.log(princess_imgBox);
@@ -1296,46 +1298,11 @@
                 $(fullScreen_mask).removeClass("active")
             }
         })
-    // $(".canclePoint").on("click", function () {
-    //     $(".fullScreen_mask").remove("active")
-    // })
+ 
     </script>
 
-    <!-- <script>
-            var windowWidth = $(window).width()
-            if (windowWidth < 1500) {
-                setTimeout(() => {
-                    swiper.update()
+   
     
-                }, 500)
-            }
-    
-        </script> -->
-    <!-- <script>
-
-
-        $(window).on("scroll", function () {
-            var windowScrollTop = $(window).scrollTop()
-            if (windowScrollTop > 100) {
-                $(".returnBut").fadeIn()
-            }
-            else {
-                $(".returnBut").fadeOut()
-            }
-        })
-
-        $(".returnBut").on("click", function () {
-
-
-
-            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
-
-            return false;
-        })
-    </script> -->
-    <script>
-
-    </script>
 </body>
 
 </html>

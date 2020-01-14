@@ -1052,13 +1052,15 @@
             console.log(triggers);
             console.log(imgShows);
 
-            // $(".trigger").on("click", function () {
-            //     $(".fulscreen_mask").toggle()
-            // })
+          
+            //關閉lightBox//
+
             $(".canclePoint").on("click", function () {
                 $(".fulscreen_mask").toggle()
             })
 
+
+             //使swiper更新//
             for (let i = 0; i < triggers.length; i++) {
                 const Triggers = triggers[i]
                 const ImgShows = imgShows[i]
@@ -1086,6 +1088,8 @@
         </script>
 
         <script>
+            //使swiper更新
+
             var windowWidth = $(window).width()
             if (windowWidth < 600) {
                 setTimeout(() => {
@@ -1093,61 +1097,10 @@
 
                 }, 500)
             }
-            // $(function(){
-            //     $(window).on("resize",function(){
-            //         setTimeout(() => {
-            //         swiper.update(), swiper2.update(), swiper3.update()
-
-            //         }, 300)
-            //     })
-            // })
+       
         </script>
 
-        <!-- <script>
-
-
-        $(window).on("scroll", function () {
-            var windowScrollTop = $(window).scrollTop()
-            if (windowScrollTop > 100) {
-                $(".returnBut").fadeIn()
-            }
-            else {
-                $(".returnBut").fadeOut()
-            }
-        })
-
-        $(".returnBut").on("click", function () {
-
-
-
-            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
-
-            return false;
-        })
-    </script> -->
-        <!-- <script>
-        var wedding_img = document.querySelectorAll(".wedding_img")
-        var wedding_mask = document.querySelectorAll(".wedding_mask")
-        console.log(wedding_img);
-        console.log(wedding_mask);
-        for (let i = 0; i < wedding_img.length; i++) {
-            const Wedding_img = wedding_img[i];
-            const Wedding_mask = wedding_mask[i];
-
-            // $(Wedding_img).on("mouseover", function () {
-            //     // clearAllactive2()
-            //     // Wedding_mask.classList.add("active")
-            //     $(Wedding_mask).fadeIn()
-            // })
-            // $(".wedding_theme_imgBox").on("mouseleave", function () {
-            //     $(Wedding_mask).fadeOut()
-            // })
-
-
-
-        }
-
-    </script> -->
+       
 </body>
 
 </html>

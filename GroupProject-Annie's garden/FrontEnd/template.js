@@ -1,3 +1,6 @@
+
+//返回見到某高度才出現
+
 $(window).on("scroll", function () {
     var windowScrollTop = $(window).scrollTop()
     if (windowScrollTop > 100) {
@@ -8,11 +11,12 @@ $(window).on("scroll", function () {
     }
 })
 
+/* 返回鍵到最頂上 */
 $(".returnBut").on("click", function () {
 
 
 
-    $('html,body').animate({ scrollTop: 0 },1000,"linear");   /* 返回到最頂上 */
+    $('html,body').animate({ scrollTop: 0 },1000,"linear");   
 
     return false;
 })
@@ -37,6 +41,8 @@ $(".returnBut").on("click", function () {
 //     }
 
 // })
+
+//手機nav選單控制//
 
 $(function () {
     $(window).on("resize", function () {
@@ -84,7 +90,6 @@ $(function () {
 
 })
 
-
    
     $(".nav_btn_guide i").on("click", function () {
         if ($(".guide_extraPages").hasClass("active")) {
@@ -101,8 +106,6 @@ $(function () {
             $(".nav_btn_guide").addClass("heightChange")   
         }
     })
-
-
 
 
 $(".nav_btnGroup_mobile ").on("click", function () {
@@ -155,34 +158,3 @@ $(".mobile_mask").on("click",function(){
     $(".burger_decoration3").removeClass("active")
     
 })
-
-// var window_width=$(window).width()
-
-// if(window_width<850){
-//     var css=document.querySelector("#css");
-//     console.log(css);
-//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
-//     var c=css.sheet;
-//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:block;}", 0)
-// }
-// $(".gmail_iconBox").on("click",function(){
-//     var window_Nowwidth=$(window).width()
-//     if(window_Nowwidth<850){
-//         var css=document.querySelector("#css");
-//     console.log(css);
-//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
-//     var c=css.sheet;
-//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:block;}", 0)
-//     }
-// })
-
-// $(window).on("dblclick",function(){
-//     var window_Nowwidth=$(window).width()
-//     if(window_Nowwidth<850){
-//         var css=document.querySelector("#css");
-//     console.log(123);
-//     var gmail_iconBox=document.querySelector("#gmail_iconBox");
-//     var c=css.sheet;
-//     c.insertRule("#gmail_iconBox#gmail_iconBox::after{display:none;}", 0)
-//     }
-// })

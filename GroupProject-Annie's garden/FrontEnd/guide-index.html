@@ -1066,46 +1066,6 @@
             <div class="swiper-button-next"></div>
         </div>
 
-
-        <!-- <div class="swiperBox"> -->
-        <!-- <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide page_3_slide " style="background-image:url('./素材/03-園區導覽/guide_eco01.jpg')">
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco02.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco03.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco04.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco05.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco06.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco07.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco08.jpg')">
-
-                </div>
-                <div class="swiper-slide page_3_slide" style="background-image:url('./素材/03-園區導覽/guide_eco09.jpg')">
-
-                </div>
-
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
-            </div>
-        </div> -->
-
-
         <div class="footer">
             <div class="footer_box">
                 <div class="footer_text">
@@ -1241,28 +1201,7 @@
     <script>
         AOS.init();
     </script>
-    <!-- <script>
-
-
-        $(window).on("scroll", function () {
-            var windowScrollTop = $(window).scrollTop()
-            if (windowScrollTop > 100) {
-                $(".returnBut").fadeIn()
-            }
-            else {
-                $(".returnBut").fadeOut()
-            }
-        })
-
-        $(".returnBut").on("click", function () {
-
-
-
-            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
-
-            return false;
-        })
-    </script> -->
+   
     <script>
         var page_3_imgBox = document.querySelectorAll(".page_3_imgBox")
         var fullScreen_mask = document.querySelectorAll(".fullScreen_mask")
@@ -1329,40 +1268,7 @@
         }
 
     </script>
-    <!-- <script>
-        var triggers = document.querySelectorAll(".trigger")
-        var imgShows = document.querySelectorAll(".imgShow")
-        console.log(triggers);
-        console.log(imgShows);
-
-        // $(".trigger").on("click", function () {
-        //     $(".fulscreen_mask").toggle()
-        // })
-        $(".canclePoint").on("click", function () {
-            $(".fulscreen_mask").toggle()
-        })
-
-        for (let i = 0; i < triggers.length; i++) {
-            const Triggers = triggers[i]
-            const ImgShows = imgShows[i]
-            console.log(imgShows[i]);
-
-
-            Triggers.onclick = function () {
-                $(".fulscreen_mask").toggle()
-                clearAllactive3();
-
-                ImgShows.classList.add("active")
-            }
-        }
-        function clearAllactive3() {
-            for (var a = 0; a < triggers.length; a++) {
-                imgShows[a].classList.remove("active");
-
-            }
-        }
-
-    </script> -->
+  
 </body>
 
 </html>

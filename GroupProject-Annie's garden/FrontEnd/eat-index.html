@@ -35,8 +35,8 @@
         }
 
         .page4_chiefImg {
-            width: 223px;
-            height: 447px;
+            width:106px;
+            height: 400px;
             background-image: url("./素材/04-主廚上菜/restaurant_chef-new.png");
             background-repeat: no-repeat;
             background-position: center;
@@ -44,28 +44,34 @@
             /* display: none; */
             position: fixed;
             top: 0px;
-            right: 10px;
+            right: 50px;
             z-index: 9999;
-            opacity: 0;
+            /* opacity: 0;
             transition-property: top;
-            transition-duration: 1s;
+            transition-duration: 1s; */
+
+            opacity: 0;
+            transition: 1s;
         }
 
         .page4_chiefImg.active {
-            opacity: 1;
-            /* display: block; */
-            top: 250px;
+            /* opacity: 1;
+          
+            top: 250px; */
+            
             animation: chiefShake;
             animation-duration: 5s;
             animation-iteration-count: infinite;
-
+            top: 250px;
+            transition: 1s;
+            opacity: 1;
 
         }
 
         .page4_chiefImg.active2 {
             opacity: 1;
             /* display: block; */
-            top: 350px;
+            top: 300px;
             animation: chiefShake;
             animation-duration: 5s;
             animation-iteration-count: infinite;
@@ -1154,43 +1160,14 @@
     <script>
         AOS.init();
     </script>
-    <!-- <script>
-
-
-        $(window).on("scroll", function () {
-            var windowScrollTop = $(window).scrollTop()
-            if (windowScrollTop > 100) {
-                $(".returnBut").fadeIn()
-            }
-            else {
-                $(".returnBut").fadeOut()
-            }
-        })
-
-        $(".returnBut").on("click", function () {
-
-
-
-            $('html,body').animate({ scrollTop: 0 }, "slow");   /* 返回到最頂上 */
-
-            return false;
-        })
-    </script> -->
+   
     <script>
         var page4_decoration_1 = $(".page_4_decoration1").scrollTop()
         // var page4_decoration_2=$(".page_4_decoration2").scrollTop()
-        // console.log(page4_decoration_1);
-        // console.log(page4_decoration_2);
-
         var page4_decoration_1_height = $(".page_4_decoration1").height()
         var page4_decoration_2_height = $(".page_4_decoration1").height()
 
-
-
-
         $(window).on("scroll", function () {
-            // console.log(page4_decoration_2_height);
-
 
             var eat_show2_offsetTop = $(".eat_show2").offset().top
             var eat_show4_offsetTop = $(".eat_show4").offset().top
@@ -1202,119 +1179,31 @@
             var chiefVanishPoint = $(".eat_title").offset().top
             var bodyHeight = $("body").height()
             var wdth = $(window).width();
-            // console.log(eat_show2_offsetTop);
-            // console.log(eat_show4_offsetTop); 
-            // console.log(windowScrollTop);
-
-            // console.log(eat_show2_touchPoint + 0.5 * page4_decoration_1_height);
-
-            // console.log(eat_show4_touchPoint - 0.5 * page4_decoration_2_height);
-
-
+  
             if (wdth >1000) {
-           
-
 
                 if (eat_show2_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show2_touchPoint - windowHeight / 5) {
-
-
-                    // $(".page4_chiefImg").animate({
-
-
-                    //     "top":"500px"
-
-                    // }, 1000)
                     $(".page4_chiefImg").addClass("active")
-
-                   
-
                 }
                 else if (eat_show4_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show4_touchPoint - windowHeight / 5) {
-                  
-
-                    //     $(".page4_chiefImg").animate({
-
-
-                    //       "top":"1000px"
-
-                    //   }, 1000)
+                                    
                     $(".page4_chiefImg").addClass("active")
                 }
                 else if (windowScrollTop + windowHeight > footer_touchPoint) {
                     $(".page4_chiefImg").addClass("active2")
                 }
                 else {
-                  
-
                     $(".page4_chiefImg").removeClass("active")
                     $(".page4_chiefImg").removeClass("active2")
-                    // $(".page4_chiefImg").animate({        
-                    // "top": "100px",
-                    //         })
                 }
-                // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
-                //     $(".page4_chiefImg").fadeIn()
-                //     $(".page4_chiefImg").css({
-                //         "top": "3531.5px"
-                //     })
-                //     $(".page4_chiefImg").addClass("active")
-                //     $(".page4_chiefImg").animate({
-                //         opacity: 1,
-                //     }, 1000)
-
-                // }
-                // else {
-                //     $(".page4_chiefImg").hide()
-                //     $(".page4_chiefImg").removeClass("active")
-                //     $(".page4_chiefImg").css({
-                //         "top": "100px"
-                //     })
-                //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
-                // }
+               
             }
             else {
-                // $(".page4_chiefImg").animate({        
-                //         "top": "100px",
-
-                //   }, 1000)
                 $(".page4_chiefImg").stop(true)
                 $(".page4_chiefImg").removeClass("active")
                 $(".page4_chiefImg").removeClass("active2")
             }
-            // if (eat_show4_touchPoint - 0.2 * page4_decoration_2_height > windowScrollTop && windowScrollTop > chiefVanishPoint) {
-            //     $(".page4_chiefImg").show()
-            //     $(".page4_chiefImg").css({
-            //         "top": "1634.5px"
-            //     })
-            //     $(".page4_chiefImg").animate({
-            //         opacity: 1,
-            //     }, 1000)
-
-            //     $(".page4_chiefImg").addClass("active")
-
-
-            // }
-
-            // else if (windowScrollTop > eat_show4_touchPoint + 0.2 * page4_decoration_2_height) {
-            //     $(".page4_chiefImg").fadeIn()
-            //     $(".page4_chiefImg").css({
-            //         "top": "3531.5px"
-            //     })
-            //     $(".page4_chiefImg").addClass("active")
-            //     $(".page4_chiefImg").animate({
-            //         opacity: 1,
-            //     }, 1000)
-
-            // }
-            // else {
-            //     $(".page4_chiefImg").hide()
-            //     $(".page4_chiefImg").removeClass("active")
-            //     $(".page4_chiefImg").css({
-            //         "top": "100px"
-            //     })
-            //     $(".page4_chiefImg").stop(true).animate({ opacity: 0, })
-            // }
-
+           
         })
     </script>
     <script>
@@ -1325,7 +1214,6 @@
         $(".canclePoint").on("click", function () {
             $(".fullScreen_mask").toggle()
         })
-
     </script>
 </body>
 
