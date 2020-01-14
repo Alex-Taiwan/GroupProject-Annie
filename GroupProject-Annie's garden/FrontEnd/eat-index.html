@@ -35,8 +35,8 @@
         }
 
         .page4_chiefImg {
-            width:106px;
-            height: 400px;
+            width:150px;
+            height: 350px;
             background-image: url("./素材/04-主廚上菜/restaurant_chef-new.png");
             background-repeat: no-repeat;
             background-position: center;
@@ -1182,14 +1182,14 @@
   
             if (wdth >1000) {
 
-                if (eat_show2_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show2_touchPoint - windowHeight / 5) {
+                if (eat_show2_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show2_touchPoint - windowHeight / 40) {
                     $(".page4_chiefImg").addClass("active")
                 }
-                else if (eat_show4_touchPoint - windowHeight < windowScrollTop && windowScrollTop < eat_show4_touchPoint - windowHeight / 5) {
+                else if (eat_show4_touchPoint - windowHeight/2 < windowScrollTop && windowScrollTop < eat_show4_touchPoint - windowHeight / 40) {
                                     
                     $(".page4_chiefImg").addClass("active")
                 }
-                else if (windowScrollTop + windowHeight > footer_touchPoint) {
+                else if (windowScrollTop + windowHeight*5/4 > footer_touchPoint) {
                     $(".page4_chiefImg").addClass("active2")
                 }
                 else {

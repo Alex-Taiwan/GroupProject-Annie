@@ -16,7 +16,6 @@
     <title>Document</title>
 
     <style>
-
         .mobile_swiper {
             display: none;
         }
@@ -332,7 +331,7 @@
         .gallery-thumbs .swiper-slide-thumb-active {
             opacity: 1;
         }
-        
+
         .returnPrePage_Box {
             width: 166px;
             margin: 100px auto;
@@ -376,7 +375,13 @@
 
 
             }
-
+            .extraPage_diy_mask .mask_text-t{
+                margin-top: 18%;
+            }
+            .extraPage_diy_theme_l .mask_text-t{
+                margin-top: 12%;
+            }
+    
             .extraPage_diy_lastContent {
                 font-size: 20px;
             }
@@ -390,13 +395,37 @@
             .extraPage_diy_themeGroup {
                 display: none;
             }
+
             .mobile_swiper {
                 display: block;
             }
+
             .returnPrePage_Box {
                 display: none;
             }
+
+            .swiper-slide {
+                cursor: grab;
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                visibility: hidden;
+                /* left: -11%;
+                right: auto; */
+                /* color: white */
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                visibility: hidden;
+                /* right: -11%;
+                left: auto; */
+                /* color: white */
+                /* color: gray */
+            }
         }
+
         @media (max-width:576px) {
             .swiper-container1 {
                 width: 80%;
@@ -496,7 +525,7 @@
             <div class="nav_logo"></div>
         </a>
         <div class="nav_btnGroup">
-  
+
             <div class="nav_btn_about nav_btn_space nav_btn ">
                 <a href="./index.html">關於安妮公主</a>
             </div>
@@ -548,7 +577,7 @@
                         <a href="./princess-index.html" class="changeSite3 ">公主故事屋</a>
                     </li>
                 </ul>
-        
+
             </div>
             <div class="nav_btn_eat nav_btn_space mobile_nav_btn mobile_afterSite">
                 <a href="./eat-index.html">主廚上菜</a>
@@ -713,7 +742,7 @@
 
         </div>
 
-        <a href="./guide-index.html" >
+        <a href="./guide-index.html">
             <div class="returnPrePage_Box">
                 回園區導覽
             </div>
@@ -729,15 +758,15 @@
                 </div>
                 <div class=" footer_iconGroupBox">
                     <div class="footer_iconGroup">
-                        <a href="https://zh-tw.facebook.com/annies0425931567"><img
-                                src="./素材/07-icon與logo/FB_icon.png" alt="" class="footer_fbIcon" title="FB"></a>
+                        <a href="https://zh-tw.facebook.com/annies0425931567"><img src="./素材/07-icon與logo/FB_icon.png"
+                                alt="" class="footer_fbIcon" title="FB"></a>
                         <a href="https://page.line.me/hif9867v"><img src="./素材/07-icon與logo/Line_icon.png" alt=""
                                 class="footer_lineIcon" title="Line"></a>
                         <a href="https://www.instagram.com/explore/locations/246263666/"><img
                                 src="./素材/07-icon與logo/IG_icon.png" alt="" class="footer_igIcon" title="IG">
                         </a>
                         <div class="footer_gmailIcon">
-                        <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
+                            <img src="./素材/07-icon與logo/Gmail_icon.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -1040,7 +1069,7 @@
             effect: 'flip',
             grabCursor: true,
             updateOnWindowResize: true,
-            speed:2500,
+            speed: 2500,
             loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -1122,7 +1151,7 @@
         }
 
     </script>
-   
+
 
 </body>
 
